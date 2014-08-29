@@ -37,4 +37,9 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+group :development, :test do
+	gem 'capybara'
+	gem 'cucumber-rails'
+	gem 'database_cleaner'
+	gem 'rspec-rails'
+end
