@@ -1,13 +1,13 @@
 Given(/^I am on new property page$/) do
-  visit('property/new')
+  visit('properties/new')
 end
 
 Given(/^I fill in title with "(.*?)"$/) do |arg1|
- fill_in title, with: "Awesome House"
+ fill_in :title, with: "Awesome House"
 end
 
 Given(/^I fill in adress line (\d+) with "(.*?)"$/) do |arg1, arg2|
-  fill_in address_line_1, with: "15"
+  fill_in :address_line_1, with: "15 walton house"
 end
 
 Given(/^I fill in postcode with "(.*?)"$/) do |arg1|
