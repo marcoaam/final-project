@@ -5,5 +5,5 @@ Feature: listing the availabale flats after a research
 
 	Scenario: A user click on a property link
 		Given I searched for a property
-		And I click on the property
+		And I click on the property on the list
 		Then I should be on the property page
