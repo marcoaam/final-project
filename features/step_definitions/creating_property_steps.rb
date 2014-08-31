@@ -3,25 +3,29 @@ Given(/^I am on new property page$/) do
 end
 
 Given(/^I fill in title with "(.*?)"$/) do |arg1|
- fill_in :title, with: "Awesome House"
+ fill_in :title, with: arg1
 end
 
 Given(/^I fill in adress with "(.*?)"$/) do |arg1|
- fill_in :address, with: "15 walton house"
+ fill_in :address, with: arg1
+end
+
+Given(/^I fill in city with "(.*?)"$/) do |arg1|
+  fill_in :city, with: arg1
 end
 
 Given(/^I fill in postcode with "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  fill_in :postcode, with: arg1
 end
 
 Given(/^I fill in description with "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  fill_in :description, with: arg1
 end
 
 Given(/^I click button "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  click_button arg1
 end
 
 Then(/^I should see "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content(arg1)
 end

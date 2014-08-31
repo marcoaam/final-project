@@ -7,6 +7,7 @@ Feature: Creating a property
 Scenario: Complete the form 
 	Given I am on new property page
 	And I fill in title with "awesome house"
+	And I fill in city with "london"
 	And I fill in adress with "Flat 15, walton house"
 	And I fill in postcode with "E2 7ET"
 	And I fill in description with "blablabla"
