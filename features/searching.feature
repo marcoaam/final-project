@@ -1,7 +1,6 @@
 Feature: Searching for a room
 	In order to find a room
-	As a roomy
-	I want to search for it by xxx
+	I want to search for it by location
 
 	@bob
 	Scenario: Searching by address
