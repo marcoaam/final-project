@@ -17,11 +17,8 @@ describe 'menu display' do
 
 	context 'if logged in' do
 		before(:each) do
-		alex = User.create(
-			 email: "a@a.com",
-			 password: "123456789",
-			 password_confirmation: "123456789")
-		login_as("a@a.com", "123456789")
+		alex = create(:user)
+		login_as alex
 	end
 	
 		it 'display sign out' do

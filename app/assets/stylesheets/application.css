@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+/* Colours*/
+
+/* Index Layout */
+#home_container {
+	background: url(Room_A.jpg) no-repeat;
+	height: 690px;
+}
+
