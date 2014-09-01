@@ -16,3 +16,4 @@
 /tmp
 /Art
 config/secrets.yml
+coverage/.resultset.json
