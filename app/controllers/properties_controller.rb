@@ -2,7 +2,10 @@ class PropertiesController < ApplicationController
 
 	def new
 		@property = Property.new
-		'bob'
+	end
+
+	def index
+		@properties = Property.all
 	end
 	
 end
