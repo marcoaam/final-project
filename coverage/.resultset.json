@@ -443,9 +443,9 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
         0,
         null,
@@ -530,7 +530,7 @@
       "/Users/user/Documents/MA/get_a_room/app/controllers/home_controller.rb": [
         1,
         1,
-        0,
+        4,
         null,
         null
       ],
@@ -541,9 +541,9 @@
         1,
         null,
         1,
-        0,
-        0,
-        0,
+        2,
+        3,
+        2,
         null,
         null
       ],
@@ -597,6 +597,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1409565720
+=======
+    "timestamp": 1409566001
+>>>>>>> 594fc40e5224ef3048fd94f1d511c0e097deb58f
   }
 }
