@@ -3,7 +3,7 @@ Given(/^I am on new property page$/) do
 end
 
 Given(/^I fill in title with "(.*?)"$/) do |arg1|
- fill_in :title, with: arg1
+ fill_in :title, with: "awesome house"
 end
 
 Given(/^I fill in adress with "(.*?)"$/) do |arg1|
