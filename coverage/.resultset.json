@@ -1,22 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/environment.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/environment.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         null,
         1,
         null,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/application.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/application.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         1,
         null,
         null,
@@ -48,21 +40,13 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/boot.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/boot.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         null,
         1,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/environments/test.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/environments/test.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         1,
         null,
         null,
@@ -103,11 +87,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/initializers/assets.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/assets.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         null,
         null,
         null,
@@ -117,11 +97,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/initializers/backtrace_silencers.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/backtrace_silencers.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         null,
         null,
         null,
@@ -130,20 +106,12 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/initializers/cookies_serializer.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/cookies_serializer.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         null,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/initializers/devise.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/devise.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         null,
         null,
         1,
@@ -335,7 +303,6 @@
         null,
         null,
         null,
-<<<<<<< HEAD
         1,
         null,
         null,
@@ -374,8 +341,6 @@
         null,
         null,
         null,
-=======
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         1,
         null,
         null,
@@ -405,65 +370,15 @@
         null,
         null,
         null,
-<<<<<<< HEAD
         null
       ],
       "/Users/user/Documents/MA/get_a_room/config/initializers/filter_parameter_logging.rb": [
-=======
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/filter_parameter_logging.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         null,
         null,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/initializers/inflections.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/inflections.rb": [
-        null,
-        null,
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         null,
         null,
         null,
@@ -477,36 +392,22 @@
         null,
         null,
         null,
-<<<<<<< HEAD
         null,
         null,
         null
       ],
       "/Users/user/Documents/MA/get_a_room/config/initializers/mime_types.rb": [
-=======
-        null
-      ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/mime_types.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         null,
         null,
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/initializers/session_store.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/session_store.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         null,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/initializers/wrap_parameters.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/wrap_parameters.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         null,
         null,
         null,
@@ -522,11 +423,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/config/routes.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/config/routes.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         1,
         null,
         1,
@@ -535,11 +432,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/app/models/user.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/app/models/user.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         1,
         null,
         1,
@@ -561,38 +454,87 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/app/helpers/application_helper.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/app/helpers/application_helper.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         1,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/helpers/home_helper.rb": [
+      "/Users/user/Documents/MA/get_a_room/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/helpers/properties_helper.rb": [
+      "/Users/user/Documents/MA/get_a_room/app/helpers/properties_helper.rb": [
         1,
         null
       ],
-<<<<<<< HEAD
+      "/Users/user/Documents/MA/get_a_room/db/schema.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/user/Documents/MA/get_a_room/app/controllers/home_controller.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/app/controllers/home_controller.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         1,
         1,
         0,
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/app/controllers/application_controller.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/app/controllers/application_controller.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         1,
         1,
         null,
@@ -605,11 +547,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/app/controllers/properties_controller.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/app/controllers/properties_controller.rb": [
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         1,
         null,
         1,
@@ -647,26 +585,18 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/user/Documents/MA/get_a_room/app/models/property.rb": [
-=======
-      "/Users/Bob/Desktop/Development/get_a_room/app/models/property.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/models/room.rb": [
+      "/Users/user/Documents/MA/get_a_room/app/models/room.rb": [
         1,
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
         1,
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1409564894
-=======
-    "timestamp": 1409564553
->>>>>>> e821029b7f61b7634c5a22c71e417829d85211ed
+    "timestamp": 1409565720
   }
 }
