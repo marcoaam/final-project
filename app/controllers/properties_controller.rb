@@ -29,4 +29,8 @@ class PropertiesController < ApplicationController
 		redirect_to '/properties'
 	end
 
+	def show
+		@property = Property.find(params[:id])
+	end
+
 end

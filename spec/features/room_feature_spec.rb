@@ -4,9 +4,9 @@ describe 'Room' do
 
 	before(:each) do
 		property = Property.create(title: 'Great flat near old street')
-		property.rooms.create(number: 2, description: 'Big room')
+		property.rooms.create(number: 1, description: 'Big room')
+		property.rooms.create(number: 2, description: 'Small room')
 	end
-
 
 	it 'shows the number of rooms' do
 		visit '/properties'

@@ -1,5 +1,5 @@
 <% @properties.each do |property| %> 
-	<%= property.title %> 
+	<%= link_to property.title, property_path(property) %>
 	<%= link_to "Edit", edit_property_path(property) %>
 	<%= link_to "Delete", property_path(property), method: :delete %>
 <% end %>
