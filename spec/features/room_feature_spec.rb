@@ -23,5 +23,4 @@ describe 'Room' do
 		expect(page).to have_content 'Small room'
 	end
 
-
 end
