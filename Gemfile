@@ -46,3 +46,5 @@ group :development, :test do
 	gem 'codeclimate-test-reporter', require: nil
 	gem 'launchy'
 end
+
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
