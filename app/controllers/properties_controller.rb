@@ -41,4 +41,5 @@ class PropertiesController < ApplicationController
 	def finding_nearby
 		Property.near(params[:search_bar],2)
 	end
+	
 end
