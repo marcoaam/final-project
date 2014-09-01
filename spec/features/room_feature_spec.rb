@@ -23,8 +23,6 @@ describe 'Room' do
 		expect(page).to have_content 'Small room'
 	end
 
-<<<<<<< HEAD
-=======
 	it 'can create a property' do
 		visit '/properties/new'
 		fill_in :property_title, with: "Great flat near old street"
@@ -37,5 +35,4 @@ describe 'Room' do
 		expect(page).to have_content("Great flat near old street")
 	end
 
->>>>>>> d45b7767bca0e9ce7451be48976a51511a90b4ed
 end
