@@ -45,6 +45,8 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'codeclimate-test-reporter', require: nil
 	gem 'launchy'
+	gem 'factory_girl_rails'
+	gem 'warden'
 end
 
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
