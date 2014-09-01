@@ -18,9 +18,7 @@ describe 'Room' do
 	end
 
 	it 'show the number of the room ex: room number1...' do
-		visit '/'
-		fill_in :search_bar, with: '25 city road,London,EC1Y 1AA'
-		click_button 'Search'
+		search_home_for('25 city road,London,EC1Y 1AA')
 		click_link 'Great flat near old street'
 		expect(page).to have_content 'room N°1'
 		expect(page).to have_content 'Big room'
