@@ -1,6 +1,7 @@
 require 'rails_helper'
 
-describe 'menu display' do
+describe 'User menu display' do
+
 	context 'if logged out' do
 
 		it 'display sign in' do
@@ -16,10 +17,11 @@ describe 'menu display' do
 	end
 
 	context 'if logged in' do
+
 		before(:each) do
-		alex = create(:user)
-		login_as alex
-	end
+			alex = create(:user)
+			login_as alex
+		end
 	
 		it 'display sign out' do
 			visit('/')

@@ -4,7 +4,7 @@ describe 'Room' do
 
 	before(:each) do
 		alex = create(:user)
-		alex.properties.create(title: 'Great flat near old street', address: '25 city road', city: 'London', postcode: 'EC1Y 1AA')
+		alex.properties << create(:makers_academy)
 		Property.first.rooms.create(number: 1, description: 'Big room')
 		Property.first.rooms.create(number: 2, description: 'Small room')
 	end
