@@ -1,6 +1,12 @@
 <%= @property.title %>
-<%= @property.rooms.count %> rooms
-	<% @property.rooms.each do |room| %>
-		room N°<%= room.number %>
-		<%= room.description %>
+
+	<% @property.pictures.each do |picture| %>
+		<%= image_tag picture.image.url(:medium), class: "image-show" %>
 	<% end %>
+
+		<%= @property.rooms.count %> rooms
+
+			<% @property.rooms.each do |room| %>
+				room N°<%= room.number %>
+				<%= room.description %>
+			<% end %>

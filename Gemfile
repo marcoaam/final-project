@@ -48,5 +48,7 @@ group :development, :test do
 	gem 'factory_girl_rails'
 	gem 'warden'
 end
+gem 'aws-sdk'
 
+gem "paperclip", "~> 4.2"
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'

@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140901092958) do
+ActiveRecord::Schema.define(version: 20140901134713) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pictures", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "property_id"
+  end
+
+  add_index "pictures", ["property_id"], name: "index_pictures_on_property_id", using: :btree
 
   create_table "properties", force: true do |t|
     t.string   "address"
@@ -24,6 +36,10 @@ ActiveRecord::Schema.define(version: 20140901092958) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "rooms", force: true do |t|
