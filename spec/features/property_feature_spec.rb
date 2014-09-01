@@ -24,7 +24,7 @@ describe 'Property' do
 
 	it 'can click a button to add a property' do
 		visit('/properties')
-		click_button("Add property") 
+		click_link("Add property") 
 		expect(current_path).to eq('/properties/new')
 	end
 
