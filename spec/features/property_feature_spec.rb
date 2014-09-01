@@ -28,5 +28,21 @@ describe 'Property' do
 		expect(current_path).to eq('/properties/new')
 	end
 
+	it 'can edit a property' do
+		visit '/properties'
+		click_link 'Edit'
+		fill_in :property_title, with: "New flat"
+		fill_in :property_address, with: "22 city road"
+		fill_in :property_postcode, with: "EC1Y 1AB"
+		fill_in :property_city, with: "London"
+		fill_in :property_description, with: "New one"
+		click_button 'Submit'
+		expect(page).not_to have_content "Great flat near old street"
+		expect(page).to have_content "New flat"
+	end
+
+	it '' do
+		
+	end
 
 end
