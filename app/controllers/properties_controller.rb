@@ -22,4 +22,11 @@ class PropertiesController < ApplicationController
 		@property.update(params[:property].permit(:title, :address, :postcode, :city, :description))
 		redirect_to '/properties'
 	end
+
+	def destroy
+		@property = Property.find(params[:id])
+		@property.destroy
+		redirect_to '/properties'
+	end
+
 end
