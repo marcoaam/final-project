@@ -48,3 +48,5 @@ group :development, :test do
 	gem 'factory_girl_rails'
 	gem 'warden'
 end
+
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
