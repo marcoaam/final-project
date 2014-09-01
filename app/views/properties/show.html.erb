@@ -1,7 +1,9 @@
 <%= @property.title %>
-
+	
 	<% @property.pictures.each do |picture| %>
-		<%= image_tag picture.image.url(:medium), class: "image-show" %>
+		<% if picture.image.present? %>
+			<%= image_tag picture.image.url(:medium), class: "image-show" %>
+		<% end %>
 	<% end %>
 
 		<%= @property.rooms.count %> rooms

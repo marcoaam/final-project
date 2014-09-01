@@ -47,6 +47,7 @@ group :development, :test do
 	gem 'launchy'
 	gem 'factory_girl_rails'
 	gem 'warden'
+	gem 'byebug'
 end
 gem 'aws-sdk'
 

@@ -10,11 +10,23 @@ class PropertiesController < ApplicationController
 	end
 	
 	def create
-		@property = Property.create(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: [:id, :image]))
-		#params[:images].each do |image|
-		#	@property.pictures.create(image: image)
-		#end
-		redirect_to '/properties'
+		@property = Property.new(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: [:id, image: []]))
+		respond_to do |format|
+			if @property.save
+				if params[:image]
+					params[:image].each do |image|
+						@property.pictures.create(image: image)
+					end
+				end
+				format.html { redirect_to @property, notice: 'The property has been successfully created' }
+				format.json { render json: @property, status: :created, location: @property }
+			else
+				format.html { render action: "new"}
+				format.json { render json: @property.errors, status: :unprocessable_entity }
+			redirect_to '/properties'
+			end
+		end
+		
 	end
 
 	def edit
