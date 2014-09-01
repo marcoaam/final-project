@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem "codeclimate-test-reporter", group: :test, require: nil
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
@@ -39,7 +38,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 group :development, :test do
 	gem 'capybara'
-	gem 'cucumber-rails'
+	gem 'cucumber-rails', require: nil
 	gem 'database_cleaner'
 	gem 'rspec-rails'
+	gem 'codeclimate-test-reporter', require: nil
 end
