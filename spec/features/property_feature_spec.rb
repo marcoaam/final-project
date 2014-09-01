@@ -22,4 +22,11 @@ describe 'Property' do
 		expect(page).to have_content("Great flat near old street")
 	end
 
+	it 'can click a button to add a property' do
+		visit('/properties')
+		click_button("Add property") 
+		expect(current_path).to eq('/properties/new')
+	end
+
+
 end
