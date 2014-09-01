@@ -1,5 +1,6 @@
 <% @properties.each do |property| %> 
 	<%= property.title %> 
+	<%= link_to "Edit", edit_property_path(property) %>
 <% end %>
 
 <%= link_to "Add property", new_property_path %>
