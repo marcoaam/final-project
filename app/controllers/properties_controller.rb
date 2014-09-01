@@ -9,7 +9,7 @@ class PropertiesController < ApplicationController
 	end
 	
 	def create
-		Property.create(params[:property].permit(:title, :address, :postcode, :city, :description))
+		Property.create(params[:property].permit(:title, :address, :postcode, :city, :total_rooms,:description))
 		redirect_to '/properties'
 	end
 
@@ -19,7 +19,7 @@ class PropertiesController < ApplicationController
 
 	def update
 		@property = Property.find(params[:id])
-		@property.update(params[:property].permit(:title, :address, :postcode, :city, :description))
+		@property.update(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description))
 		redirect_to '/properties'
 	end
 
