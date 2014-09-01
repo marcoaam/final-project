@@ -41,8 +41,12 @@ describe 'Property' do
 		expect(page).to have_content "New flat"
 	end
 
-	it '' do
-		
+	it 'can delete a property' do
+		visit('/properties')
+		expect(Property.count).to eq 1
+		click_link('Delete')
+		expect(page).not_to have_content('Great flat near old street')
+		expect(Property.count).to eq 0
 	end
 
 end
