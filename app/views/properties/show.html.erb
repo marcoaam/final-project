@@ -1,6 +1,6 @@
 <%= @property.title %>
 <%= @property.rooms.count %> rooms
-	<% @property.rooms do |room| %>
-		<%= room.number %>
+	<% @property.rooms.each do |room| %>
+		room N°<%= room.number %>
 		<%= room.description %>
 	<% end %>
