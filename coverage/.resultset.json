@@ -1,30 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/environment.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/environment.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/environment.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         null,
         1,
         null,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/application.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/application.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/application.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         1,
         null,
         null,
@@ -56,29 +40,13 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/boot.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/boot.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/boot.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         null,
         1,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/environments/test.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/environments/test.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/environments/test.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         1,
         null,
         null,
@@ -119,15 +87,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/initializers/assets.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/assets.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/initializers/assets.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         null,
         null,
         null,
@@ -137,15 +97,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/initializers/backtrace_silencers.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/backtrace_silencers.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/initializers/backtrace_silencers.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         null,
         null,
         null,
@@ -154,42 +106,279 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/initializers/cookies_serializer.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/cookies_serializer.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/initializers/cookies_serializer.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         null,
         null,
         1
       ],
-<<<<<<< HEAD
+      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/devise.rb": [
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/Bob/Desktop/Development/get_a_room/config/initializers/filter_parameter_logging.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/filter_parameter_logging.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/initializers/filter_parameter_logging.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         null,
         null,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/initializers/inflections.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/inflections.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/initializers/inflections.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         null,
         null,
         null,
@@ -207,42 +396,18 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/initializers/mime_types.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/mime_types.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/initializers/mime_types.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         null,
         null,
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/initializers/session_store.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/session_store.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/initializers/session_store.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         null,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/initializers/wrap_parameters.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/wrap_parameters.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/initializers/wrap_parameters.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         null,
         null,
         null,
@@ -258,73 +423,38 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/config/routes.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/routes.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/config/routes.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         1,
         null,
+        1,
         1,
         1,
         null,
         null
       ],
-<<<<<<< HEAD
+      "/Users/Bob/Desktop/Development/get_a_room/app/models/user.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/Bob/Desktop/Development/get_a_room/app/helpers/application_helper.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/home_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/properties_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/jeantroiani/Desktop/get_a_room/db/schema.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/home_controller.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/app/helpers/application_helper.rb": [
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         1,
         null
       ],
@@ -336,42 +466,27 @@
         1,
         null
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/app/controllers/home_controller.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/app/controllers/home_controller.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         1,
         1,
         0,
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/app/controllers/application_controller.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/application_controller.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/app/controllers/application_controller.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
+        1,
         1,
         null,
         1,
+        null,
+        1,
+        0,
+        0,
+        0,
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/app/controllers/properties_controller.rb": [
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/properties_controller.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/app/controllers/properties_controller.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         1,
         null,
         1,
@@ -415,28 +530,12 @@
         1,
         null
       ],
-<<<<<<< HEAD
       "/Users/Bob/Desktop/Development/get_a_room/app/models/room.rb": [
         1,
-=======
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/models/property.rb": [
-=======
-      "/Users/user/Documents/MA/get_a_room/app/models/property.rb": [
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
         1,
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1409564350
-=======
-<<<<<<< HEAD
-    "timestamp": 1409559364
-=======
-    "timestamp": 1409563685
->>>>>>> acf0b1aadae89dbec4da3780d632be5d4f57f9b1
->>>>>>> 7a62e5d7149243a9c3e253a3e5696ca18809b712
+    "timestamp": 1409564553
   }
 }
