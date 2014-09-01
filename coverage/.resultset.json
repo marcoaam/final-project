@@ -200,7 +200,7 @@
         1,
         null,
         1,
-        7,
+        8,
         null,
         null,
         1,
@@ -228,13 +228,24 @@
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/Bob/Desktop/Development/get_a_room/app/models/property.rb": [
         1,
+        null,
+        1,
+        null
+      ],
+      "/Users/Bob/Desktop/Development/get_a_room/app/models/room.rb": [
+        1,
+        1,
         null
       ]
     },
-    "timestamp": 1409563018
+    "timestamp": 1409564350
   }
 }
