@@ -12,11 +12,6 @@ class PropertiesController < ApplicationController
 	def create
 		@property = Property.new(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: :image))
 		@property.save
-		#@property.pictures.create(params[:image].permit(pictures_attributes: :image))
-		#params[:images].each do |image|
-		#	@property.pictures.create(image: image)
-		#end
-
 
 		respond_to do |format|
 			if @property.save
