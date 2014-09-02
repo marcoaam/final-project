@@ -20,8 +20,43 @@
 /* Colours*/
 
 /* Index Layout */
-#home_container {
-	background: url(Room_A.jpg) no-repeat;
-	height: 690px;
+
+#header-home {
+	float: left;
 }
 
+.header-layout {
+
+	float: right;
+	display: block;
+
+	ul {
+		list-style-type: none;
+	}
+
+	nav li {
+		display: inline-block;
+	}
+
+}
+
+.container-fluid {
+ padding-left: 0px;
+ padding-top: 2px; 
+}
+
+.navbar {
+	min-height: 60px;
+	font-size: 1.2em;
+}
+
+.navbar-default {
+background-color: rgba(255, 255, 255, 0.6);
+border-color: #e7e7e7;
+}
+
+body {
+	background: url(' https://s3.amazonaws.com/getaroom/background.jpg') no-repeat center center;
+	background-size: 100%;
+	background-position-y: -40px;
+}
