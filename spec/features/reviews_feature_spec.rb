@@ -28,7 +28,7 @@ describe 'Reviews' do
 
 	it 'shows a message if no reviews for a user' do
 		visit '/'
-		search_home_for("25 city road,London,EC1Y 1AA")
+		search_home_for('25 city road,London,EC1Y 1AA')
 		click_link 'Great flat near old street'
 		click_link 'John'
 		click_link 'All reviews'
@@ -37,7 +37,7 @@ describe 'Reviews' do
 
 	it 'leaves a review for a user' do
 		visit '/'
-		search_home_for("25 city road,London,EC1Y 1AA")
+		search_home_for('25 city road,London,EC1Y 1AA')
 		click_link 'Great flat near old street'
 		click_link 'John'
 		click_link 'All reviews'
