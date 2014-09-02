@@ -1,34 +1,27 @@
-<header>
-	<% if user_signed_in? %>
-		<nav>
-			<ul>
-				<li> 
-					<%= link_to 'Home', root_path %>
-				</li>
-				<li> 
-					<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-				</li>
-				<li>
-					<%= link_to 'My properties', user_properties_path(current_user) %>
-				</li>
-				<li>
-					<%= link_to "Add property", new_property_path %>
-				</li>
-			</ul>
-		</nav>
-	<% else %>
-			<nav>
-			<ul>
-				<li> 
-					<%= link_to 'Home', root_path %>
-				</li>
-				<li> 
-					<%= link_to 'Sign in', new_user_session_path %>
-				</li>
-				<li> 
-					<%= link_to 'Sign up', new_user_registration_path %>
-				</li>
-			</ul>
-		</nav>
-	<% end %>
-</header>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Flat Me Out</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-left" role="search">
+        <% unless request.original_fullpath == root_path || request.original_fullpath == properties_path %>
+					<%= render "home/search_bar" %> 
+        <% end %>
+      </form>
+      <% if user_signed_in? %>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><%= link_to 'Home', root_path %></li>
+	  			<li> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+					<li> <%= link_to 'My properties', user_properties_path(current_user) %></li>
+					<li><%= link_to "Add property", new_property_path %></li>
+	      </ul>
+      <% else %>
+      	<ul class="nav navbar-nav navbar-right">
+	   			<li><%= link_to 'Home', root_path %> </li>
+					<li><%= link_to 'Sign in', new_user_session_path %> </li>
+					<li> <%= link_to 'Sign up', new_user_registration_path %> </li>
+      	</ul>
+      <% end %>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
