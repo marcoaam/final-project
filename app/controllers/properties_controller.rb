@@ -6,11 +6,18 @@ class PropertiesController < ApplicationController
 
 	def new
 		@property = Property.new
-		@property.pictures.build
+		2.times { @property.pictures.build }
 	end
 	
 	def create
-		@property = Property.new(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: [:id, image: []]))
+		@property = Property.new(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: :image))
+		@property.save
+		#@property.pictures.create(params[:image].permit(pictures_attributes: :image))
+		#params[:images].each do |image|
+		#	@property.pictures.create(image: image)
+		#end
+
+
 		respond_to do |format|
 			if @property.save
 				if params[:image]
@@ -25,8 +32,7 @@ class PropertiesController < ApplicationController
 				format.json { render json: @property.errors, status: :unprocessable_entity }
 			redirect_to '/properties'
 			end
-		end
-		
+		end	
 	end
 
 	def edit
@@ -35,7 +41,7 @@ class PropertiesController < ApplicationController
 
 	def update
 		@property = Property.find(params[:id])
-		@property.update(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, :picture))
+		@property.update(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: :image))
 		redirect_to '/properties'
 	end
 

@@ -431,7 +431,6 @@
         1,
         1,
         null,
-        null,
         null
       ],
       "/Users/Bob/Desktop/Development/get_a_room/app/models/user.rb": [
@@ -497,11 +496,18 @@
         null,
         1,
         7,
-        7,
+        21,
         null,
         null,
         1,
         2,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         2,
         2,
         2,
@@ -515,7 +521,6 @@
         0,
         0,
         0,
-        null,
         null,
         null,
         null,
@@ -552,7 +557,18 @@
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -595,6 +611,6 @@
         null
       ]
     },
-    "timestamp": 1409596970
+    "timestamp": 1409609449
   }
 }

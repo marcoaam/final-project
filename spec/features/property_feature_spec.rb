@@ -51,15 +51,14 @@ describe 'Property' do
 
 	it 'can upload one picture' do
 		visit('properties/new')
-		save_and_open_page
 		fill_in :property_title, with: "New flat"
 		fill_in :property_address, with: "22 city road"
 		fill_in :property_postcode, with: "EC1Y 1AB"
 		fill_in :property_city, with: "London"
 		fill_in :property_description, with: "New one"
-		attach_file 'property[pictures_attributes][0][images[]][]', Rails.root.join('spec/images/Bob_razowski-1.jpg')
+		attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-1.jpg')
 		click_button 'Submit'
-		expect(current_path).to eq('/properties/8')
+		expect(current_path).to eq('/properties')
 	end
 
 	it 'can show the picture' do
@@ -76,18 +75,17 @@ describe 'Property' do
 		fill_in :property_postcode, with: "EC1Y 1AB"
 		fill_in :property_city, with: "London"
 		fill_in :property_description, with: "New one"
-		attach_file 'property[pictures_attributes][0][images[]][]', Rails.root.join('spec/images/Bob_razowski-1.jpg') 
-		attach_file 'property[pictures_attributes][0][images[]][]', Rails.root.join('spec/images/Bob_razowski-2.jpg') 
-		attach_file 'property[pictures_attributes][0][images[]][]', Rails.root.join('spec/images/Bob_razowski-3.jpg') 
+		attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-1.jpg') 
+		attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-2.jpg') 
+		attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-3.jpg') 
 		click_button 'Submit'
-		expect(current_path).to eq('/properties/12')
+		expect(current_path).to eq('/properties')
 	end
 
 	it 'can show the pictures' do
 		add_many_images
 		visit('/properties')
 		click_link('title')
-		save_and_open_page
 		expect(page).to have_css('.image-show')
 	end
 
