@@ -3,12 +3,12 @@ class PropertiesController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
-	
-		gmap_caller
 		if params[:user_id]
-			@properties = User.find_by(id: params[:user_id]).properties	
+			@properties = User.find_by(id: params[:user_id]).properties
+			gmap_caller(@properties)	
 		else
 			@properties = finding_nearby
+			gmap_caller(@properties)
 		end
 	end
 
@@ -64,16 +64,11 @@ class PropertiesController < ApplicationController
 
 	private
 
-	def gmap_caller
-
-		@properties = finding_nearby
-			@hash = Gmaps4rails.build_markers(@properties) do |property, marker|
-			  marker.lat property.latitude
-			  marker.lng property.longitude
-			end
-
+	def gmap_caller(properties)
+		@hash = Gmaps4rails.build_markers(properties) do |property, marker|
+		  marker.lat property.latitude
+		  marker.lng property.longitude
+		end
 	end
-
-	
 
 end
