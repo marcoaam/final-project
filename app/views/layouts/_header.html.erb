@@ -11,6 +11,9 @@
 				<li>
 					<%= link_to 'My properties', user_properties_path(current_user) %>
 				</li>
+				<li>
+					<%= link_to "Add property", new_property_path %>
+				</li>
 			</ul>
 		</nav>
 	<% else %>

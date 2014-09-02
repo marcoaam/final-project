@@ -3,8 +3,10 @@ require 'rails_helper'
 describe 'Property Search' do
 
 	before(:each) do
-		create(:london_victoria)
-		create(:makers_academy)
+		john = create(:user)
+		login_as john
+		john.properties << create(:london_victoria)
+		john.properties << create(:makers_academy)
 	end
 
 	it 'can search by address' do

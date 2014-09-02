@@ -1,13 +1,13 @@
 <% if @properties.any? %>
 	<% @properties.each do |property| %> 
 		<%= link_to property.title, property_path(property) %>
+		<%= "Posted by - #{property.user.username}" %>
 		<%= link_to "Edit", edit_property_path(property) %>
 		<%= link_to "Delete", property_path(property), method: :delete %>
 	<% end %>
 <%else%>
-<p>No properties have been added.</p>
+	<p>No properties have been added.</p>
 <%end%>
-<%= link_to "Add property", new_property_path %>
 
 
 

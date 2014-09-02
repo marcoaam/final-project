@@ -3,8 +3,9 @@ require 'rails_helper'
 describe 'Room' do
 
 	before(:each) do
-		alex = create(:user)
-		alex.properties << create(:makers_academy)
+		john = create(:user)
+		login_as john
+		john.properties << create(:makers_academy)
 		Property.first.rooms.create(number: 1, description: 'Big room')
 		Property.first.rooms.create(number: 2, description: 'Small room')
 	end

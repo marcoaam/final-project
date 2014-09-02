@@ -1,5 +1,7 @@
 class PropertiesController < ApplicationController
 
+	before_action :authenticate_user!, except: [:index, :show]
+
 	def index
 		if params[:user_id]
 			@properties = User.find_by(id: params[:user_id]).properties	
@@ -14,7 +16,7 @@ class PropertiesController < ApplicationController
 	end
 	
 	def create
-		@property = Property.new(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: :image))
+		@property = current_user.properties.new(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: :image))
 		@property.save
 
 		respond_to do |format|

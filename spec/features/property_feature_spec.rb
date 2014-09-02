@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Property' do
-	
+
 	context 'without nothing in the DB' do
 
 		it 'shows a message' do
