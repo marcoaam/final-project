@@ -14,11 +14,14 @@
  *= require_self
  */
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 /* Colours*/
 
 /* Index Layout */
 #home_container {
-	/*background: url(Room_A.jpg) no-repeat;*/
+	background: url(Room_A.jpg) no-repeat;
 	height: 690px;
 }
 
