@@ -1,5 +1,5 @@
 <header>
-	<% if user_signed_in? %> root
+	<% if user_signed_in? %>
 		<nav>
 			<ul>
 				<li> 
@@ -7,6 +7,9 @@
 				</li>
 				<li> 
 					<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+				</li>
+				<li>
+					<%= link_to 'My properties', user_properties_path(current_user) %>
 				</li>
 			</ul>
 		</nav>

@@ -1,5 +1,10 @@
 class Property < ActiveRecord::Base
 
+	geocoded_by :full_address
+	after_validation :geocode, :if => :address_changed?
+
+	belongs_to :user
+
 	has_many :rooms
 
 	has_many :pictures, :dependent => :destroy
@@ -14,5 +19,8 @@ class Property < ActiveRecord::Base
 		end 
 	end
 
+	def full_address
+		"#{self.address},#{self.city},#{self.postcode}"
+	end
 
 end

@@ -1,6 +1,7 @@
 require 'rails_helper'
 
-describe 'menu display' do
+describe 'User menu display' do
+
 	context 'if logged out' do
 
 		it 'display sign in' do
@@ -16,13 +17,11 @@ describe 'menu display' do
 	end
 
 	context 'if logged in' do
+
 		before(:each) do
-		alex = User.create(
-			 email: "a@a.com",
-			 password: "123456789",
-			 password_confirmation: "123456789")
-		login_as("a@a.com", "123456789")
-	end
+			alex = create(:user)
+			login_as alex
+		end
 	
 		it 'display sign out' do
 			visit('/')

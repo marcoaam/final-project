@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
-  
- devise_for :users
- root to: "home#index"
-resources :properties do
- resources :pictures
-end
+
+	root to: "home#index"
+
+	devise_for :users
+	
+	resources :user do
+		resources :properties
+	end
+
+	resources :properties do
+ 		resources :pictures
+	end
+	
+	resources :properties
+
 end

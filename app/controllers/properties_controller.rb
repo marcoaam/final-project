@@ -1,12 +1,16 @@
 class PropertiesController < ApplicationController
 
 	def index
-		@properties = Property.all
+		if params[:user_id]
+			@properties = User.find_by(id: params[:user_id]).properties	
+		else
+			@properties = finding_nearby
+		end
 	end
 
 	def new
 		@property = Property.new
-		2.times { @property.pictures.build }
+		3.times { @property.pictures.build }
 	end
 	
 	def create
@@ -50,4 +54,8 @@ class PropertiesController < ApplicationController
 		@property = Property.find(params[:id])
 	end
 
+	def finding_nearby
+		Property.near(params[:search_bar],2)
+	end
+	
 end

@@ -19,6 +19,9 @@ RSpec.configure do |config|
 
   config.infer_spec_type_from_file_location!
 
+  config.include Warden::Test::Helpers
+  Warden.test_mode!
+
   config.include FactoryGirl::Syntax::Methods
 
   config.before(:suite) do
@@ -39,6 +42,34 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
+  end
+
+  config.before(:all) do 
+  Geocoder.configure(:lookup => :test)
+
+  Geocoder::Lookup::Test.add_stub(
+  "25 city road,London,EC1Y 1AA", [
+    {
+      'latitude'     => 51.5229965,
+      'longitude'    => -0.0871299,
+      'address'      => '25 City Road, London EC1Y 1AA, UK',
+      'country'      => 'United Kingdom',
+      'country_code' => 'UK'
+    }
+   ]
+  )
+
+  Geocoder::Lookup::Test.add_stub(
+  "Victoria St,London,SW1E 5ND", [
+    {
+      'latitude'     => 51.4935138,
+      'longitude'    => -0.1421816,
+      'address'      => 'Victoria, London SW1E 5ND, UK',
+      'country'      => 'United Kingdom',
+      'country_code' => 'UK'
+    }
+   ]
+  )
   end
 
 end
