@@ -1,5 +1,11 @@
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
 <% if @properties.any? %>
 	<% @properties.each do |property| %> 
+	
+</div>
 		<%= link_to property.title, property_path(property) %>
 		<%= link_to "Edit", edit_property_path(property) %>
 		<%= link_to "Delete", property_path(property), method: :delete %>

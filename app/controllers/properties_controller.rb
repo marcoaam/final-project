@@ -1,6 +1,8 @@
 class PropertiesController < ApplicationController
 
 	def index
+	
+		gmap_caller
 		if params[:user_id]
 			@properties = User.find_by(id: params[:user_id]).properties	
 		else
@@ -57,5 +59,19 @@ class PropertiesController < ApplicationController
 	def finding_nearby
 		Property.near(params[:search_bar],2)
 	end
+
+	private
+
+	def gmap_caller
+
+		@properties = finding_nearby
+			@hash = Gmaps4rails.build_markers(@properties) do |property, marker|
+			  marker.lat property.latitude
+			  marker.lng property.longitude
+			end
+
+	end
+
 	
+
 end
