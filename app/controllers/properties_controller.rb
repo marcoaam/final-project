@@ -1,5 +1,7 @@
 class PropertiesController < ApplicationController
 
+	before_action :authenticate_user!, except: [:index, :show]
+
 	def index
 	
 		gmap_caller
@@ -16,7 +18,7 @@ class PropertiesController < ApplicationController
 	end
 	
 	def create
-		@property = Property.new(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: :image))
+		@property = current_user.properties.new(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: :image))
 		@property.save
 
 		respond_to do |format|
@@ -31,7 +33,7 @@ class PropertiesController < ApplicationController
 			else
 				format.html { render action: "new"}
 				format.json { render json: @property.errors, status: :unprocessable_entity }
-			redirect_to '/properties'
+				redirect_to '/properties'
 			end
 		end	
 	end

@@ -17,8 +17,9 @@ require 'rails_helper'
 		context ' gives you results of the search'
 
 		before(:each) do
-			Property.create(title: 'Great flat near old street', address: '25 city road', city: 'London', postcode: 'EC1Y 1AA')
-			Property.create(title: 'London Victoria', address: 'Victoria St', city: 'London', postcode: 'SW1E 5ND')
+			john = create(:user)
+			john.properties << create(:makers_academy)
+			john.properties << create(:london_victoria)
 		end
 		
 		it 'if the user inputs an address' do

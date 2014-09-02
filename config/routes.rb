@@ -6,10 +6,12 @@ Rails.application.routes.draw do
 	
 	resources :user do
 		resources :properties
+		resources :reviews
 	end
 
 	resources :properties do
  		resources :pictures
+ 		resources :reviews
 	end
 	
 	resources :properties
