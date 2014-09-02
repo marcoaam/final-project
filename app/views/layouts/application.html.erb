@@ -13,9 +13,11 @@
 
 </nav>
 </section> 
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
+ <%= render "home/slider" %>
    <section class="container">
+
+      <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
 	<%= yield %>
 </section> 
 <script src="//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" type="text/javascript"></script>
