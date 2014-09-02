@@ -2,18 +2,23 @@
   <div class='col-md-7 col-lg-offset-2' id="map" style='height: 400px;'></div>
 </div>
 
+<div class="search_bar_property col-md-4" >
+	<%= render "home/search_bar" %>
+
 <% if @properties.any? %>
 	<% @properties.each do |property| %> 
-	
-</div>
-		<%= link_to property.title, property_path(property) %>
-		<%= "Posted by - #{property.user.username}" %>
-		<%= link_to "Edit", edit_property_path(property) %>
-		<%= link_to "Delete", property_path(property), method: :delete %>
-	<% end %>
+	<div class = 'property_list'>
+			<%= link_to property.title, property_path(property) %>
+			<%= "Posted by - #{property.user.username}" %>
+			<%= link_to "Edit", edit_property_path(property) %>
+			<%= link_to "Delete", property_path(property), method: :delete %>
+	</div><!--end of property_list-->
+		<% end %>
 <%else%>
 	<p>No properties have been added.</p>
 <%end%>
+
+</div>
 
 
 

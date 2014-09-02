@@ -1,8 +1,24 @@
 // Place all the styles related to the properties controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.search_bar_property #search_bar {
+
+
+}
+
 .property_list {
-background: #FFFFFF;
--moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
-box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
+	color: 4A4A4A;
+	margin-top: 5px;
+	height:45px;
+	padding: 6px 3px; 
+	-moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
+	box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
+	border-radius: 8px;
+	/* Rectangle 4: */
+	background:  whitesmoke;
 } 
+
+a{
+	color: 4A4A4A;
+}
