@@ -20,8 +20,23 @@
 /* Colours*/
 
 /* Index Layout */
-#home_container {
-	background: url(Room_A.jpg) no-repeat;
-	height: 690px;
+
+#header-home {
+	float: left;
+}
+
+.header-layout {
+
+	float: right;
+	display: block;
+
+	ul {
+		list-style-type: none;
+	}
+
+	nav li {
+		display: inline-block;
+	}
+
 }
 
