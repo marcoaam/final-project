@@ -7,6 +7,8 @@ class Property < ActiveRecord::Base
 
 	has_many :rooms
 
+	has_many :reviews
+
 	has_many :pictures, :dependent => :destroy
 	accepts_nested_attributes_for :pictures
 	

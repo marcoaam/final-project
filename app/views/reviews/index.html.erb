@@ -1,0 +1,26 @@
+<% if @reviews.any? %>
+	<% @reviews.each do |review| %>
+		<%= review.thoughts %>
+	<% end %>
+<% else %>
+	No reviews have been added.
+<% end %>
+<% if @property %>
+	<%= form_for [@property, @review] do |f| %>
+
+		<%= f.label :thoughts %>
+		<%= f.text_field :thoughts %>
+
+		<%= f.submit 'Leave review' %>
+
+	<% end %>
+<% else %>
+	<%= form_for [@user, @review] do |f| %>
+
+		<%= f.label :thoughts %>
+		<%= f.text_field :thoughts %>
+
+		<%= f.submit 'Leave review' %>
+
+	<% end %>
+<% end %>

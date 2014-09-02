@@ -86,14 +86,13 @@ describe 'Property' do
 
 		it 'can show the pictures' do
 			add_many_images
-			visit('/properties')
 			search_home_for("25 city road,London,EC1Y 1AA")
 			click_link('title')
 			expect(page).to have_css('.image-show')
 		end
 
 		it 'can delete a property' do
-			visit('/properties')
+			visit('/')
 			click_link 'My properties'
 			expect(page).to have_content 'Great flat near old street'
 			click_link('Delete')

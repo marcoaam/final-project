@@ -12,4 +12,5 @@
 				room N°<%= room.number %>
 				<%= room.description %>
 			<% end %>
-			<%= "Posted by - #{@property.user.username}" %>
+			Posted by - <%= link_to "#{@property.user.username}", user_path(@property.user) %>
+			<%= link_to 'All reviews', property_reviews_path(@property) %>
