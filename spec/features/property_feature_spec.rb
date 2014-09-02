@@ -1,12 +1,8 @@
 require 'rails_helper'
 
 describe 'Property' do
-
-	before(:each) do
-		property = Property.create(title: 'Great flat near old street')
-	end
-
-	context 'without nothin in the DB' do
+	
+	context 'without nothing in the DB' do
 
 		it 'shows a message' do
 			visit '/properties'
@@ -55,46 +51,46 @@ describe 'Property' do
 			expect(page).to have_content 'New flat'
 		end
 
-	it 'can upload one picture' do
-		visit('properties/new')
-		fill_in :property_title, with: "New flat"
-		fill_in :property_address, with: "25 city road"
-		fill_in :property_postcode, with: "EC1Y 1AA"
-		fill_in :property_city, with: "London"
-		fill_in :property_description, with: "New one"
-		attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-1.jpg')
-		click_button 'Submit'
-		expect(current_path).to eq('/properties/11')
-	end
+		it 'can upload one picture' do
+			visit('properties/new')
+			fill_in :property_title, with: "New flat"
+			fill_in :property_address, with: "25 city road"
+			fill_in :property_postcode, with: "EC1Y 1AA"
+			fill_in :property_city, with: "London"
+			fill_in :property_description, with: "New one"
+			attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-1.jpg')
+			click_button 'Submit'
+			expect(current_path).to eq('/properties/6')
+		end
 
-	it 'can show the picture' do
-		add_image
-		search_home_for("25 city road,London,EC1Y 1AA")
-		click_link('title')
-		expect(page).to have_css('.image-show')
-	end
+		it 'can show the picture' do
+			add_image
+			search_home_for("25 city road,London,EC1Y 1AA")
+			click_link('title')
+			expect(page).to have_css('.image-show')
+		end
 
-	it 'can upload many pictures' do
-		visit('properties/new')
-		fill_in :property_title, with: "New flat"
-		fill_in :property_address, with: "25 city road"
-		fill_in :property_postcode, with: "EC1Y 1AA"
-		fill_in :property_city, with: "London"
-		fill_in :property_description, with: "New one"
-		attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-1.jpg') 
-		attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-2.jpg') 
-		attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-3.jpg') 
-		click_button 'Submit'
-		expect(current_path).to eq('/properties/17')
-	end
+		it 'can upload many pictures' do
+			visit('properties/new')
+			fill_in :property_title, with: "New flat"
+			fill_in :property_address, with: "25 city road"
+			fill_in :property_postcode, with: "EC1Y 1AA"
+			fill_in :property_city, with: "London"
+			fill_in :property_description, with: "New one"
+			attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-1.jpg') 
+			attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-2.jpg') 
+			attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-3.jpg') 
+			click_button 'Submit'
+			expect(current_path).to eq('/properties/10')
+		end
 
-	it 'can show the pictures' do
-		add_many_images
-		visit('/properties')
-		search_home_for("25 city road,London,EC1Y 1AA")
-		click_link('title')
-		expect(page).to have_css('.image-show')
-	end
+		it 'can show the pictures' do
+			add_many_images
+			visit('/properties')
+			search_home_for("25 city road,London,EC1Y 1AA")
+			click_link('title')
+			expect(page).to have_css('.image-show')
+		end
 
 		it 'can delete a property' do
 			visit('/properties')

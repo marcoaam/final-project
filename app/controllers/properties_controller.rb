@@ -29,7 +29,7 @@ class PropertiesController < ApplicationController
 			else
 				format.html { render action: "new"}
 				format.json { render json: @property.errors, status: :unprocessable_entity }
-			redirect_to '/properties'
+				redirect_to '/properties'
 			end
 		end	
 	end
