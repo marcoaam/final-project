@@ -60,7 +60,7 @@ describe 'Property' do
 			fill_in :property_description, with: "New one"
 			attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-1.jpg')
 			click_button 'Submit'
-			expect(current_path).to eq('/properties/6')
+			expect(current_path).to eq('/properties/5')
 		end
 
 		it 'can show the picture' do
@@ -81,7 +81,7 @@ describe 'Property' do
 			attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-2.jpg') 
 			attach_file 'property_pictures_attributes_0_image', Rails.root.join('spec/images/Bob_razowski-3.jpg') 
 			click_button 'Submit'
-			expect(current_path).to eq('/properties/10')
+			expect(current_path).to eq('/properties/9')
 		end
 
 		it 'can show the pictures' do
