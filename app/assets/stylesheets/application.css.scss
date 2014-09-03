@@ -65,7 +65,7 @@ body {
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
-	margin-left: -249px;
+	margin-left: -228px;
 }
 
 .nav-tabs {
@@ -88,4 +88,18 @@ body {
 img.image-show {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.flat-partial {
+float: left;
+position: absolute;
+margin-left: -50%;
+border: 1px solid red;
+}
+
+.flat-review-partial {
+	float: right;
+	position: absolute;
+	margin-right: -50%;
+	border: 1px solid blue;
 }

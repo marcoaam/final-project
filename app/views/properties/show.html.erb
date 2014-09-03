@@ -1,40 +1,45 @@
- <%= render "properties/slider" %>
+<%= render "properties/slider" %>
+<article class="row">
 
- <%= @property.title %>
-<div class="row">
- <div class="toggle-vertical col-xs-6 col-md-offset-0">
+	<section class="toggle-vertical col-xs-6 col-md-offset-0">
+	 	<ul class="nav nav-tabs" role="tablist">
+		  <li class="active"><a href="#flat-tab" role="tab" data-toggle="tab">Flat</a></li>
+		  <li><a href="#landlord-tab" role="tab" data-toggle="tab">Landlord</a></li>
 
- 	<ul class="nav nav-tabs" role="tablist">
-  <li class="active"><a href="#flat-tab" role="tab" data-toggle="tab">Flat</a></li>
-  <li><a href="#landlord-tab" role="tab" data-toggle="tab">Landlord</a></li>
-  <% if @property.rooms.any?  %>
-  	<%= @property.rooms.each do |room| %>
-  <li><a href="#room-tab" role="tab" data-toggle="tab">Room <%= room.number %></a></li>
- <% end %>
-  <% end %>
-</ul>
-</div>
-<div class="col-xs-6">
-<div class="tab-content">
-  <div class="tab-pane active" id="flat-tab"><%= render "properties/flat" %></div>
-  <div class="tab-pane" id="landlord-tab">LAAAANDLOOOOOORDDDD</div>
-  <% if @property.rooms.any?  %>
-  	<%= @property.rooms.each do |room| %>
-  <div class="tab-pane" id="room-tab">ROOOOOOOOM <%= room.number %></div>
-  <% end %>
-  <% end %>
+		 		<% if @property.rooms.any?  %>
+		  		<% @property.rooms.each do |room| %>
+		  			<li><a href="#room-tab" role="tab" data-toggle="tab">Room <%= room.number %></a></li>
+					<% end %>
+		 		<% end %>
 
-</div>
-</div>
-	
+		</ul>
+	</section>
 
-</div>
+	<article class="col-xs-6">
+		<section class="tab-content">
 
-		<%= @property.rooms.count %> rooms
+	  	<div class="tab-pane active" id="flat-tab">
+	  		<div class="flat-partial">
+		  		<%= render "properties/flat" %>
+		  	</div>
+		  	<div class="flat-review-partial">
+		  		<%= render "properties/flat_reviews" %>
+				</div>
+	  	</div>
 
-			<% @property.rooms.each do |room| %>
-				room N°<%= room.number %>
-				<%= room.description %>
-			<% end %>
-			Posted by - <%= link_to "#{@property.user.username}", user_path(@property.user) %>
-			<%= link_to 'All reviews', property_reviews_path(@property) %>
+	  	<div class="tab-pane" id="landlord-tab">
+	  		<%= render "properties/landlord" %>
+	  		<%= render "properties/landlord_reviews"%>
+	  	</div>
+
+	  			<% if @property.rooms.any?  %>
+	  				<% @property.rooms.each do |room| %>
+	  					<div class="tab-pane" id="room-tab">
+	  						<%= render partial: "properties/room", locals: {room: room} %>
+	  					</div>
+	  				<% end %>
+	  			<% end %>
+
+		</section>
+	</article>
+</article>
