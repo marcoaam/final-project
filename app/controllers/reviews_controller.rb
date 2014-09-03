@@ -14,8 +14,10 @@ class ReviewsController < ApplicationController
 	def create
 		if params[:property_id]
 			property = Property.find(params[:property_id])
-			property.reviews.create(params[:review].permit(:thoughts))
+			property.reviews.create(params[:review].permit(:thoughts, :rating))
+
 		else
+			raise 'hell'
 			user = User.find(params[:user_id])
 			user.reviews.create(params[:review].permit(:thoughts))
 		end

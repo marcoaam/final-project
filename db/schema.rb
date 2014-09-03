@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140902122721) do
+ActiveRecord::Schema.define(version: 20140903101144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20140902122721) do
     t.datetime "updated_at"
     t.integer  "property_id"
     t.integer  "user_id"
+    t.integer  "rating"
   end
 
   add_index "reviews", ["property_id"], name: "index_reviews_on_property_id", using: :btree
