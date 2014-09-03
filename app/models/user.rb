@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
 
   has_many :properties
 
-  has_many :reviews
+  has_many :reviews, as: :imageable
+
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

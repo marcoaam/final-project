@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe 'Reviews' do
+	context 'without reviews' do
 
 	before(:each) do
 	  john = create(:user)
@@ -43,5 +44,44 @@ describe 'Reviews' do
 		fill_in 'Thoughts', with: 'Great landlord'
 		click_button 'Leave review'
 		expect(page).to have_content 'Great landlord'
+	end
+
+end
+
+
+	context 'with one review' do 
+
+		before(:each) do
+		  john = create(:user)
+		  property = create(:makers_academy)
+			john.properties << property
+			property.reviews << create(:review)
+			login_as john
+		end
+
+		it 'displays the message 1 review' do
+		 visit('/')
+		 search_home_for('25 city road,London,EC1Y 1AA')
+		 expect(page).to have_content("1 review")
+		end
+
+	end
+
+	context 'with many reviews' do
+
+			before(:each) do
+			  john = create(:user)
+			  property = create(:makers_academy)
+				john.properties << property
+				3.times { property.reviews << create(:review) }
+				login_as john
+			end
+
+			it 'displays the message 3 reviews' do
+			 visit('/')
+			 search_home_for('25 city road,London,EC1Y 1AA')
+			 expect(page).to have_content("3 reviews")
+			end
+
 	end
 end	

@@ -9,6 +9,7 @@
 	<% @properties.each do |property| %> 
 	<div class = 'property_list'>
 			<%= link_to property.title, property_path(property) %>
+			<%= property.reviews.count %> <%= property.pluralized_review %>
 			<%= "Posted by - #{property.user.username}" %>
 			<%= link_to "Edit", edit_property_path(property) %>
 			<%= link_to "Delete", property_path(property), method: :delete %>

@@ -3,5 +3,6 @@
 FactoryGirl.define do
   factory :review do
     thoughts "MyText"
+    rating 	 "2"
   end
 end

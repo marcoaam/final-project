@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Bob/Desktop/Development/get_a_room/config/environment.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/application.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/application.rb": [
         1,
         null,
         null,
@@ -40,13 +40,13 @@
         null,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/boot.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/environments/test.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/environments/test.rb": [
         1,
         null,
         null,
@@ -87,7 +87,7 @@
         null,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/assets.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -97,7 +97,7 @@
         null,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/backtrace_silencers.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -106,12 +106,12 @@
         null,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/cookies_serializer.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/devise.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -372,13 +372,13 @@
         null,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/filter_parameter_logging.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/inflections.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -396,18 +396,18 @@
         null,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/mime_types.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/session_store.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/initializers/wrap_parameters.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -423,175 +423,290 @@
         null,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/config/routes.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/app/models/property.rb": [
         1,
         null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/models/user.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/helpers/home_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/helpers/properties_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/controllers/home_controller.rb": [
-        1,
-        1,
-        4,
-        null,
-        null
-      ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/controllers/application_controller.rb": [
         1,
         1,
         null,
         1,
         null,
         1,
-        2,
-        3,
-        2,
         null,
-        null
-      ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/controllers/properties_controller.rb": [
         1,
         null,
         1,
-        10,
+        1,
+        null,
+        1,
         null,
         null,
         1,
         7,
-        21,
-        null,
-        null,
-        1,
-        6,
-        6,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        6,
-        6,
-        6,
-        0,
-        0,
-        null,
-        null,
-        12,
-        6,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        10,
-        null,
-        null,
-        null
-      ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/models/picture.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/models/property.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        6,
         5,
         null,
         null,
         null,
+        1,
+        42,
+        null,
+        null,
+        null,
+        1,
+        22,
+        18,
+        null,
+        4,
+        null,
+        null,
+        null,
+        1,
+        23,
+        null,
+        null,
         null,
         null
       ],
-      "/Users/Bob/Desktop/Development/get_a_room/app/models/room.rb": [
+      "/Users/jeantroiani/Desktop/get_a_room/config/routes.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/models/user.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/properties_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/reviews_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/user_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/home_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        4,
+        4,
+        3,
+        null,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/properties_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        26,
+        9,
+        9,
+        null,
+        17,
+        17,
+        null,
+        null,
+        null,
+        1,
+        8,
+        32,
+        null,
+        null,
+        1,
+        7,
+        7,
+        null,
+        7,
+        7,
+        7,
+        0,
+        0,
+        null,
+        null,
+        14,
+        7,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        21,
+        21,
+        21,
+        null,
+        null,
+        1,
+        17,
+        null,
+        null,
+        1,
+        null,
+        1,
+        26,
+        21,
+        21,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/reviews_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        4,
+        4,
+        4,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        4,
+        null,
+        null,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/user_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/models/picture.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/models/review.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/jeantroiani/Desktop/get_a_room/app/models/room.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1409644097
+    "timestamp": 1409766983
   }
 }

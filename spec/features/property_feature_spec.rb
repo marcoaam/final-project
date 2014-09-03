@@ -101,5 +101,18 @@ describe 'Property' do
 		end
 
 	end
+
+	context 'displays review material' do
+		it 'show 3 reviews' do
+		
+		end
+	end
 	
 end
+
+
+
+
+
+
+

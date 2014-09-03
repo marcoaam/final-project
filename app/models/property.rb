@@ -7,7 +7,7 @@ class Property < ActiveRecord::Base
 
 	has_many :rooms
 
-	has_many :reviews
+	has_many :reviews, as: :imageable
 
 	has_many :pictures, :dependent => :destroy
 	accepts_nested_attributes_for :pictures
@@ -25,12 +25,18 @@ class Property < ActiveRecord::Base
 		"#{self.address},#{self.city},#{self.postcode}"
 	end
 
+
 	def average_rating
 		if self.reviews.empty?
 			"No reviews have been added."
 		else 
 			reviews.average(:rating)
 		end
+	end
+
+	def pluralized_review
+		self.reviews.count < 2 ? "review" : "reviews"
+
 	end
 
 end
