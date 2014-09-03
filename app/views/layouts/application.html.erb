@@ -15,7 +15,11 @@
 </section> 
    <section class="container">
 
-      <p class="notice"><%= notice %></p>
+    <%= render "user/sign_up_form" %>
+
+    <%= render "user/sign_in_form" %>
+
+   <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
 	<%= yield %>
 </section> 
