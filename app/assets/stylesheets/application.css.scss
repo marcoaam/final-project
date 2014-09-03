@@ -60,3 +60,32 @@ body {
 	background-size: 100%;
 	background-position-y: -40px;
 }
+
+.toggle-vertical {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: -249px;
+}
+
+.nav-tabs {
+	position: absolute;
+
+	li {
+		display: block;
+		float: none;
+	}
+
+}
+
+.carousel {
+	position: relative;
+	margin-top: -82px;
+	margin-left: -232px;
+	width: 141%;
+}
+
+img.image-show {
+	margin-left: auto;
+	margin-right: auto;
+}

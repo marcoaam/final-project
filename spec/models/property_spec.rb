@@ -18,4 +18,5 @@ RSpec.describe Property, :type => :model do
 		2.times { property.reviews << create(:review) }
 		expect(property.pluralized_review).to eq 'reviews'		
 	end
+	
 end
