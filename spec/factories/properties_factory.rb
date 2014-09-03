@@ -6,6 +6,7 @@ FactoryGirl.define do
     city 				'London'
     postcode	 	'EC1Y 1AA'
     description 'Makers Academy'
+    id          '21'
   end
 
   factory :london_victoria, class: Property do

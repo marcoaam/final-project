@@ -1,4 +1,3 @@
 class Review < ActiveRecord::Base
-	belongs_to :property
-	belongs_to :user
+	belongs_to :imageable, polymorphic: true
 end
