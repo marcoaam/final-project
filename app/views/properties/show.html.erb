@@ -3,12 +3,17 @@
 
 	<section class="toggle-vertical col-xs-6 col-md-offset-0">
 	 	<ul class="nav nav-tabs col-xs-6" role="tablist">
-		  <li class="active"><a href="#flat-tab" role="tab" data-toggle="tab">Flat</a></li>
+		  <li class="active">
+		  	<a href="#flat-tab" role="tab" data-toggle="tab">
+					<h4><%= @property.title %></h4>
+					<h6><%= @property.address %></h6>
+				</a>
+			</li>
 		  <li><a href="#landlord-tab" role="tab" data-toggle="tab">Landlord</a></li>
 
 		 		<% if @property.rooms.any?  %>
 		  		<% @property.rooms.each do |room| %>
-		  			<li><a href="#room-tab" role="tab" data-toggle="tab">Room <%= room.number %></a></li>
+		  			<li><a href="#room-tab" role="tab" data-toggle="tab" data-room="room-<%= room.number %>">Room <%= room.number %></a></li>
 					<% end %>
 		 		<% end %>
 
@@ -16,7 +21,7 @@
 	</section>
 
 	<article class="col-xs-6">
-		<section class="tab-content">
+		<nav class="tab-content">
 
 	  	<ul class="tab-pane active" id="flat-tab">
 	  		<li class="flat-partial">
@@ -33,15 +38,20 @@
 	  		<%= render "properties/landlord_reviews"%>
 	  	</ul>
 
-	  			<% if @property.rooms.any?  %>
-	  				<% @property.rooms.each do |room| %>
-	  					<ul class="tab-pane" id="room-tab">
-	  						<li><%= render partial: "properties/room", locals: {room: room} %></li>
-	  					</ul>
-	  				<% end %>
-	  			<% end %>
+	  	<ul class="tab-pane" id="room-tab">
+  			<% if @property.rooms.any?  %>
+  				<% @property.rooms.each do |room| %>
+  					<li data-room="room-<%= room.number %>"> 
+  							<div>
+  								room N°<%= room.number %>
+									<%= room.description %>
+								</div>
+  					</li>
+  				<% end %>
+  			<% end %>
+	  	</ul>
 
-		</section>
+		</nav>
 	</article>
 </article>
 

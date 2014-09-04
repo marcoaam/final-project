@@ -79,6 +79,7 @@ border-color: #e7e7e7;
 
 }
 
+/*
 .carousel {
 	position: relative;
 	margin-top: -82px;
@@ -92,15 +93,20 @@ img.image-show {
 }
 
 .flat-partial {
-float: left;
-position: absolute;
-margin-left: -50%;
-border: 1px solid red;
+	float: left;
+	position: absolute;
+	margin-left: -58%;
+	border: 1px solid red;
+	list-style-type: none;
+	width: 100%;
 }
 
 .flat-review-partial {
 	float: right;
 	position: absolute;
-	margin-right: -50%;
+	margin-right: -77%;
 	border: 1px solid blue;
+	margin-left: 44%;
+	list-style-type: none;
 }
+*/
