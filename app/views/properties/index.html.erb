@@ -1,20 +1,23 @@
-<div style='width: 800px;'>
-  <div class='col-md-7 col-lg-offset-2' id="map" style='height: 400px;'></div>
-</div>
+<div class='col-md-6' id="map"></div>
 
-<div class="search_bar_property col-md-4" >
-	<%= render "home/search_bar" %>
+
+<div class="col-md-6 property_list_container" >
+	<form method='GET' action='/properties' >
+	<input type="text" name="search_bar" id="index_search_bar" placeholder='Type location' class="col-xs-6 .col-sm-4" required>
+	<input type="submit" value="Search" >
+</form>
 
 <% if @properties.any? %>
-	<% @properties.each do |property| %> 
 	<div class = 'property_list'>
+	<% @properties.each do |property| %> 
 			<%= link_to property.title, property_path(property) %>
 			<%= property.reviews.count %> <%= property.pluralized_review %>
 			<%= "Posted by - #{property.user.username}" %>
 			<%= link_to "Edit", edit_property_path(property) %>
 			<%= link_to "Delete", property_path(property), method: :delete %>
-	</div><!--end of property_list-->
 		<% end %>
+		<hr>
+	</div><!--end of property_list-->
 <%else%>
 	<p>No properties have been added.</p>
 <%end%>

@@ -448,13 +448,13 @@
         null,
         null,
         1,
-        42,
+        45,
         null,
         null,
         null,
         1,
-        22,
-        18,
+        24,
+        20,
         null,
         4,
         null,
@@ -614,9 +614,9 @@
         null,
         null,
         1,
-        21,
-        21,
-        21,
+        23,
+        23,
+        23,
         null,
         null,
         1,
@@ -683,7 +683,6 @@
         null,
         null,
         null,
-        null,
         1,
         null,
         null,
@@ -692,12 +691,9 @@
       "/Users/jeantroiani/Desktop/get_a_room/app/models/review.rb": [
         1,
         null,
-        null,
         1,
         null,
         1,
-        null,
-        null,
         null,
         null
       ],
@@ -707,6 +703,14 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1409837109
+=======
+<<<<<<< HEAD
+    "timestamp": 1409834010
+=======
+    "timestamp": 1409831882
+>>>>>>> 8d0b52e70ba86e22635e31d82fc617cb9cd1d497
+>>>>>>> 4f5cc1ecde9d28c5f380dd814620dacc24e8abf2
   }
 }
