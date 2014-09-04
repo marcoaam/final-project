@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20140903101548) do
     t.datetime "updated_at"
     t.integer  "imageable_id"
     t.string   "imageable_type"
+    t.integer  "rating"
   end
 
   create_table "rooms", force: true do |t|

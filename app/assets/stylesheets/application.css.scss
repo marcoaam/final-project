@@ -21,6 +21,13 @@
 
 /* Index Layout */
 
+body {
+	/*background: url(' https://s3.amazonaws.com/getaroom/background.jpg') no-repeat center center; */
+	background-size: 100%;
+	background-position-y: -40px;
+}
+
+
 #header-home {
 	float: left;
 }
@@ -53,12 +60,6 @@
 .navbar-default {
 background-color: rgba(255, 255, 255, 0.6);
 border-color: #e7e7e7;
-}
-
-body {
-	background: url(' https://s3.amazonaws.com/getaroom/background.jpg') no-repeat center center;
-	background-size: 100%;
-	background-position-y: -40px;
 }
 
 .toggle-vertical {

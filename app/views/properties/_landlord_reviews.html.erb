@@ -1,0 +1,7 @@
+
+<% if @reviews.any? %>
+	<% @property.reviews.each do |review| %>
+		<%= review.thoughts %>
+		<%= review.rating %>
+	<%end%>
+<% end %>

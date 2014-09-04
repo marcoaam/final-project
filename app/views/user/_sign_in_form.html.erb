@@ -1,0 +1,29 @@
+<div class="modal fade" id="sign_in_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Sign in</h4>
+      </div>
+      <div class="modal-body">
+
+        <%= form_for(User.new, as: :user, url: session_path(:user), html: { class: 'form-signin', role: 'form' }) do |f| %>
+          
+        <div><%= f.label :login %><br />
+          <%= f.text_field :login, class: 'form-control' %></div>
+
+        <div><%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control' %></div>
+
+        <div><%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %></div>
+
+      </div>
+      <div class="modal-footer">
+        <%= f.submit "login", class: "btn btn-lg btn-primary btn-block"%>
+        <% end %>
+        
+      </div>
+    </div>
+  </div>
+</div>

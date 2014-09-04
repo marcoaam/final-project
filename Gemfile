@@ -12,6 +12,7 @@ group :development, :test do
 	gem 'warden'
 	gem 'byebug'
 	gem 'poltergeist'
+	gem 'rspec-collection_matchers'
 end
 
 gem 'bootstrap-sass', '~> 3.2.0'
@@ -23,6 +24,7 @@ gem 'gmaps4rails'
 gem 'aws-sdk'
 gem "paperclip", "~> 4.2"
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+
 
 gem 'rails', '4.1.4'
 gem 'pg'

@@ -1,0 +1,27 @@
+<%= @property.user  %>
+<%= @property.average_rating  %>
+
+<div class='review'>
+	<%= form_for [@property, @review] do |f| %>
+
+		<%= f.label        :thoughts              %>
+		<%= f.text_field   :thoughts              %>
+
+		<%= f.radio_button :rating,   "1" 				%>
+		<%= label_tag			 :rating_1, "Poor" 		  %>
+
+		<%= f.radio_button :rating,   "2" 				%>
+		<%= label_tag			 :rating_2, "Fair" 		  %>
+
+		<%= f.radio_button :rating,   "3" 				%>
+		<%= label_tag			 :rating_3, "Good" 		  %>
+
+		<%= f.radio_button :rating,   "4" 				%>
+		<%= label_tag			 :rating_4, "Very Good" %>
+
+		<%= f.radio_button :rating,   "5" 				%>
+		<%= label_tag			 :rating_5, "Excellent" %>
+
+		<%= f.submit 'Leave review' %>
+	<% end %>
+</div>

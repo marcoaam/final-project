@@ -2,7 +2,7 @@
 <article class="row">
 
 	<section class="toggle-vertical col-xs-6 col-md-offset-0">
-	 	<ul class="nav nav-tabs" role="tablist">
+	 	<ul class="nav nav-tabs col-xs-6" role="tablist">
 		  <li class="active"><a href="#flat-tab" role="tab" data-toggle="tab">Flat</a></li>
 		  <li><a href="#landlord-tab" role="tab" data-toggle="tab">Landlord</a></li>
 
@@ -18,28 +18,33 @@
 	<article class="col-xs-6">
 		<section class="tab-content">
 
-	  	<div class="tab-pane active" id="flat-tab">
-	  		<div class="flat-partial">
+	  	<ul class="tab-pane active" id="flat-tab">
+	  		<li class="flat-partial">
 		  		<%= render "properties/flat" %>
-		  	</div>
-		  	<div class="flat-review-partial">
-		  		<%= render "properties/flat_reviews" %>
-				</div>
-	  	</div>
+		  	</li>
 
-	  	<div class="tab-pane" id="landlord-tab">
+		  	<li class="flat-review-partial">
+		  		<%= render "properties/flat_reviews" %>
+				</li>
+	  	</ul>
+
+	  	<ul class="tab-pane" id="landlord-tab">
 	  		<%= render "properties/landlord" %>
 	  		<%= render "properties/landlord_reviews"%>
-	  	</div>
+	  	</ul>
 
 	  			<% if @property.rooms.any?  %>
 	  				<% @property.rooms.each do |room| %>
-	  					<div class="tab-pane" id="room-tab">
-	  						<%= render partial: "properties/room", locals: {room: room} %>
-	  					</div>
+	  					<ul class="tab-pane" id="room-tab">
+	  						<li><%= render partial: "properties/room", locals: {room: room} %></li>
+	  					</ul>
 	  				<% end %>
 	  			<% end %>
 
 		</section>
 	</article>
 </article>
+
+
+
+
