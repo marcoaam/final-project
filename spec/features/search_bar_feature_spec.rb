@@ -4,7 +4,7 @@ require 'rails_helper'
 	
 		it 'show up when visiting the root' do 
 			visit('/')
-			expect(page).to have_css('#search_bar')
+			expect(page).to have_css('#home_search_bar')
 		end
 
 		it 'can submit a search by location' do
