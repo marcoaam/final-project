@@ -8,8 +8,8 @@
 </form>
 
 <% if @properties.any? %>
-	<% @properties.each do |property| %> 
 	<div class = 'property_list'>
+	<% @properties.each do |property| %> 
 			<%= link_to property.title, property_path(property) %>
 			<%= property.reviews.count %> <%= property.pluralized_review %>
 			<%= "Posted by - #{property.user.username}" %>
