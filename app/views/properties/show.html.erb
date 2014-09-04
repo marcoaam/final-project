@@ -1,8 +1,8 @@
 <%= render "properties/slider" %>
 <article class="row">
 
-	<section class="toggle-vertical col-xs-6 col-md-offset-0">
-	 	<ul class="nav nav-tabs col-xs-6" role="tablist">
+	<section class="toggle-vertical col-md-4">
+	 	<ul class="nav nav-tabs" role="tablist">
 		  <li class="active">
 		  	<a href="#flat-tab" role="tab" data-toggle="tab">
 					<h4><%= @property.title %></h4>
@@ -20,15 +20,15 @@
 		</ul>
 	</section>
 
-	<article class="col-xs-6">
+	<article class="col-md-8">
 		<nav class="tab-content">
 
 	  	<ul class="tab-pane active" id="flat-tab">
-	  		<li class="flat-partial">
+	  		<li class="flat-partial col-md-6">
 		  		<%= render "properties/flat" %>
 		  	</li>
 
-		  	<li class="flat-review-partial">
+		  	<li class="flat-review-partial col-md-6">
 		  		<%= render "properties/flat_reviews" %>
 				</li>
 	  	</ul>
