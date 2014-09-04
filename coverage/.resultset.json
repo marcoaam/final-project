@@ -692,12 +692,9 @@
       "/Users/user/Documents/MA/get_a_room/app/models/review.rb": [
         1,
         null,
-        null,
         1,
         null,
         1,
-        null,
-        null,
         null,
         null
       ],
@@ -707,6 +704,6 @@
         null
       ]
     },
-    "timestamp": 1409767481
+    "timestamp": 1409831656
   }
 }
