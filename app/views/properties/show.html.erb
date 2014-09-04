@@ -1,67 +1,50 @@
- <%= render "properties/slider" %>
+<%= render "properties/slider" %>
+<article class="row">
 
- <%= @property.title %>
-<div class="row">
- <div class="toggle-vertical col-xs-6 col-md-offset-0">
+	<section class="toggle-vertical col-xs-6 col-md-offset-0">
+	 	<ul class="nav nav-tabs col-xs-6" role="tablist">
+		  <li class="active"><a href="#flat-tab" role="tab" data-toggle="tab">Flat</a></li>
+		  <li><a href="#landlord-tab" role="tab" data-toggle="tab">Landlord</a></li>
 
- 	<ul class="nav nav-tabs" role="tablist">
-  <li class="active"><a href="#flat-tab" role="tab" data-toggle="tab">Flat</a></li>
-  <li><a href="#landlord-tab" role="tab" data-toggle="tab">Landlord</a></li>
-  <% if @property.rooms.any?  %>
-  	<%= @property.rooms.each do |room| %>
-  <li><a href="#room-tab" role="tab" data-toggle="tab">Room <%= room.number %></a></li>
- <% end %>
-  <% end %>
-</ul>
-</div>
-<div class="col-xs-6">
-<div class="tab-content">
-  <div class="tab-pane active" id="flat-tab"><%= render "properties/flat" %></div>
-  <div class="tab-pane" id="landlord-tab">LAAAANDLOOOOOORDDDD</div>
-  <% if @property.rooms.any?  %>
-  	<%= @property.rooms.each do |room| %>
-  <div class="tab-pane" id="room-tab">ROOOOOOOOM <%= room.number %></div>
-  <% end %>
-  <% end %>
+		 		<% if @property.rooms.any?  %>
+		  		<% @property.rooms.each do |room| %>
+		  			<li><a href="#room-tab" role="tab" data-toggle="tab">Room <%= room.number %></a></li>
+					<% end %>
+		 		<% end %>
 
-</div>
-</div>
-	
+		</ul>
+	</section>
 
-</div>
+	<article class="col-xs-6">
+		<section class="tab-content">
 
-		<%= @property.rooms.count %> rooms
+	  	<ul class="tab-pane active" id="flat-tab">
+	  		<li class="flat-partial">
+		  		<%= render "properties/flat" %>
+		  	</li>
 
-			<% @property.rooms.each do |room| %>
-				room N°<%= room.number %>
-				<%= room.description %>
-			<% end %>
-			Posted by - <%= link_to "#{@property.user.username}", user_path(@property.user) %>
-			<%= link_to 'All reviews', property_reviews_path(@property) %>
+		  	<li class="flat-review-partial">
+		  		<%= render "properties/flat_reviews" %>
+				</li>
+	  	</ul>
 
-<div class='review'>
-	<%= form_for [@property, @review] do |f| %>
-		<%= f.label        :thoughts              %>
-		<%= f.text_field   :thoughts              %>
-		<%= f.radio_button :rating,   "1" 				%>
-		<%= label_tag			 :rating_1, "Poor" 		  %>
-		<%= f.radio_button :rating,   "2" 				%>
-		<%= label_tag			 :rating_2, "Fair" 		  %>
-		<%= f.radio_button :rating,   "3" 				%>
-		<%= label_tag			 :rating_3, "Good" 		  %>
-		<%= f.radio_button :rating,   "4" 				%>
-		<%= label_tag			 :rating_4, "Very Good" %>
-		<%= f.radio_button :rating,   "5" 				%>
-		<%= label_tag			 :rating_5, "Excellent" %>
-		<%= f.submit 'Leave review' %>
-	<% end %>
-</div>
+	  	<ul class="tab-pane" id="landlord-tab">
+	  		<%= render "properties/landlord" %>
+	  		<%= render "properties/landlord_reviews"%>
+	  	</ul>
 
-<% if @reviews.any? %>
-	<% @property.reviews.each do |review| %>
-		<%= review.thoughts %>
-		<%= review.rating %>
-	<%end%>
-<% end %>
+	  			<% if @property.rooms.any?  %>
+	  				<% @property.rooms.each do |room| %>
+	  					<ul class="tab-pane" id="room-tab">
+	  						<li><%= render partial: "properties/room", locals: {room: room} %></li>
+	  					</ul>
+	  				<% end %>
+	  			<% end %>
 
-	<%= @property.average_rating  %>
+		</section>
+	</article>
+</article>
+
+
+
+
