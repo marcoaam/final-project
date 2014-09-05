@@ -1,22 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/environment.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/environment.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         null,
         1,
         null,
         null,
         1
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/application.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/application.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         null,
         null,
@@ -48,21 +40,13 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/boot.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/boot.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         null,
         1,
         null,
         1
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/environments/test.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/environments/test.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         null,
         null,
@@ -103,11 +87,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/assets.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/initializers/assets.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         null,
         null,
         null,
@@ -117,11 +97,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/backtrace_silencers.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/initializers/backtrace_silencers.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         null,
         null,
         null,
@@ -130,20 +106,12 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/cookies_serializer.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/initializers/cookies_serializer.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         null,
         null,
         1
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/devise.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/initializers/devise.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         null,
         null,
         1,
@@ -404,21 +372,13 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/filter_parameter_logging.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/initializers/filter_parameter_logging.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         null,
         null,
         null,
         1
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/inflections.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/initializers/inflections.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         null,
         null,
         null,
@@ -436,30 +396,18 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/mime_types.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/initializers/mime_types.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         null,
         null,
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/session_store.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/initializers/session_store.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         null,
         null,
         1
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/initializers/wrap_parameters.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/initializers/wrap_parameters.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         null,
         null,
         null,
@@ -475,11 +423,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/models/property.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/app/models/property.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         null,
         1,
@@ -528,11 +472,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/config/routes.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/config/routes.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         null,
         1,
@@ -553,13 +493,9 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/models/user.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/app/models/user.rb": [
         1,
         null,
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         null,
         1,
@@ -567,8 +503,6 @@
         1,
         null,
         1,
-        null,
-        null,
         null,
         null,
         null,
@@ -586,29 +520,6 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/home_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/properties_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/reviews_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/jeantroiani/Desktop/get_a_room/app/helpers/user_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/home_controller.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/app/helpers/application_helper.rb": [
         1,
         null
@@ -630,7 +541,6 @@
         null
       ],
       "/Users/user/Documents/MA/get_a_room/app/controllers/home_controller.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         null,
         1,
@@ -638,11 +548,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/application_controller.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/app/controllers/application_controller.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         1,
         null,
@@ -655,11 +561,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/properties_controller.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/app/controllers/properties_controller.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         null,
         1,
@@ -737,11 +639,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/reviews_controller.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/app/controllers/reviews_controller.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         null,
         1,
@@ -770,11 +668,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/controllers/user_controller.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/app/controllers/user_controller.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         null,
         1,
@@ -797,11 +691,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/models/picture.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/app/models/picture.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         null,
         1,
@@ -819,11 +709,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/models/review.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/app/models/review.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         null,
         1,
@@ -832,20 +718,12 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/jeantroiani/Desktop/get_a_room/app/models/room.rb": [
-=======
       "/Users/user/Documents/MA/get_a_room/app/models/room.rb": [
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
         1,
         1,
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1409918749
-=======
-    "timestamp": 1409913822
->>>>>>> d28044a1760a0801f3035ff90b09ef7b6f981a03
+    "timestamp": 1409919439
   }
 }
