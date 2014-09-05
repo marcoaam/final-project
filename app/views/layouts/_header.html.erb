@@ -14,6 +14,7 @@
 	  			<li> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
 					<li> <%= link_to 'My properties', user_properties_path(current_user) %></li>
 					<li><%= link_to "Add property", new_property_path %></li>
+          <li><%= link_to "Edit profile", edit_user_path(current_user) %></li>
 	      </ul>
       <% else %>
       	<ul class="nav navbar-nav navbar-right">

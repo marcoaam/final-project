@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   has_many :reviews, as: :imageable
 
+  has_many :pictures, dependent: :destroy
+
 
 
   # Include default devise modules. Others available are:
