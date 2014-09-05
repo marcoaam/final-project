@@ -3,6 +3,7 @@
       <a class="navbar-brand" href="/">Flat Me Out</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
       <form class="navbar-form navbar-left" role="search">
         <% unless request.original_fullpath == root_path || request.original_fullpath == properties_path %>
 					<%= render "home/search_bar" %> 

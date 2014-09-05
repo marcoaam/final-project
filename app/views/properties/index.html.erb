@@ -8,16 +8,27 @@
 </form>
 
 <% if @properties.any? %>
-	<div class = 'property_list'>
 	<% @properties.each do |property| %> 
-			<%= link_to property.title, property_path(property) %>
-			<%= property.reviews.count %> <%= property.pluralized_review %>
-			<%= "Posted by - #{property.user.username}" %>
-			<%= link_to "Edit", edit_property_path(property) %>
-			<%= link_to "Delete", property_path(property), method: :delete %>
+			<li class="property_item">
+			<div class='property_title'>
+				<%= link_to property.title, property_path(property) %>
+			</div>
+				<address><%= property.display_full_address %></address>
+				<div class='property_review'>
+					<%= property.reviews.count %> <%= property.pluralized_review %>
+				</div>
+				<% if current_user == property.user %>
+				<div class='edit'>
+					<%= link_to "Edit", edit_property_path(property) %>
+					<%= link_to "Delete", property_path(property), method: :delete %>
+				</div>
+				<%else%>
+				<div class='posted_by'>
+					<%= "Posted by - #{property.user.username}" %>
+				</div>
+				</li>
+				<%end%>
 		<% end %>
-		<hr>
-	</div><!--end of property_list-->
 <%else%>
 	<p>No properties have been added.</p>
 <%end%>

@@ -21,10 +21,14 @@ class Property < ActiveRecord::Base
 		end
 	end
 
+
 	def full_address
 		"#{self.address},#{self.city},#{self.postcode}"
 	end
 
+	def display_full_address
+		"#{self.address} #{self.city}, #{self.postcode}"
+	end
 
 	def average_rating
 		if self.reviews.empty?
@@ -36,7 +40,7 @@ class Property < ActiveRecord::Base
 
 	def pluralized_review
 		self.reviews.count < 2 ? "review" : "reviews"
-
 	end
+
 
 end

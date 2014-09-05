@@ -12,6 +12,11 @@ RSpec.describe Property, :type => :model do
 	it 'gathers up address, city and postcode together' do
 		expect(property.full_address).to eq('25 city road,London,EC1Y 1AA')
 	end
+
+	it 'prints up address, city and postcode in a singl line' do
+		expect(property.display_full_address).to eq('25 city road London, EC1Y 1AA')
+	end
+
 	context'ratings' do
 
 		it 'without reviews should' do
