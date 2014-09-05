@@ -39,4 +39,25 @@ describe 'Room' do
 		expect(page).to have_content("The property has been successfully created")
 	end
 
+	it 'should allow the user to say that it is its room', js: true do
+
+		visit('/properties/21')
+		within(:css, "li#room-1") do
+	      click_link("Room 1")
+	  end
+
+	  within(:css, "article#container-room-1") do
+	      click_link("Do you live here ?")
+	  end
+
+		within(:css, "li#room-1") do
+	      click_link("Room 1")
+	  end
+
+ 		within(:css, "article#container-room-1") do
+	      expect(page).to have_content("Hello I'm John")
+	  end
+
+	end
+
 end

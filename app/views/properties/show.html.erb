@@ -49,10 +49,9 @@
   			<% if @property.rooms.any?  %>
   				<% @property.rooms.each do |room| %>
   					<li data-room="room-<%= room.number %>"> 
-  							<div>
-  								room N°<%= room.number %>
-									<%= room.description %>
-								</div>
+  							<article id="container-room-<%= room.number %>">			
+									<%= render partial: "properties/room", locals: {room: room} %>
+								</article>
   					</li>
   				<% end %>
   			<% end %>

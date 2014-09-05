@@ -20,7 +20,6 @@ class PropertiesController < ApplicationController
 	def create
 		@property = current_user.properties.new(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: :image))
 		@property.save
-
 		respond_to do |format|
 			if @property.save
 				if params[:image]
@@ -57,8 +56,7 @@ class PropertiesController < ApplicationController
 	def show
 		@property = Property.find(params[:id])
 		@review   = Review.new
-		@reviews = @property.reviews
-		
+		@reviews = @property.reviews		
 	end
 
 	def finding_nearby

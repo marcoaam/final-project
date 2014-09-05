@@ -1,5 +1,11 @@
+<% if room.user.nil? %>
+room N°<%= room.number %>
+<%= room.description %>
+	<%= link_to "Do you live here ?", room_path(room), method: :patch %>
+<% else %>
 	room N°<%= room.number %>
-				<%= room.description %>
-<%= render partial: "properties/room", locals: {room: room} %>
+				 <%= room.description %>
+				 Hello I'm <%= room.user.username %>
+<% end %>
 
 			

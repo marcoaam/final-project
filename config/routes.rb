@@ -14,6 +14,7 @@ Rails.application.routes.draw do
  		resources :reviews
 	end
 	
+ 		resources :rooms
 	resources :properties
 
 end
