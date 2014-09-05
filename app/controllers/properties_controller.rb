@@ -58,7 +58,6 @@ class PropertiesController < ApplicationController
 		@property = Property.find(params[:id])
 		@review   = Review.new
 		@reviews = @property.reviews
-		
 	end
 
 	def finding_nearby
