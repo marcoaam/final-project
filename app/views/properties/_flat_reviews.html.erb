@@ -1,4 +1,32 @@
-	Posted by - <%= link_to "#{@property.user.username}", user_path(@property.user) %>
-			<%= link_to 'All reviews', property_reviews_path(@property) %>
+<article class='review' id="review_thoughts_flat">
+	<%= form_for [@property, @review] do |f| %>
+		<section class="stars-section">
+		<h3>Leave a review </h3>
+			<aside class='stars'>
+	      <% 1.upto(5) do |n| %>
+	          <%= f.label n, "rating_#{n}" => "star-#{n}", for: "star-#{n}" %>
+	          <%= f.radio_button :rating, n, :class => "star-#{n}", id: "star-#{n}" %>
+	      <% end %>
+	      <span></span>
+	    </aside>
+    </section>
+		<section class="input-thougths">
+			<%= f.text_field   :thoughts, :placeholder => "Leave a review here... " %>
+		</section>
+		<%= f.submit "submit", class: "submit-button" %>
+	<% end %>
+</article>
 
-			Roof party lomo Odd Future, viral 8-bit Tonx normcore tousled Banksy. Wes Anderson artisan Williamsburg Neutra. Freegan quinoa forage shabby chic cornhole vinyl. IPhone polaroid forage ennui, jean shorts flexitarian Godard gastropub kitsch sartorial Cosby sweater pickled. Ethical Marfa deep v church-key. Gluten-free biodiesel art party squid vinyl swag, Banksy keytar sustainable. Roof party sriracha fashion axe bitters.
+<% if @reviews.any? %>
+	<% @reviews.each do |review| %>
+		<ul>
+			<li>
+				<%= review.thoughts %>, Posted by @<%= link_to "#{@property.user.username}", user_path(@property.user) %>
+			</li>
+		</ul>
+	<% end %>
+<% else %>
+	No reviews have been added.
+<% end %>
+
+	<%= link_to 'See all reviews', property_reviews_path(@property) %>

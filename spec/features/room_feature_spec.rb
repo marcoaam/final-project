@@ -15,7 +15,7 @@ describe 'Room' do
 		fill_in :search_bar, with: '25 city road,London,EC1Y 1AA'
 		click_button 'Search'
 		click_link 'Great flat near old street'
-		expect(page).to have_content '2 rooms'
+		expect(page).to have_content 'Number of rooms: 2'
 	end
 
 	it 'show the number of the room ex: room number1...' do
