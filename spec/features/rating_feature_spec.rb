@@ -43,15 +43,22 @@ describe 'Ratings' do
 			login_as user
 		end
 		
-		it 'If someone creates a single rating' do
+		xit 'If someone creates a single rating', js: true do
 			visit('/')
 			click_link('My properties')
 			click_link('Great flat near old street')
-			visit('/properties/21#landlord-tab') #difference
-			fill_in 'review_thoughts', with: 'Excellent'
-			choose('3')
-			click_button('Leave review')
-			expect(page).to have_content('3')
+
+			within(:css, "li#landlord") do
+				click_link('Landlord')
+			end
+
+			within(:css, "article#user-reviews") do
+				fill_in 'thoughts', with: 'Excellent'
+				choose('3')
+				click_button('Leave review')
+				expect(page).to have_content('3')
+			end
+
 		end
 
 		it 'an average of all ratings written' do

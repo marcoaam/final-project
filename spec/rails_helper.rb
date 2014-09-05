@@ -12,6 +12,10 @@ Capybara.register_driver :poltergeist do |app|
   Capybara::Poltergeist::Driver.new(app, {js_errors: false})
 end
 
+Capybara.configure do |config|
+  config.match = :prefer_exact
+  config.ignore_hidden_elements = false
+end
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
