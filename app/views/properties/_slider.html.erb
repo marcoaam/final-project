@@ -6,11 +6,11 @@
   <!-- Wrapper for slides -->
     <% if index == 0 %>
     <div class="item active">
-     <img id="img-show" src="<%= picture.image.url(:medium)%>">
+     <img class="image-show" src="<%= picture.image.url(:medium)%>">
     </div>
     <% else %>
     <div class="item">
-      <img id="img-show" src="<%= picture.image.url(:medium)%>">
+      <img class="image-show" src="<%= picture.image.url(:medium)%>">
     </div>
     <% end %>
  <% end %>
