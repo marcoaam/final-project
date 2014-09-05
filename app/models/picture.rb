@@ -1,6 +1,6 @@
 class Picture < ActiveRecord::Base
 
-	belongs_to :property
+	belongs_to :imageable, polymorphic: true
 	
 	has_attached_file :image, styles: {medium: "1000x400"},
                   	:storage => :s3,
