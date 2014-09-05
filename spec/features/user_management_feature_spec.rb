@@ -28,6 +28,15 @@ describe 'User menu display' do
 			expect(page).to have_content('Sign out')
 		end
 
+		it 'can edit his profile' do
+			visit '/'
+			click_link 'Edit profile'
+			fill_in 'user[bio]', with: "Easy going person"
+			attach_file 'user[image]', Rails.root.join('spec/images/Bob_razowski-1.jpg')
+			click_button 'Save'
+			expect(page).to have_content 'Profile successfully saved'
+		end
+
 	end
 
 	context 'js enabled' do
