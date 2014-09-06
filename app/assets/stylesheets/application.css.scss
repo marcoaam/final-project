@@ -154,17 +154,17 @@ address{
 }
 
 #index_search_bar:focus {
-	  outline: none;
+	 outline: none;
 } 
 
 .container-fluid {
- padding-left: 0px;
- padding-top: 2px; 
+	padding-left: 0px;
+	padding-top: 2px; 
 }
 
 #home_search_bar {
 	width: 400px;
-	height: 40px;
+	height: 38px;
 	color: rgba(74,74,74,0.8);
 	font-family: $quick;
 	font-size: 20px;
@@ -173,10 +173,18 @@ address{
 }
 
 #home_search_form {
-	width: 500px;
-	margin: 0 auto;
-}
+		width: 500px;
+		margin: 0 auto;
 
+		input[type=submit] {
+		width:38px;
+		height: 38px;
+		background: url('search_property_small.png') no-repeat;
+		border: none;
+		color: transparent;
+		position:absolute;
+	}
+}
 
 .navbar {
 		min-height: 60px;
@@ -184,17 +192,20 @@ address{
 		background-color: rgba(74, 74, 74, 0.6);
 		border: none;
 		border-radius: 0px;
+
 	a{
 	 color: rgb(255,255,255);
-
 	}
+
 	a:visited {
 	 color: rgb(255,255,255);
 	}
+
 	.navbar-right a:visited {
 	 color: rgb(255,255,255);
 
 	}
+
 	.navbar-right a{
 	 color: rgb(255,255,255);
 	}
@@ -244,7 +255,6 @@ body {
 #map {
 	height: 85%;
 }
-
 
 .nav-tabs {
 
@@ -328,7 +338,7 @@ section.input-thougths input {
 
 section.input-thougths-big input {
 	width: 70%;
-		-webkit-transition: height 2s ease;
+	-webkit-transition: height 2s ease;
 	-moz-transition: height 2s ease;
 	-ms-transition: height 2s ease;
 	-o-transition: height 2s ease;
@@ -344,7 +354,6 @@ section.input-thougths-big input:focus {
 	-o-transition: height 2s ease;
 	transition: height 2s ease;
 }
-
 
 input.submit-button {
 	width: 70%;
