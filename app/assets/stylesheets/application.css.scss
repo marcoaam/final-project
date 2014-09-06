@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -75,9 +75,9 @@ li{
 	padding: 0px;
 	background: rgba(74,74,74,1) ;
 	height: 100%;
-	margin-top: -72px;
-	height: 95%;
+	height: 85%;
 	position:relative;
+	overflow-y: auto;
 	
 	input[type=submit] {
 		width:38px;
@@ -96,6 +96,11 @@ li{
 			background-color: rgba(242,242,242,1);
 			border-bottom: 1px rgba(74,74,74,0.6) solid;
 			width: 100%;
+	}
+
+	.property_item:hover {
+		background-color: rgba(245,166,35,1);
+		transition-delay: 0.6s ease-in-out;
 	}
 
 	.property_item .property_title{
@@ -178,7 +183,6 @@ address{
 		font-size: 1.2em;
 		background-color: rgba(74, 74, 74, 0.6);
 		border: none;
-		margin-bottom: -52px;
 		border-radius: 0px;
 
 	a{
@@ -221,10 +225,25 @@ address{
 	
 }
 
+.navbar-brand{
+	position:relative;
+	left: 5%;
+	bottom:5px;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background: url(' https://s3.amazonaws.com/getaroom/background.jpg') no-repeat center center;
+	background-size: 100%;
+	background-position-y: -40px;
+	height: 100%;
+}
 
 #map {
-	margin-top: -72px;
-	height: 95%;
+	height: 85%;
 }
 
 
@@ -242,6 +261,26 @@ img.image-show {
 	margin-right: auto;
 }
 
+.footer {
+	color: whitesmoke;
+	margin-top: -150px;
+	height: 50px;
+	clear: both;
+	padding-top: 20px;
+	color: #fff;
+	background-color: #646464;
+	padding-left: 5;
+	bottom: 0px;
+}
+
+
+.footer a {
+	color: whitesmoke;
+	font-family: $quick;
+	margin-left:10px;
+	position: relative;
+	bottom:8px;
+}
 /*
 .carousel {
 	position: relative;
@@ -466,4 +505,22 @@ form .stars-landlord span {
   -ms-transition: -ms-width 0.5s;
   -o-transition: -o-width 0.5s;
   transition: width 0.5s;
+}
+
+.carousel {
+	position: relative;
+}
+
+ul.ul-footer {
+	list-style-type: none;
+	display: inline-flex;
+	margin-bottom: 0px;
+}
+
+article.flash {
+	display: table-column;
+}
+
+nav.navbar.navbar-default {
+	margin-bottom: 0px;
 }

@@ -22,7 +22,6 @@ class Property < ActiveRecord::Base
 		end
 	end
 
-
 	def full_address
 		"#{self.address},#{self.city},#{self.postcode}"
 	end
@@ -42,6 +41,5 @@ class Property < ActiveRecord::Base
 	def pluralized_review
 		self.reviews.count < 2 ? "review" : "reviews"
 	end
-
 
 end
