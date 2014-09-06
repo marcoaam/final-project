@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -75,7 +75,6 @@ li{
 	padding: 0px;
 	background: rgba(74,74,74,1) ;
 	height: 100%;
-	margin-top: -72px;
 	height: 85%;
 	position:relative;
 	overflow-y: auto;
@@ -117,12 +116,12 @@ li{
 
 }
 
-.property_item .edit{
+.property_item .edit {
 	font-family: $ada;
 	font-size: 12px;
 }
 
-.property_review{
+.property_review {
 	font-family: $ada;
 	font-size: 14px;
 	width: 80px;
@@ -180,12 +179,11 @@ address{
 
 
 .navbar {
-	min-height: 60px;
-	font-size: 1.2em;
-	background-color: rgba(74, 74, 74, 0.6);
-	border:none;
-	border-radius:0px;
-	
+		min-height: 60px;
+		font-size: 1.2em;
+		background-color: rgba(74, 74, 74, 0.6);
+		border: none;
+		border-radius: 0px;
 	a{
 	 color: rgb(255,255,255);
 
@@ -201,7 +199,7 @@ address{
 	 color: rgb(255,255,255);
 	}
 
-	.navbar-right a{
+	.navbar-right a {
 	 font-family: "helvetica neue"; 
 	 font-weight: 100;
 	 color: rgb(255,255,255);
@@ -244,7 +242,6 @@ body {
 }
 
 #map {
-	margin-top: -72px;
 	height: 85%;
 }
 
@@ -265,15 +262,16 @@ img.image-show {
 
 .footer {
 	color: whitesmoke;
-	position: relative;
-	margin-top: -150px; /* negative value of footer height */
+	margin-top: -150px;
 	height: 50px;
-	clear:both;
-	padding-top:20px;
-	color:#fff;
-	background-color: rgb(100,100,100);
-	padding-left:5%;
+	clear: both;
+	padding-top: 20px;
+	color: #fff;
+	background-color: #646464;
+	padding-left: 5;
+	bottom: 0px;
 }
+
 
 .footer a {
 	color: whitesmoke;
@@ -310,14 +308,57 @@ img.image-show {
 
 */
 
+
+li.col-md-6 {
+	list-style-type: none;
+}
+
+li.flat-partial.col-md-6 {
+	top: -32px;
+	left: -4%;
+}
+
+li.flat-review-partial.col-md-6 {
+	top: -32px;
+}
+
+section.input-thougths input {
+	width: 70%;
+}
+
+section.input-thougths-big input {
+	width: 70%;
+		-webkit-transition: height 2s ease;
+	-moz-transition: height 2s ease;
+	-ms-transition: height 2s ease;
+	-o-transition: height 2s ease;
+	transition: height 2s ease;
+}
+
+section.input-thougths-big input:focus {
+	width: 70%;
+	height: 120px;
+	-webkit-transition: height 2s ease;
+	-moz-transition: height 2s ease;
+	-ms-transition: height 2s ease;
+	-o-transition: height 2s ease;
+	transition: height 2s ease;
+}
+
+
+input.submit-button {
+	width: 70%;
+	height: 30px;
+}
+
 form .stars {
-	background: url("stars.png") repeat-x 0 0;
-	width: 150px;
-	margin: 0 auto;
-	display: inline-block;
-	position: absolute;
-	top: 17px;
-	margin-left: 35%;
+background: url("stars.png") repeat-x 0 0;
+width: 150px;
+margin: 0 auto;
+display: inline-block;
+position: absolute;
+top: 17px;
+margin-left: 35%;
 }
 
 form .stars input[type="radio"] {
@@ -386,46 +427,99 @@ form .stars span {
   transition: width 0.5s;
 }
 
-li.col-md-6 {
+
+/* second stars */
+
+form .stars-landlord {
+background: url("stars1.png") repeat-x 0 0;
+width: 150px;
+margin: 0 auto;
+display: inline-block;
+position: absolute;
+top: 17px;
+margin-left: 35%;
+}
+
+form .stars-landlord input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+form .stars-landlord input[type="radio"].star-landlord-5:checked ~ span {
+  width: 100%;
+}
+form .stars-landlord input[type="radio"].star-landlord-4:checked ~ span {
+  width: 80%;
+}
+form .stars-landlord input[type="radio"].star-landlord-3:checked ~ span {
+  width: 60%;
+}
+form .stars-landlord input[type="radio"].star-landlord-2:checked ~ span {
+  width: 40%;
+}
+form .stars-landlord input[type="radio"].star-landlord-1:checked ~ span {
+  width: 20%;
+}
+form .stars-landlord label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0!important;
+  padding: 0!important;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent!important;
+  cursor: pointer;
+}
+form .stars-landlord label:hover ~ span {
+  background-position: 0 -30px;
+}
+form .stars-landlord label.star-landlord-5:hover ~ span {
+  width: 100% !important;
+}
+form .stars-landlord label.star-landlord-4:hover ~ span {
+  width: 80% !important;
+}
+form .stars-landlord label.star-landlord-3:hover ~ span {
+  width: 60% !important;
+}
+form .stars-landlord label.star-landlord-2:hover ~ span {
+  width: 40% !important;
+}
+form .stars-landlord label.star-landlord-1:hover ~ span {
+  width: 20% !important;
+}
+form .stars-landlord span {
+  display: block;
+  width: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("stars.png") repeat-x 0 -60px;
+  -webkit-transition: -webkit-width 0.5s;
+  -moz-transition: -moz-width 0.5s;
+  -ms-transition: -ms-width 0.5s;
+  -o-transition: -o-width 0.5s;
+  transition: width 0.5s;
+}
+
+.carousel {
+	position: relative;
+}
+
+ul.ul-footer {
 	list-style-type: none;
+	display: inline-flex;
+	margin-bottom: 0px;
 }
 
-li.flat-partial.col-md-6 {
-	top: -32px;
-	left: -4%;
+article.flash {
+	display: table-column;
 }
 
-li.flat-review-partial.col-md-6 {
-	top: -32px;
+nav.navbar.navbar-default {
+	margin-bottom: 0px;
 }
-
-section.input-thougths input {
-	width: 70%;
-}
-
-section.input-thougths-big input {
-	width: 70%;
-		-webkit-transition: height 2s ease;
-	-moz-transition: height 2s ease;
-	-ms-transition: height 2s ease;
-	-o-transition: height 2s ease;
-	transition: height 2s ease;
-}
-
-section.input-thougths-big input:focus {
-	width: 70%;
-	height: 120px;
-	-webkit-transition: height 2s ease;
-	-moz-transition: height 2s ease;
-	-ms-transition: height 2s ease;
-	-o-transition: height 2s ease;
-	transition: height 2s ease;
-}
-
-
-input.submit-button {
-	width: 70%;
-	height: 30px;
-}
-
-

@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
 
 		else
 			user = User.find(params[:user_id])
-			user.reviews.create(thoughts: params[:thoughts], rating: 3)
+			user.reviews.create(thoughts: params[:thoughts], rating: params[:rating])
 		end
 		redirect_to :back
 	end
