@@ -241,16 +241,6 @@ address{
 	bottom:5px;
 }
 
-html {
-	height: 100%;
-}
-
-body {
-	background: url(' https://s3.amazonaws.com/getaroom/background.jpg') no-repeat center center;
-	background-size: 100%;
-	background-position-y: -40px;
-	height: 100%;
-}
 
 #map {
 	height: 85%;
@@ -525,10 +515,70 @@ ul.ul-footer {
 	margin-bottom: 0px;
 }
 
-article.flash {
-	display: table-column;
+
+.add_property{
+	font-family: $ada;
+	color: whitesmoke;
+	margin: 0px auto;
+
+	height:440px;
+	width: 420px;
+	background-color: rgba(75,75,75,0.7);
+	input{
+		color: rgba(75,75,75,0.7);
+		margin-top: 8px;
+		border: none;
+		width:250px;
+		height: 28px;
+	}
+
 }
+
+.form_label label{
+	width: 		 110px;
+	text-align: right;
+}
+
+.form_text_short input{
+	width: 88px;
+}
+
+.form_label_short input{
+	width: 40px;
+}
+
+.form_text_tall input {
+	height:80px;
+}
+
+
+.form_submit input[type=submit]{
+		margin: 0px auto;
+		padding:0px;
+		width:420px;
+}
+
+.form_submit input[type=submit]:hover {
+	background-color: rgba(245,166,35,1);
+	transition-delay: 0.6s ease-in-out;
+}
+
+#property_pictures_attributes_1_image{
+width:100;
+display: inline-block;
+}
+
+
+article.flash {
+display: table-column;
+position: absolute;
+}
+
 
 nav.navbar.navbar-default {
 	margin-bottom: 0px;
+}
+
+.col-md-12.home_search_form_container {
+	top: 40%;
 }

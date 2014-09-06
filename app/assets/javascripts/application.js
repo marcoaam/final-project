@@ -24,7 +24,7 @@ $("li [role='tab']").on('click', function() {
 
 	var dest = $(this).attr('data-room');
   showTab(dest);
-
+  
 });
 
 function showTab(tab) {
@@ -42,3 +42,4 @@ $("li [role='tab']").on('click', function() {
 $(".input-thougths").on('click', function(event){
 	$(this).removeClass().addClass("input-thougths-big");
 });
+

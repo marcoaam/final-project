@@ -1,30 +1,31 @@
-<%= form_for @property, :html => {:multipart => true} do |f| %>
+<div class='add_property'>
+	<%= form_for @property, :html => {:multipart => true} do |f| %>
 
-	<%= f.label :title %>
-	<%= f.text_field :title %>
+		<span class="form_label" ><%= f.label :title %></span>
+		<%= f.text_field :title %>
+		<br>
+		<span class="form_label" ><%= f.label :address %></span>
+		<%= f.text_field :address %>
+		<br>
+		<span class="form_label" ><%= f.label :city %></span>
+		<span class="form_text_short" ><%= f.text_field :city %></span>
+		<span class="form_label_short" ><%= f.label :postcode %></span>
+		<span class="form_text_short" ><%= f.text_field :postcode %></span>
+		<hr>
+		<span class="form_label" ><%= f.label :description %></span>
+		<span class="form_text_tall" ><%= f.text_field :description %></span>
+		<br>
+		<span class="form_label" ><%= f.label :total_rooms %></span>
+		<span class="form_text_short" ><%= f.number_field :total_rooms %></span>
+		<br>
 
-	<%= f.label :address %>
-	<%= f.text_field :address %>
-
-	<%= f.label :postcode %>
-	<%= f.text_field :postcode %>
-
-	<%= f.label :city %>
-	<%= f.text_field :city %>
-
-	<%= f.label :total_rooms %>
-	<%= f.number_field :total_rooms %>
-
-	<%= f.label :description %>
-	<%= f.text_field :description %>
-
-	<ul>
-		<%= f.fields_for :pictures do |pictures_form| %>
-	     <li> <%= pictures_form.label :image %>
-	      <%= pictures_form.file_field :image %>
-	    </li>
-	  <% end %>
-	</ul>
-	<%= f.submit "Submit" %> 
-
-<% end %>
+		
+			<%= f.fields_for :pictures do |pictures_form| %>
+		      <span class="form_label" ><%= pictures_form.label :image %></span>
+		      <%= pictures_form.file_field :image %>
+		    
+		  <% end %>
+	
+<span class="form_submit"><%= f.submit "Submit" %></span>
+	<% end %>
+</div>
