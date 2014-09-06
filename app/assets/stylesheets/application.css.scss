@@ -526,9 +526,14 @@ ul.ul-footer {
 }
 
 article.flash {
-	display: table-column;
+display: table-column;
+position: absolute;
 }
 
 nav.navbar.navbar-default {
 	margin-bottom: 0px;
+}
+
+.col-md-12.home_search_form_container {
+	top: 40%;
 }

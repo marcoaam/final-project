@@ -40,8 +40,21 @@ $("li [role='tab']").on('click', function() {
 });
 
 $(".input-thougths").on('click', function(event){
-	$(this).removeClass().addClass("input-thougths-big");
+	
+	  $(this).addClass("input-thougths-big");
+
+	    $(".submit-button").click(function(){
+        $(this).removeClass();
+    }); 
+
 });
+
+
+
+
+
+
+
 
 
 
