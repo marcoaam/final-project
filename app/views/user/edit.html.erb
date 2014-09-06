@@ -1,11 +1,20 @@
+Hey <%= @user.username %>, wanna add a bio and your pictures? 
+
+You can do it here: 
+
 <%= form_for @user, :html => {:multipart => true} do |f| %>
 
-  <%= f.label :bio %>
-  <%= f.text_field :bio %>
-  
-  <%= f.label :image %>
-  <%= f.file_field :image %>
+		  <%= f.label :bio %>
+		  <%= f.text_field :bio %>
 
-  <%= f.submit "Save" %> 
+		  <%= f.label :image %>
+		  <%= f.file_field :image %>
 
-<% end %>
+		  <%= f.submit "Save" %> 
+
+		<% end %>
+
+
+You can see your all your reviews there: <%= link_to 'All reviews', user_reviews_path(@user) %>
+
+		

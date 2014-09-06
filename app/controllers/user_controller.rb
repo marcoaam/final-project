@@ -5,6 +5,7 @@ class UserController < ApplicationController
 	end
 
   def edit
+    @properties = current_user.properties
     @user = User.find(params[:id])
     @user.pictures.new
   end

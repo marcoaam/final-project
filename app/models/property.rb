@@ -12,7 +12,7 @@ class Property < ActiveRecord::Base
 	has_many :pictures, as: :imageable, :dependent => :destroy
 	
 	accepts_nested_attributes_for :pictures
-	
+
 	def total_rooms
 	end
 
