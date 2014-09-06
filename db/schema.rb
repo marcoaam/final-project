@@ -46,9 +46,9 @@ ActiveRecord::Schema.define(version: 20140905132652) do
     t.text     "thoughts"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rating"
     t.integer  "imageable_id"
     t.string   "imageable_type"
-    t.integer  "rating"
   end
 
   create_table "rooms", force: true do |t|

@@ -1,14 +1,9 @@
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">Flat Me Out</a>
+      <a class="navbar-brand" href="/"><img src="http://localhost:3000/assets/flatter_logo_big.png"></a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    
-      <form class="navbar-form navbar-left" role="search">
-        <% unless request.original_fullpath == root_path || request.original_fullpath == properties_path %>
-					<%= render "home/search_bar" %> 
-        <% end %>
-      </form>
+
       <% if user_signed_in? %>
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><%= link_to 'Home', root_path %></li>
