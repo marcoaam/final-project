@@ -3,6 +3,7 @@ require "codeclimate-test-reporter"
 CodeClimate::TestReporter.start
 require 'byebug'
 
+
 RSpec.configure do |config|
 
 end

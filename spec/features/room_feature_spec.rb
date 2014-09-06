@@ -15,7 +15,7 @@ describe 'Room' do
 		fill_in :search_bar, with: '25 city road,London,EC1Y 1AA'
 		click_button 'Search'
 		click_link 'Great flat near old street'
-		expect(page).to have_content '2 rooms'
+		expect(page).to have_content 'Number of rooms: 2'
 	end
 
 	it 'show the number of the room ex: room number1...' do
@@ -37,6 +37,27 @@ describe 'Room' do
 		fill_in :property_description, with: "Makers Academy"
 		click_button 'Submit'
 		expect(page).to have_content("The property has been successfully created")
+	end
+
+	it 'should allow the user to say that it is its room', js: true do
+
+		visit('/properties/21')
+		within(:css, "li#room-1") do
+	      click_link("Room 1")
+	  end
+
+	  within(:css, "article#container-room-1") do
+	      click_link("Do you live here ?")
+	  end
+
+		within(:css, "li#room-1") do
+	      click_link("Room 1")
+	  end
+
+ 		within(:css, "article#container-room-1") do
+	      expect(page).to have_content("Hello I'm John")
+	  end
+
 	end
 
 end

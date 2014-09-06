@@ -17,9 +17,8 @@ class ReviewsController < ApplicationController
 			property.reviews.create(params[:review].permit(:thoughts, :rating))
 
 		else
-			raise 'hell'
 			user = User.find(params[:user_id])
-			user.reviews.create(params[:review].permit(:thoughts))
+			user.reviews.create(thoughts: params[:thoughts], rating: 3)
 		end
 		redirect_to :back
 	end

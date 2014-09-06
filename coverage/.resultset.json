@@ -450,7 +450,7 @@
         null,
         null,
         1,
-        49,
+        51,
         null,
         null,
         1,
@@ -458,10 +458,10 @@
         null,
         null,
         1,
-        24,
-        20,
+        31,
+        25,
         null,
-        4,
+        6,
         null,
         null,
         null,
@@ -489,6 +489,7 @@
         1,
         null,
         null,
+        1,
         1,
         null,
         null
@@ -536,7 +537,15 @@
         1,
         null
       ],
+<<<<<<< HEAD
       "/Users/jeantroiani/Desktop/get_a_room/app/helpers/user_helper.rb": [
+=======
+      "/Users/user/Documents/MA/get_a_room/app/helpers/rooms_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/user/Documents/MA/get_a_room/app/helpers/user_helper.rb": [
+>>>>>>> 41ab8bd81d6a4f23f90b5a393894ac085321a704
         1,
         null
       ],
@@ -568,11 +577,11 @@
         null,
         1,
         29,
-        11,
-        11,
+        12,
+        12,
         null,
-        18,
-        18,
+        17,
+        17,
         null,
         null,
         null,
@@ -584,7 +593,6 @@
         1,
         7,
         7,
-        null,
         7,
         7,
         7,
@@ -619,13 +627,13 @@
         null,
         null,
         1,
-        23,
-        23,
-        23,
+        30,
+        30,
+        30,
         null,
         null,
         1,
-        18,
+        17,
         null,
         null,
         1,
@@ -643,28 +651,37 @@
         1,
         null,
         1,
-        1,
-        0,
-        0,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        4,
-        4,
-        4,
-        null,
-        null,
         0,
         0,
         0,
         null,
-        4,
+        0,
+        0,
         null,
+        0,
+        null,
+        null,
+        1,
+        6,
+        6,
+        6,
+        null,
+        null,
+        0,
+        0,
+        null,
+        6,
+        null,
+        null,
+        null
+      ],
+      "/Users/user/Documents/MA/get_a_room/app/controllers/rooms_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -672,7 +689,7 @@
         1,
         null,
         1,
-        2,
+        0,
         null,
         null,
         1,
@@ -721,9 +738,14 @@
       "/Users/jeantroiani/Desktop/get_a_room/app/models/room.rb": [
         1,
         1,
+        1,
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1409994361
+=======
+    "timestamp": 1409929296
+>>>>>>> 41ab8bd81d6a4f23f90b5a393894ac085321a704
   }
 }

@@ -1,27 +1,12 @@
-<%= @property.user  %>
-<%= @property.average_rating  %>
+<article class="flat-bio">
 
-<div class='review'>
-	<%= form_for [@property, @review] do |f| %>
+<h2><%= @property.user.username  %></h2>
 
-		<%= f.label        :thoughts              %>
-		<%= f.text_field   :thoughts              %>
+<strong>My rate: </strong><%= @property.average_rating  %>
 
-		<%= f.radio_button :rating,   "1" 				%>
-		<%= label_tag			 :rating_1, "Poor" 		  %>
+<p><%= @property.user.username %>
 
-		<%= f.radio_button :rating,   "2" 				%>
-		<%= label_tag			 :rating_2, "Fair" 		  %>
+Roof party lomo Odd Future, viral 8-bit Tonx normcore tousled Banksy. Wes Anderson artisan Williamsburg Neutra. Freegan quinoa forage shabby chic cornhole vinyl. IPhone polaroid forage ennui, jean shorts flexitarian Godard gastropub kitsch sartorial Cosby sweater pickled. Ethical Marfa deep v church-key. Gluten-free biodiesel art party squid vinyl swag, Banksy keytar sustainable. Roof party sriracha fashion axe bitters.</p>
 
-		<%= f.radio_button :rating,   "3" 				%>
-		<%= label_tag			 :rating_3, "Good" 		  %>
+</article>
 
-		<%= f.radio_button :rating,   "4" 				%>
-		<%= label_tag			 :rating_4, "Very Good" %>
-
-		<%= f.radio_button :rating,   "5" 				%>
-		<%= label_tag			 :rating_5, "Excellent" %>
-
-		<%= f.submit 'Leave review' %>
-	<% end %>
-</div>

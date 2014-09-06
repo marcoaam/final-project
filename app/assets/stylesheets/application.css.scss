@@ -27,13 +27,17 @@ $ada: 'Adamina', serif;
 $quick: 'Quicksand', sans-serif;
 $area :	1px red solid;
 
+html {
+	height: 100%;
+}
 
 body {
-	/*background: url(' https://s3.amazonaws.com/getaroom/background.jpg') no-repeat center center; */
+	/* background: url(' https://s3.amazonaws.com/getaroom/background.jpg') no-repeat center center; */
 	background-size: 100%;
 	background-position-y: -40px;
-
+	height: 100%;
 }
+
 
 a:visited {
 	 color: rgb(75,75,75);
@@ -43,6 +47,7 @@ a:hover {
 	 color: rgb(75,75,75);
 	text-decoration: none;
 }
+
 li{
 		list-style-type: none;
 }
@@ -111,6 +116,7 @@ li{
 	}
 
 }
+
 .property_item .edit{
 	font-family: $ada;
 	font-size: 12px;
@@ -220,6 +226,7 @@ address{
 	
 }
 
+<<<<<<< HEAD
 .navbar-brand{
 	position:relative;
 	left: 5%;
@@ -236,6 +243,8 @@ body {
 	background-position-y: -40px;
 	height: 100%;
 }
+=======
+>>>>>>> 41ab8bd81d6a4f23f90b5a393894ac085321a704
 
 #map {
 	margin-top: -72px;
@@ -301,4 +310,125 @@ img.image-show {
 	margin-left: 44%;
 	list-style-type: none;
 }
+
 */
+
+form .stars {
+	background: url("stars.png") repeat-x 0 0;
+	width: 150px;
+	margin: 0 auto;
+	display: inline-block;
+	position: absolute;
+	top: 17px;
+	margin-left: 35%;
+}
+
+form .stars input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+form .stars input[type="radio"].star-5:checked ~ span {
+  width: 100%;
+}
+form .stars input[type="radio"].star-4:checked ~ span {
+  width: 80%;
+}
+form .stars input[type="radio"].star-3:checked ~ span {
+  width: 60%;
+}
+form .stars input[type="radio"].star-2:checked ~ span {
+  width: 40%;
+}
+form .stars input[type="radio"].star-1:checked ~ span {
+  width: 20%;
+}
+form .stars label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0!important;
+  padding: 0!important;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent!important;
+  cursor: pointer;
+}
+form .stars label:hover ~ span {
+  background-position: 0 -30px;
+}
+form .stars label.star-5:hover ~ span {
+  width: 100% !important;
+}
+form .stars label.star-4:hover ~ span {
+  width: 80% !important;
+}
+form .stars label.star-3:hover ~ span {
+  width: 60% !important;
+}
+form .stars label.star-2:hover ~ span {
+  width: 40% !important;
+}
+form .stars label.star-1:hover ~ span {
+  width: 20% !important;
+}
+form .stars span {
+  display: block;
+  width: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("stars.png") repeat-x 0 -60px;
+  -webkit-transition: -webkit-width 0.5s;
+  -moz-transition: -moz-width 0.5s;
+  -ms-transition: -ms-width 0.5s;
+  -o-transition: -o-width 0.5s;
+  transition: width 0.5s;
+}
+
+li.col-md-6 {
+	list-style-type: none;
+}
+
+li.flat-partial.col-md-6 {
+	top: -32px;
+	left: -4%;
+}
+
+li.flat-review-partial.col-md-6 {
+	top: -32px;
+}
+
+section.input-thougths input {
+	width: 70%;
+}
+
+section.input-thougths-big input {
+	width: 70%;
+		-webkit-transition: height 2s ease;
+	-moz-transition: height 2s ease;
+	-ms-transition: height 2s ease;
+	-o-transition: height 2s ease;
+	transition: height 2s ease;
+}
+
+section.input-thougths-big input:focus {
+	width: 70%;
+	height: 120px;
+	-webkit-transition: height 2s ease;
+	-moz-transition: height 2s ease;
+	-ms-transition: height 2s ease;
+	-o-transition: height 2s ease;
+	transition: height 2s ease;
+}
+
+
+input.submit-button {
+	width: 70%;
+	height: 30px;
+}
+
+

@@ -32,4 +32,16 @@ function showTab(tab) {
   $("#room-tab [data-room='" + tab + "']").show();
 }
 
+$("li [role='tab']").on('click', function() {
+
+	var dest = $(this).attr('data-user');
+	$('#form_for_user').attr('action', "/user/" + dest + "/reviews")
+
+});
+
+$(".input-thougths").on('click', function(event){
+	$(this).removeClass().addClass("input-thougths-big");
+});
+
+
 

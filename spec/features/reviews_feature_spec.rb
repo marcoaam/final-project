@@ -20,8 +20,8 @@ describe 'Reviews' do
 		visit '/'
 		click_link 'My properties'
 		click_link 'Great flat near old street'
-		fill_in 'Thoughts', with: 'Great property'
-		choose('review_rating_3')
+		fill_in 'review_thoughts', with: 'Great property'
+		choose('3')
 		click_button 'Leave review'
 		expect(page).to have_content 'Great property'
 	end
@@ -30,20 +30,30 @@ describe 'Reviews' do
 		visit '/'
 		search_home_for('25 city road,London,EC1Y 1AA')
 		click_link 'Great flat near old street'
-		click_link 'John'
-		click_link 'All reviews'
 		expect(page).to have_content 'No reviews have been added.'
 	end
 
-	xit 'leaves a review for a user' do
+	xit 'can leave a review for a user',js: true do
 		visit '/'
 		search_home_for('25 city road,London,EC1Y 1AA')
 		click_link 'Great flat near old street'
-		click_link 'John'
-		click_link 'All reviews'
-		fill_in 'Thoughts', with: 'Great landlord'
-		click_button 'Leave review'
-		expect(page).to have_content 'Great landlord'
+
+			within(:css, "li#landlord") do
+	      click_link("Landlord")
+	    end
+
+	    within(:css, "#form_for_user") do
+	      fill_in 'thoughts', with: 'Great landlord'
+				click_button 'Leave review'
+			end
+
+			within(:css, "li#landlord") do
+				click_link("Landlord")
+	    end
+	    within(:css, "article#user-reviews") do
+	    	expect(page).to have_content 'Great landlord'
+	    end
+			
 	end
 
 end
