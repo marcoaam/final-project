@@ -12,7 +12,7 @@ class Property < ActiveRecord::Base
 	has_many :pictures, as: :imageable, :dependent => :destroy
 	
 	accepts_nested_attributes_for :pictures
-	
+
 	def total_rooms
 	end
 
@@ -21,7 +21,6 @@ class Property < ActiveRecord::Base
 			self.rooms << Room.create(number: n)
 		end
 	end
-
 
 	def full_address
 		"#{self.address},#{self.city},#{self.postcode}"
@@ -42,6 +41,5 @@ class Property < ActiveRecord::Base
 	def pluralized_review
 		self.reviews.count < 2 ? "review" : "reviews"
 	end
-
 
 end

@@ -47,7 +47,7 @@ describe 'User menu display' do
 
 		it 'can sign up', js: true do
 			visit ('/')
-			click_button 'Sign up'
+			click_link 'Sign up'
 			within("#sign_up_modal") do
 				fill_in ('user[username]'), with: 'marco', match: :prefer_exact
 				fill_in ('user[email]'), with: 'm@m.com', match: :prefer_exact
@@ -60,7 +60,7 @@ describe 'User menu display' do
 
 		it 'can sign in', js: true do
 			visit ('/')
-			click_button 'Sign in'
+			click_link 'Sign in'
 			within("#sign_in_modal") do
 				fill_in ('user[login]'), with: 'John', match: :prefer_exact
 				fill_in ('user[password]'), with: '12345678', match: :prefer_exact
