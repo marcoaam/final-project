@@ -24,7 +24,7 @@ class PropertiesController < ApplicationController
 	end
 
 	def update
-		@property = Property.find(params[:id])
+		@property = Property.find(id: params[:id])
 		_update_property_with_new_params
 		redirect_to '/properties'
 	end
@@ -37,6 +37,7 @@ class PropertiesController < ApplicationController
 
 	def show
 		@property = Property.find(params[:id])
+		@user = @property.user
 		@review   = Review.new
 		@reviews  = @property.reviews
 	end
