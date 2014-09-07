@@ -15,6 +15,7 @@
 			</div>
 				<address><%= property.display_full_address %></address>
 				<div class='property_review'>
+					<%= "#{star_rating(property.average_rating)}" %><br>
 					<%= property.reviews.count %> <%= property.pluralized_review %>
 				</div>
 				<% if current_user == property.user %>

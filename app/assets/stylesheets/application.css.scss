@@ -269,7 +269,7 @@ img.image-show {
 .footer {
 	color: whitesmoke;
 	margin-top: -150px;
-	height: 50px;
+	height: 56px;
 	clear: both;
 	padding-top: 20px;
 	color: #fff;
@@ -333,17 +333,8 @@ section.input-thougths input {
 }
 
 section.input-thougths-big input {
-	width: 70%;
-	-webkit-transition: height 2s ease;
-	-moz-transition: height 2s ease;
-	-ms-transition: height 2s ease;
-	-o-transition: height 2s ease;
-	transition: height 2s ease;
-}
-
-section.input-thougths-big input:focus {
-	width: 70%;
 	height: 120px;
+	width: 70%;
 	-webkit-transition: height 2s ease;
 	-moz-transition: height 2s ease;
 	-ms-transition: height 2s ease;

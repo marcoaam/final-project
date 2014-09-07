@@ -1,15 +1,11 @@
 class PropertiesController < ApplicationController
 
+	include PropertiesHelper
+
 	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
-		if params[:user_id]
-			@properties = User.find_by(id: params[:user_id]).properties
-			gmap_caller(@properties)	
-		else
-			@properties = finding_nearby
-			gmap_caller(@properties)
-		end
+		params[:user_id] ? _user_proprieties	: _nearby_proprieties
 	end
 
 	def new
@@ -18,23 +14,9 @@ class PropertiesController < ApplicationController
 	end
 	
 	def create
-		@property = current_user.properties.new(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: :image))
+		@property = _new_property_for_current_user
 		@property.save
-		respond_to do |format|
-			if @property.save
-				if params[:image]
-					params[:image].each do |image|
-						@property.pictures.create(image: image)
-					end
-				end
-				format.html { redirect_to @property, notice: 'The property has been successfully created' }
-				format.json { render json: @property, status: :created, location: @property }
-			else
-				format.html { render action: "new"}
-				format.json { render json: @property.errors, status: :unprocessable_entity }
-				redirect_to '/properties'
-			end
-		end	
+		_respond_to_propriety_creation
 	end
 
 	def edit
@@ -43,33 +25,21 @@ class PropertiesController < ApplicationController
 
 	def update
 		@property = Property.find(params[:id])
-		@property.update(params[:property].permit(:title, :address, :postcode, :city, :total_rooms, :description, pictures_attributes: :image))
+		_update_property_with_new_params
 		redirect_to '/properties'
 	end
 
 	def destroy
 		@property = Property.find(params[:id])
 		@property.destroy
-		redirect_to '/properties'
+		redirect_to "/user/#{current_user.id}/properties"
 	end
 
 	def show
 		@property = Property.find(params[:id])
+		@user = @property.user
 		@review   = Review.new
-		@reviews = @property.reviews
-	end
-
-	def finding_nearby
-		Property.near(params[:search_bar],2)
-	end
-
-	private
-
-	def gmap_caller(properties)
-		@hash = Gmaps4rails.build_markers(properties) do |property, marker|
-		  marker.lat property.latitude
-		  marker.lng property.longitude
-		end
+		@reviews  = @property.reviews
 	end
 
 end
