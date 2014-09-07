@@ -327,17 +327,8 @@ section.input-thougths input {
 }
 
 section.input-thougths-big input {
-	width: 70%;
-	-webkit-transition: height 2s ease;
-	-moz-transition: height 2s ease;
-	-ms-transition: height 2s ease;
-	-o-transition: height 2s ease;
-	transition: height 2s ease;
-}
-
-section.input-thougths-big input:focus {
-	width: 70%;
 	height: 120px;
+	width: 70%;
 	-webkit-transition: height 2s ease;
 	-moz-transition: height 2s ease;
 	-ms-transition: height 2s ease;
@@ -519,11 +510,12 @@ ul.ul-footer {
 .add_property{
 	font-family: $ada;
 	color: whitesmoke;
-	margin: 0px auto;
-
+	margin: auto auto;
 	height:440px;
 	width: 420px;
 	background-color: rgba(75,75,75,0.7);
+	position:relative;
+	top:10%;
 	input{
 		color: rgba(75,75,75,0.7);
 		margin-top: 8px;
@@ -549,6 +541,7 @@ ul.ul-footer {
 
 .form_text_tall input {
 	height:80px;
+	width:220px;
 }
 
 
@@ -556,6 +549,8 @@ ul.ul-footer {
 		margin: 0px auto;
 		padding:0px;
 		width:420px;
+		position: relative;
+		bottom: -14px;
 }
 
 .form_submit input[type=submit]:hover {
@@ -563,9 +558,23 @@ ul.ul-footer {
 	transition-delay: 0.6s ease-in-out;
 }
 
+#property_pictures_attributes_0_image{
+width:100;
+display: inline-block;
+}
 #property_pictures_attributes_1_image{
 width:100;
 display: inline-block;
+}
+#property_pictures_attributes_2_image{
+color: whitesmoke;
+width:100;
+display: inline-block;
+border: 1px whitesmoke solid;
+border-radius: 8px;
+	input{
+		
+	}
 }
 
 
@@ -581,4 +590,54 @@ nav.navbar.navbar-default {
 
 .col-md-12.home_search_form_container {
 	top: 40%;
+}
+
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin: 10px;
+}
+.fileUpload input.upload {
+	width:300px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.btn-primary {
+	width:245px;
+	background-color: transparent;
+	border: 1px whitesmoke solid;
+}
+
+#property_description{
+	width:250px;
+}
+
+.btn-primary:hover {
+	width:245px;
+	background-color: rgba(74,74,74,0.8);
+	border: 1px whitesmoke solid;
+}
+
+#property_pictures_attributes_0_image {
+	border-radius: 8px;
+	width: 100px;
+	display: none;
+
+}
+
+#property_pictures_attributes_1_image {
+	width: 100px;
+	display: none;
+}
+#property_pictures_attributes_2_image {
+	width: 100px;
+	display: none;
 }
