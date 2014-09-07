@@ -87,6 +87,7 @@ li{
 		color: transparent;
 		position:absolute;
 		right:0px;
+		outline: none;
 	}
 
 	.property_item {
@@ -172,6 +173,10 @@ address{
 	background-color: rgba(216,216,216,0.8);
 }
 
+#home_search_bar:focus{
+	outline:none;
+} 
+
 #home_search_form {
 		width: 500px;
 		margin: 0 auto;
@@ -183,6 +188,7 @@ address{
 		border: none;
 		color: transparent;
 		position:absolute;
+		outline: none;
 	}
 }
 
@@ -544,7 +550,6 @@ ul.ul-footer {
 	width:220px;
 }
 
-
 .form_submit input[type=submit]{
 		margin: 0px auto;
 		padding:0px;
@@ -557,26 +562,6 @@ ul.ul-footer {
 	background-color: rgba(245,166,35,1);
 	transition-delay: 0.6s ease-in-out;
 }
-
-#property_pictures_attributes_0_image{
-width:100;
-display: inline-block;
-}
-#property_pictures_attributes_1_image{
-width:100;
-display: inline-block;
-}
-#property_pictures_attributes_2_image{
-color: whitesmoke;
-width:100;
-display: inline-block;
-border: 1px whitesmoke solid;
-border-radius: 8px;
-	input{
-		
-	}
-}
-
 
 article.flash {
 display: table-column;
@@ -617,27 +602,80 @@ nav.navbar.navbar-default {
 }
 
 #property_description{
+	color: rgba(74,74,74,1);
 	width:250px;
+}
+
+button{
+	border:$area;
+	text-decoration: none;
+	color: #fff;
+  font-size: 20px; 
+  cursor: pointer;
+  background: transparent;
+  position: relative
 }
 
 .btn-primary:hover {
 	width:245px;
 	background-color: rgba(74,74,74,0.8);
-	border: 1px whitesmoke solid;
+
 }
 
-#property_pictures_attributes_0_image {
+#property_pictures_attributes_0_image button{
+	// background: transparent;
 	border-radius: 8px;
 	width: 100px;
-	display: none;
-
+	display: inline-block;
 }
 
 #property_pictures_attributes_1_image {
 	width: 100px;
-	display: none;
+	display: inline-block;
 }
 #property_pictures_attributes_2_image {
 	width: 100px;
-	display: none;
+	display: inline-block;
+}
+
+.modal-content{
+	color:whitesmoke;
+	width:300px;
+	margin:100px auto;
+	background-color: rgba(74,74,74,0.8);
+}
+
+
+.edit_user{
+	color: whitesmoke;
+	padding-top: 20px;
+	width:400px;
+	background-color: rgba(74,74,74,0.8);
+	margin: 0px auto;
+	height:200px;
+
+ 	input[type=submit]{
+		margin: 0px auto;
+		padding:0px;
+		width:100%;
+		position: relative;
+		background-color: rgba(216,216,216,1);
+		bottom:-90px;
+		border: none;
+	}
+	input[type=submit]:hover{
+			background-color: rgba(245,166,35,1);
+	}
+		#user_image{
+		width: 200px;
+		height: 30px;
+		display: inline-block;
+		background:gray;
+		border: 1px whitesmoke solid;
+		border-radius: 8px;
+		text-decoration: none;
+	}
+	#user_bio{
+		width: 200px;
+	}
 }

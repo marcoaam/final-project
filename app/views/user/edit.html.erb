@@ -4,10 +4,10 @@ You can do it here:
 
 <%= form_for @user, :html => {:multipart => true} do |f| %>
 
-		  <%= f.label :bio %>
-		  <%= f.text_field :bio %>
-
-		  <%= f.label :image %>
+		  <span class="form_label" ><%= f.label :bio %></span>
+		  <span class="form_text_tall"><%= f.text_area :bio %></span>
+			<br>
+		  <span class="form_label" ><%= f.label :image %></span>
 		  <%= f.file_field :image %>
 
 		  <%= f.submit "Save" %> 
