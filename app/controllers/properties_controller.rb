@@ -37,6 +37,7 @@ class PropertiesController < ApplicationController
 
 	def show
 		@property = Property.find(params[:id])
+		@user = @property.user
 		@review   = Review.new
 		@reviews  = @property.reviews.reverse
 	end

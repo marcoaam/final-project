@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
 
   has_many :pictures, as: :imageable, dependent: :destroy
 
+  validates_each :pictures do |user, attr, value|
+   user.errors.add attr, "too much pictures for user" if user.pictures.size > 1
+  end
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

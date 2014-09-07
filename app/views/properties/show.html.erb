@@ -1,15 +1,20 @@
 <%= render "properties/slider" %>
 <article class="row">
-	<section class="toggle-vertical col-md-4">
+	<section class="toggle-vertical col-md-4 property-list-container">
 	 	<ul class="nav nav-tabs" role="tablist">
-		  <li class="active" id="flat">
+		  <li class="active property_item" id="flat">
 		  	<a href="#flat-tab" role="tab" data-toggle="tab">
 					<h4><%= @property.title %></h4>
 					<h6><%= @property.address %></h6>
 				</a>
 			</li>
 		  <li id="landlord">
-		  	<a href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">Landlord</a>
+		  	<a href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">
+		  		<% @user.pictures.each do |picture| %>
+		  			<%= image_tag picture.image.url(:profile), class: "img-circle panel-img-position" %>">
+		  		</a>
+		  		<% end %>
+		  		<a href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">Landlord</a>
 		  </li>
 
 		 		<% if @property.rooms.any?  %>

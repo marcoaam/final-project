@@ -13,6 +13,10 @@ class Property < ActiveRecord::Base
 	
 	accepts_nested_attributes_for :pictures
 
+	validates_each :pictures do |property, attr, value|
+   property.errors.add attr, "too much pictures for property" if property.pictures.size > 3
+  end
+
 	def total_rooms
 	end
 
