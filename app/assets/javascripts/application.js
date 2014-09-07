@@ -17,13 +17,29 @@
 //= require gmaps/google
 //= require_tree .
 
+//show the right room number on properties/id page
 
 
+$("li [role='tab']").on('click', function() {
 
+	var dest = $(this).attr('data-room');
+  showTab(dest);
+  
+});
 
+function showTab(tab) {
+	$("#room-tab li").hide();
+  $("#room-tab [data-room='" + tab + "']").show();
+}
 
+$("li [role='tab']").on('click', function() {
 
+	var dest = $(this).attr('data-user');
+	$('#form_for_user').attr('action', "/user/" + dest + "/reviews")
 
+});
 
-
+$(".input-thougths").on('click', function(event){
+	$(this).removeClass().addClass("input-thougths-big");
+});
 

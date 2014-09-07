@@ -20,4 +20,10 @@ module ReviewsHelper
 		user.reviews.create(thoughts: params[:thoughts], rating: params[:rating])
 	end
 
+	def star_rating(rating)
+		return 'No rating' unless rating.respond_to?(:round)
+		remainder = 5 - rating.round
+		('★' * rating.round) + ('☆' * remainder)
+	end
+
 end

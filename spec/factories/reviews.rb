@@ -5,4 +5,5 @@ FactoryGirl.define do
     thoughts "MyText"
     rating 	 "2"
   end
+
 end
