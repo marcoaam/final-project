@@ -24,7 +24,7 @@ class PropertiesController < ApplicationController
 	end
 
 	def update
-		@property = Property.find(id: params[:id])
+		@property = Property.find(params[:id])
 		_update_property_with_new_params
 		redirect_to '/properties'
 	end

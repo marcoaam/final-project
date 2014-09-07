@@ -32,7 +32,6 @@ describe 'interactive tab' do
 		it 'can target, open and see what is inside the tab', js: true do
 			visit("/properties/21")
 			within(:css, "li#landlord") do
-				save_and_open_page
 	      click_link("Landlord")
 	    end
 	    find('#review_thoughts_landlord').visible?
