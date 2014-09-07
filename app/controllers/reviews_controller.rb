@@ -1,25 +1,14 @@
 class ReviewsController < ApplicationController
 
+	include ReviewsHelper
+
 	def index
-		if params[:property_id]
-			@property = Property.find(params[:property_id])
-			@reviews = @property.reviews.all
-		else
-			@user = User.find(params[:user_id])
-			@reviews = @user.reviews.all
-		end
+		params[:property_id] ? _show_reviews_of_one_property : _show_reviews_of_one_user
 		@review = Review.new
 	end
 
 	def create
-		if params[:property_id]
-			property = Property.find(params[:property_id])
-			property.reviews.create(params[:review].permit(:thoughts, :rating))
-
-		else
-			user = User.find(params[:user_id])
-			user.reviews.create(thoughts: params[:thoughts], rating: params[:rating])
-		end
+		params[:property_id] ? _create_review_for_property : _create_review_for_user
 		redirect_to :back
 	end
 	
