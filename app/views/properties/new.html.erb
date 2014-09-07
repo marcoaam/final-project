@@ -19,18 +19,14 @@
 		<span class="form_text_short" ><%= f.number_field :total_rooms %></span>
 		<br>
 
-		
-			<%= f.fields_for :pictures do |pictures_form| %>
-		      <span class="form_label" ><%= pictures_form.label :image %></span>
-
-		      <div class="fileUpload btn btn-primary">
-    <span>Upload</span>
-    <%= pictures_form.file_field :image %>
-</div>
-
-		    
-		  <% end %>
+		<%= f.fields_for :pictures do |pictures_form| %>
+	    <span class="form_label" ><%= pictures_form.label :image %></span>
+	    <div class="fileUpload btn btn-primary">
+				<!-- <span>Upload</span> -->
+  			<%= pictures_form.file_field :image %>
+			</div>    
+	  <% end %>
 	
-<span class="form_submit"><%= f.submit "Submit" %></span>
+	<span class="form_submit"><%= f.submit "Submit" %></span>
 	<% end %>
 </div>
