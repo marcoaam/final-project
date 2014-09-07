@@ -13,7 +13,7 @@
 		<span class="form_text_short" ><%= f.text_field :postcode %></span>
 		<hr>
 		<span class="form_label" ><%= f.label :description %></span>
-		<span class="form_text_tall" ><%= f.text_field :description %></span>
+		<span class="form_text_tall" ><%= f.text_area :description %></span>
 		<br>
 		<span class="form_label" ><%= f.label :total_rooms %></span>
 		<span class="form_text_short" ><%= f.number_field :total_rooms %></span>
@@ -22,7 +22,12 @@
 		
 			<%= f.fields_for :pictures do |pictures_form| %>
 		      <span class="form_label" ><%= pictures_form.label :image %></span>
-		      <%= pictures_form.file_field :image %>
+
+		      <div class="fileUpload btn btn-primary">
+    <span>Upload</span>
+    <%= pictures_form.file_field :image %>
+</div>
+
 		    
 		  <% end %>
 	
