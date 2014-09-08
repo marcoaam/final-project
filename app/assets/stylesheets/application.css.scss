@@ -10,8 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_self
  *= require_tree .
+ *= require_self
 */
 
 @import "bootstrap-sprockets";
@@ -164,13 +164,13 @@ address{
 }
 
 #home_search_bar {
-	width: 700px;
-	height: 67px;
-	color: rgba(74,74,74,0.8);
-	font-family: $quick;
+	width: 112%;
+	height: 67%;
+	color: rgba(74, 74, 74, 0.8);
+	font-family: "Quicksand", sans-serif;
 	font-size: 24px;
 	border: none;
-	background-color: rgba(216,216,216,0.8);
+	background-color: rgba(216, 216, 216, 0.8);
 }
 
 #home_search_bar:focus{
@@ -181,7 +181,7 @@ address{
 
 		width: 500px;
 		height: 100px;
-		margin-left: 30%;
+		margin-left: 32%;
 		margin-top: 22%;
 
 		input[type=submit] {
@@ -280,36 +280,7 @@ img.image-show {
 	font-family: $quick;
 	margin-left:10px;
 	position: relative;
-	bottom:8px;
 }
-/*
-.carousel {
-	position: relative;
-	margin-top: -82px;
-	margin-left: -232px;
-	width: 141%;
-}
-
-.flat-partial {
-	float: left;
-	position: absolute;
-	margin-left: -58%;
-	border: 1px solid red;
-	list-style-type: none;
-	width: 100%;
-}
-
-.flat-review-partial {
-	float: right;
-	position: absolute;
-	margin-right: -77%;
-	border: 1px solid blue;
-	margin-left: 44%;
-	list-style-type: none;
-}
-
-*/
-
 
 li.col-md-6 {
 	list-style-type: none;
@@ -645,7 +616,7 @@ width: 100%;
 	bottom: -59px;
 }
 
-/*
+
 .btn-primary:hover {
 	width:245px;
 	background-color: rgba(74,74,74,0.8);
@@ -680,11 +651,16 @@ input.form-control.input-sm {
 	background-color: transparent;
 	border: 1px whitesmoke solid;
 }
-*/
 
 .video{
 	height:100%;
-	width:100%;
+	width:102%;
 	z-index:-1;
 	position:absolute;
+}
+
+video.col-md-12 {
+object-fit: cover;
+height: 100%;
+width: 100%;
 }
