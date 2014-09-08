@@ -10,8 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_self
  *= require_tree .
+ *= require_self
 */
 
 @import "bootstrap-sprockets";
@@ -207,17 +207,9 @@ address{
 	 color: rgb(255,255,255);
 	}
 
-	a:visited {
-	 color: rgb(255,255,255);
-	}
-
 	.navbar-right a:visited {
 	 color: rgb(255,255,255);
 
-	}
-
-	.navbar-right a{
-	 color: rgb(255,255,255);
 	}
 
 	.navbar-right a {
@@ -289,7 +281,6 @@ img.image-show {
 	font-family: $quick;
 	margin-left:10px;
 	position: relative;
-	bottom:8px;
 }
 
 li.col-md-6 {
@@ -663,13 +654,13 @@ input.form-control.input-sm {
 	border: 1px whitesmoke solid;
 }
 
-
 .video{
 	height:100%;
-	width:100%;
+	width:102%;
 	z-index:-1;
 	position:absolute;
 }
+
 
 .room_item a{
 	color: rgba(74,74,74,1);
@@ -699,5 +690,9 @@ input.form-control.input-sm {
 	overflow-y: auto;
 }
 
-
+video.col-md-12 {
+object-fit: cover;
+height: 100%;
+width: 100%;
+}
 

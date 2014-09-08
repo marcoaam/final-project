@@ -4,8 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-  attr_accessor :login #who put it there? I think it is old syntax ... 
-  # REEEEADDDDDDDD !!!!! 
+  attr_accessor :login
+
   has_many :properties
 
   has_many :reviews, as: :imageable
@@ -24,5 +24,5 @@ class User < ActiveRecord::Base
       where(conditions).first
     end
   end
-  #Explain me this method guys
+
 end
