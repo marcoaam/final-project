@@ -171,7 +171,6 @@ address{
 	font-size: 24px;
 	border: none;
 	background-color: rgba(216,216,216,0.8);
-	margin: 0px -10%;
 }
 
 #home_search_bar:focus{
@@ -179,9 +178,11 @@ address{
 } 
 
 #home_search_form {
+
 		width: 500px;
-		margin: 0 auto;
 		height: 100px;
+		margin-left: 30%;
+		margin-top: 22%;
 
 		input[type=submit] {
 		width:67px;
@@ -239,7 +240,6 @@ address{
 
 	.home_search_form_container {
 		height: 100%;
-		margin: 0px auto;
 	}
 	
 }
