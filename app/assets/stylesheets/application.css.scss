@@ -36,6 +36,7 @@ body {
 	background-size: 100%;
 	background-position-y: -40px;
 	height: 100%;
+	overflow-x: hidden;
 }
 
 
@@ -480,6 +481,7 @@ form .stars-landlord span {
 
 .carousel {
 	position: relative;
+	height:55%;
 }
 
 ul.ul-footer {
@@ -668,3 +670,34 @@ input.form-control.input-sm {
 	z-index:-1;
 	position:absolute;
 }
+
+.room_item a{
+	color: rgba(74,74,74,1);
+	font-family:$ada;
+	font-size:18px;
+	height:70px;
+	background-color: whitespace;
+}
+
+.landlord_item a{
+	color: rgba(74,74,74,1);
+	font-family:$ada;
+	font-size:18px;
+	height:70px;
+	background-color: rgba(251,212,149,1);
+} 
+
+.nav-tabs > li.property_item_big.active > a, .nav-tabs > li.property_item_big.active > a:hover, .nav-tabs > li.property_item_big.active > a:focus{
+	background-color: rgba(245,166,35,1);
+}
+
+.lower_column {
+	height: calc(45% - 115px);
+}
+.property-list-container{
+	height: 100%;
+	overflow-y: auto;
+}
+
+
+
