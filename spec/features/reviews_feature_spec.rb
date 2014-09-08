@@ -33,27 +33,28 @@ describe 'Reviews' do
 		expect(page).to have_content 'No reviews have been added.'
 	end
 
-	xit 'can leave a review for a user',js: true do
+	it 'can leave a review for a user',js: true do
 		visit '/'
 		search_home_for('25 city road,London,EC1Y 1AA')
 		click_link 'Great flat near old street'
 
-			within(:css, "li#landlord") do
-	      click_link("Landlord")
-	    end
+		within(:css, "li#landlord") do
+      click_link("Landlord")
+    end
+    
+    within(:css, "#form_for_user") do
+    	page.find("#star-landlord-1").trigger('click')
+      fill_in 'thoughts', with: 'Great landlord'
+			click_button 'Leave review'
+		end
 
-	    within(:css, "#form_for_user") do
-	      fill_in 'thoughts', with: 'Great landlord'
-				click_button 'Leave review'
-			end
+		within(:css, "li#landlord") do
+			click_link("Landlord")
+    end
 
-			within(:css, "li#landlord") do
-				click_link("Landlord")
-	    end
-	    within(:css, "article#user-reviews") do
-	    	expect(page).to have_content 'Great landlord'
-	    end
-			
+    within(:css, "#user-reviews") do
+    	expect(page).to have_content 'Great landlord'
+  	end
 	end
 
 end

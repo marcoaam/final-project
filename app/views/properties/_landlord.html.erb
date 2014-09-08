@@ -1,6 +1,5 @@
 <article class="flat-bio">
 	<h2><%= @property.user.username  %></h2>
-	<strong>My rate: </strong><%= @property.average_rating  %>
+	<strong>My rate: </strong><%= @property.user.reviews.average(:rating)  %>
 		<p><%= @property.user.username %></p>
 </article>
-
