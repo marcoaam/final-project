@@ -24,18 +24,5 @@ describe 'Edit user' do
 			expect(page).to have_content('Hey John')
 		end
 
-		it 'can see a link to see all the reviews' do
-			visit('/')
-			click_link('Edit profile')
-			expect(page).to have_content('All reviews')
-		end
-
-		it 'can go to the page with all the reviews' do
-			visit('/')
-			click_link('Edit profile')
-			click_link('All reviews')
-			expect(current_path).to eq('/user/4/reviews')
-		end
-
 	end
 end
