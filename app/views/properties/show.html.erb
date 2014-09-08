@@ -9,13 +9,12 @@
 				</a>
 			</li>
 		  <li id="landlord">
-		  	<a href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">
-		  	</a>
-		  		<a href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">Landlord</a>
+		  		<a href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">
 		  		<% @user.pictures.each do |picture| %>
 		  			<%= image_tag picture.image.url(:profile), class: "img-circle panel-img-position" %>
 		  		<% end %>
-		  		Landlord</a>
+		  		Landlord
+		  		</a>
 		  </li>
 
 	 		<% if @property.rooms.any?  %>

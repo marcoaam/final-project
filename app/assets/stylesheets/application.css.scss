@@ -75,7 +75,6 @@ li {
 	padding: 0px;
 	background: rgba(74,74,74,1) ;
 	height: 100%;
-	height: 85%;
 	position:relative;
 	overflow-y: auto;
 	
@@ -120,6 +119,7 @@ li {
 .property_item .edit {
 	font-family: $ada;
 	font-size: 12px;
+	display: block;
 }
 
 .property_review {
@@ -171,7 +171,6 @@ address{
 	font-size: 24px;
 	border: none;
 	background-color: rgba(216,216,216,0.8);
-	margin: 0px -10%;
 }
 
 #home_search_bar:focus{
@@ -179,9 +178,11 @@ address{
 } 
 
 #home_search_form {
+
 		width: 500px;
-		margin: 0 auto;
 		height: 100px;
+		margin-left: 30%;
+		margin-top: 22%;
 
 		input[type=submit] {
 		width:67px;
@@ -231,7 +232,6 @@ address{
 
 	.home_search_form_container {
 		height: 100%;
-		margin: 0px auto;
 	}
 	
 }
@@ -245,7 +245,7 @@ address{
 
 
 #map {
-	height: 85%;
+	height: 100%;
 }
 
 .nav-tabs {
@@ -560,8 +560,7 @@ ul.ul-footer {
 }
 
 article.flash {
-display: table-column;
-position: absolute;
+	margin-top: 18px;
 }
 
 
@@ -590,7 +589,6 @@ article.navbar.navbar-default {
 
 
 .edit_user{
-	color: whitesmoke;
 	padding-top: 20px;
 	width:400px;
 	background-color: rgba(74,74,74,0.8);
@@ -633,30 +631,56 @@ top: 5px;
 }
 
 h5.add-pictures {
-margin: 10px auto;
-width: 90px;
+text-align: center;
+width: 100%;
 }
 
 .edit_user input[type=submit] {
-margin: 0px auto;
-padding: 0px;
-width: 100%;
-position: relative;
-background-color: #d8d8d8;
-border: none;
-margin-top: 11%;
+	margin: 0px auto;
+	padding: 0px;
+	width: 100%;
+	position: relative;
+	background-color: #d8d8d8;
+	border: none;
+	bottom: -59px;
 }
 
+/*
 .btn-primary:hover {
-width:245px;
-background-color: rgba(74,74,74,0.8);
+	width:245px;
+	background-color: rgba(74,74,74,0.8);
+}
 
-}
 .btn-primary {
-width:245px;
-background-color: transparent;
-border: 1px whitesmoke solid;
+	width:245px;
+	background-color: transparent;
+	border: 1px whitesmoke solid;
 }
+
+span.alert {
+	margin-left: 42%;
+	margin-top: 16px;
+}
+
+.close {
+	float: none;
+}
+
+ .alert-dismissible .close {
+	top: 0px;
+}
+
+.edit-user-text {
+	text-align: center;
+}
+
+input.form-control.input-sm {
+	top: 5px;
+	width:245px;
+	background-color: transparent;
+	border: 1px whitesmoke solid;
+}
+*/
 
 .video{
 	height:100%;
