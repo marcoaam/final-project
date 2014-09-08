@@ -1,18 +1,22 @@
 <article class='review' id="review_thoughts_flat">
+
 	<%= form_for [@property, @review] do |f| %>
+
 		<section class="stars-section">
-		<h3>Leave a review </h3>
-			<aside class='stars'>
-	      <% 1.upto(5) do |n| %>
-	          <%= f.label n, "rating_#{n}" => "star-#{n}", for: "star-#{n}" %>
-	          <%= f.radio_button :rating, n, :class => "star-#{n}", id: "star-#{n}" %>
-	      <% end %>
-	      <span></span>
-	    </aside>
+			<h3>Leave a review </h3>
+				<aside class='stars'>
+		      <% 1.upto(5) do |n| %>
+		          <%= f.label n, "rating_#{n}" => "star-#{n}", for: "star-#{n}" %>
+		          <%= f.radio_button :rating, n, :class => "star-#{n}", id: "star-#{n}" %>
+		      <% end %>
+		      <span></span>
+		    </aside>
     </section>
+
 		<section class="input-thougths">
 			<%= f.text_field   :thoughts, :placeholder => "Leave a review here... " %>
 		</section>
+
 		<%= f.submit "Leave review", class: "submit-button" %>
 	<% end %>
 </article>
@@ -29,4 +33,4 @@
 	No reviews have been added.
 <% end %>
 
-	<%= link_to 'See all reviews', property_reviews_path(@property) %>
+<%= link_to 'See all reviews', property_reviews_path(@property) %>

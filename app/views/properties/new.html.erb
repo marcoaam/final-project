@@ -1,6 +1,6 @@
-<div class='add_property'>
-	<%= form_for @property, :html => {:multipart => true} do |f| %>
+<article class='add_property'>
 
+	<%= form_for @property, :html => {:multipart => true} do |f| %>
 		<span class="form_label" ><%= f.label :title %></span>
 		<%= f.text_field :title %>
 		<br>
@@ -21,12 +21,11 @@
 
 		<%= f.fields_for :pictures do |pictures_form| %>
 	    <span class="form_label" ><%= pictures_form.label :image %></span>
-	    <div class="fileUpload btn btn-primary">
-				<!-- <span>Upload</span> -->
+	    <span class="fileUpload btn btn-primary">
   			<%= pictures_form.file_field :image %>
-			</div>    
+			</span>    
 	  <% end %>
 	
 	<span class="form_submit"><%= f.submit "Submit" %></span>
 	<% end %>
-</div>
+</article>

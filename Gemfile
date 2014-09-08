@@ -24,7 +24,7 @@ gem 'gmaps4rails'
 gem 'aws-sdk'
 gem "paperclip", "~> 4.2"
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
-
+gem 'bootstrap-filestyle-rails'
 
 gem 'rails', '4.1.4'
 gem 'pg'

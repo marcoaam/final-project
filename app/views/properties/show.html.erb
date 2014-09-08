@@ -17,13 +17,13 @@
 		  		<a href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">Landlord</a>
 		  </li>
 
-		 		<% if @property.rooms.any?  %>
-		  		<% @property.rooms.each do |room| %>
-		  			<li id="room-<%= room.number %>">
-		  				<a href="#room-tab" role="tab" data-toggle="tab" id="rooma-<%= room.number %>"data-room="room-<%= room.number %>">Room <%= room.number %></a>
-		  			</li>
-					<% end %>
-		 		<% end %>
+	 		<% if @property.rooms.any?  %>
+	  		<% @property.rooms.each do |room| %>
+	  			<li id="room-<%= room.number %>">
+	  				<a href="#room-tab" role="tab" data-toggle="tab" id="rooma-<%= room.number %>"data-room="room-<%= room.number %>">Room <%= room.number %></a>
+	  			</li>
+				<% end %>
+	 		<% end %>
 
 		</ul>
 	</section>

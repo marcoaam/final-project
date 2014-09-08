@@ -1,35 +1,38 @@
 <article class='review' id="review_thoughts_flat">
-	<div class='review' id="review_thoughts_landlord">
-<form id="form_for_user" method="POST" action="">
-<section class="stars-section">
-		<h3>Leave a review </h3>
-	<aside class="stars-landlord">
-	<label for="star-landlord-1" rating_1="star-landlord-1">1</label>
-		<input type="radio" name="rating" class="star-landlord-1" id="star-1" value="1" />
-		<label for="star-landlord-2" rating_2="star-landlord-2">2</label>
-		<input type="radio" name="rating" class="star-landlord-2" id="star-2" value="2" />
+	<span class='review' id="review_thoughts_landlord">
+		<form id="form_for_user" method="POST" action="">
+			<section class="stars-section">
+				<h3>Leave a review </h3>
+					<aside class="stars-landlord">
+						<label for="star-landlord-1" rating_1="star-landlord-1">1</label>
+						<input type="radio" name="rating" class="star-landlord-1" id="star-1" value="1" />
 
-		<label for="star-landlord-3" rating_3="star-landlord-3">3</label>
-		<input type="radio" name="rating" class="star-landlord-3" id="star-3" value="3" />
+						<label for="star-landlord-2" rating_2="star-landlord-2">2</label>
+						<input type="radio" name="rating" class="star-landlord-2" id="star-2" value="2" />
 
-		<label for="star-landlord-4" rating_4="star-landlord-4">4</label>
-		<input type="radio" name="rating" class="star-landlord-4" id="star-4" value="4" />
+						<label for="star-landlord-3" rating_3="star-landlord-3">3</label>
+						<input type="radio" name="rating" class="star-landlord-3" id="star-3" value="3" />
 
-		<label for="star-landlord-5" rating_5="star-landlord-5">5</label>
-		<input type="radio" name="rating" class="star-landlord-5" id="star-5" value="5" />
-		<span></span>
-	</aside>
-</section>
+						<label for="star-landlord-4" rating_4="star-landlord-4">4</label>
+						<input type="radio" name="rating" class="star-landlord-4" id="star-4" value="4" />
 
-		<section class="input-thougths">
-			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-		  <input type="text" id="thoughts" name="thoughts" required>
-		</section>
+						<label for="star-landlord-5" rating_5="star-landlord-5">5</label>
+						<input type="radio" name="rating" class="star-landlord-5" id="star-5" value="5" />
 
-	<input type="submit" class="submit-button" value="Leave review">
+						<span></span>
+					</aside>
+			</section>
 
-</form>
+			<section class="input-thougths">
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			  <input type="text" id="thoughts" name="thoughts" required>
+			</section>
+
+			<input type="submit" class="submit-button" value="Leave review">
+		</form>
+	</span>
 </article>
+
 <article id="user-reviews">
 <% if @reviews.any? %>
 	<% @property.user.reviews.each do |review| %>

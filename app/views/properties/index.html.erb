@@ -1,8 +1,8 @@
-	<div class='col-md-6' id="map"></div>
+<div class='col-md-6' id="map"></div>
 
-<div class="col-md-6 property_list_container" >
+<article class="col-md-6 property_list_container" >
 	
-	<form method='GET' action='/properties' >
+<form method='GET' action='/properties' >
 	<input type="text" name="search_bar" id="index_search_bar" placeholder='Type location' class="col-xs-6 .col-sm-4" required>
 	<input type="submit" value="Search" >
 </form>
@@ -10,28 +10,28 @@
 <% if @properties.any? %>
 	<% @properties.each do |property| %> 
 			<li class="property_item">
-			<div class='property_title'>
-				<%= link_to property.title, property_path(property) %>
-			</div>
+				<span class='property_title'>
+					<%= link_to property.title, property_path(property) %>
+				</span>
 				<address><%= property.display_full_address %></address>
-				<div class='property_review'>
+				<span class='property_review'>
 					<%= "#{star_rating(property.average_rating)}" %><br>
 					<%= property.reviews.count %> <%= property.pluralized_review %>
-				</div>
+				</span>
 				<% if current_user == property.user %>
-				<div class='edit'>
+				<span class='edit'>
 					<%= link_to "Edit", edit_property_path(property) %>
 					<%= link_to "Delete", property_path(property), method: :delete %>
-				</div>
+				</span>
 				<%else%>
-				<div class='posted_by'>
+				<span class='posted_by'>
 					<%= "Posted by - #{property.user.username}" %>
-				</div>
-				</li>
+				</span>
+			</li>
 				<%end%>
 		<% end %>
 <%else%>
 	<p>No properties have been added.</p>
 <%end%>
 
-</div>
+</article>

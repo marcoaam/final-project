@@ -1,24 +1,30 @@
-  <div class="container-fluid">
-    <div class="navbar-header">
+<article class="navbar navbar-default" role="navigation">
+  <section class="container-fluid">
+    <header class="navbar-header">
       <a class="navbar-brand" href="/"><img src="http://localhost:3000/assets/flatter_logo_big.png"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    </header>
+    <nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <% if user_signed_in? %>
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><%= link_to 'Home', root_path %></li>
-	  			<li> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
-					<li> <%= link_to 'My properties', user_properties_path(current_user) %></li>
-					<li><%= link_to "Add property", new_property_path %></li>
-          <li><%= link_to "Edit profile", edit_user_path(current_user) %></li>
-	      </ul>
-      <% else %>
-      	<ul class="nav navbar-nav navbar-right">
-	   			<li><%= link_to 'Home', root_path %> </li>
-					<li><%= link_to 'Sign in', '#', data: { toggle: "modal", target: "#sign_in_modal" } %> </li>
-					<li> <%= link_to 'Sign up', '#', data: { toggle: "modal", target: "#sign_up_modal" } %></li>
-      	</ul>
-      <% end %>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
 
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to 'Home', root_path %></li>
+    			<li> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+  				<li> <%= link_to 'My properties', user_properties_path(current_user) %></li>
+  				<li><%= link_to "Add property", new_property_path %></li>
+          <li><%= link_to "Edit profile", edit_user_path(current_user) %></li>
+        </ul>
+
+      <% else %>
+
+      	<ul class="nav navbar-nav navbar-right">
+     			<li><%= link_to 'Home', root_path %> </li>
+  				<li><%= link_to 'Sign in', '#', data: { toggle: "modal", target: "#sign_in_modal" } %> </li>
+  				<li> <%= link_to 'Sign up', '#', data: { toggle: "modal", target: "#sign_up_modal" } %></li>
+      	</ul>
+        
+      <% end %>
+
+    </nav><!-- /.navbar-collapse -->
+  </section><!-- /.container-fluid -->
+</article>

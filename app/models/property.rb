@@ -17,9 +17,7 @@ class Property < ActiveRecord::Base
 	end
 
 	def total_rooms=(number)
-		1.upto(number.to_i) do |n|
-			self.rooms << Room.create(number: n)
-		end
+		1.upto(number.to_i) { |n| self.rooms << Room.create(number: n) }
 	end
 
 	def full_address
@@ -31,11 +29,7 @@ class Property < ActiveRecord::Base
 	end
 
 	def average_rating
-		if self.reviews.empty?
-			"No reviews have been added."
-		else 
-			reviews.average(:rating)
-		end
+	  self.reviews.empty? ? "No reviews have been added." : reviews.average(:rating)
 	end
 
 	def pluralized_review

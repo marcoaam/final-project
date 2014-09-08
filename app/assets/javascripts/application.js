@@ -12,12 +12,15 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require bootstrap-filestyle
 //= require jquery_ujs
 //= require underscore
 //= require gmaps/google
 //= require_tree .
 
 //show the right room number on properties/id page
+
+$(":file").filestyle({size: "sm"});
 
 
 $("li [role='tab']").on('click', function() {
@@ -42,4 +45,6 @@ $("li [role='tab']").on('click', function() {
 $(".input-thougths").on('click', function(event){
 	$(this).removeClass().addClass("input-thougths-big");
 });
+
+
 

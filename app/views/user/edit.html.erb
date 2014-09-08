@@ -1,20 +1,26 @@
-Hey <%= @user.username %>, wanna add a bio and your pictures? 
+<h1>Hey <%= @user.username %>, wanna add a bio and your pictures?</h1> 
 
-You can do it here: 
+<h4>You can do it here: <h4>
 
 <%= form_for @user, :html => {:multipart => true} do |f| %>
 
-		  <span class="form_label" ><%= f.label :bio %></span>
-		  <span class="form_text_tall"><%= f.text_area :bio %></span>
-			<br>
-		  <span class="form_label" ><%= f.label :image %></span>
-		  <%= f.file_field :image %>
+  <span class="form_label" ><%= f.label :bio %></span>
+  <span class="form_text_tall"><%= f.text_area :bio %></span>
+	<br>
+  <span class="btn btn-default btn-file"><%= f.label :image %></span>
+  	<%= f.file_field :image %>
 
-		  <%= f.submit "Save" %> 
+  <%= f.submit "Save" %> 
 
-		<% end %>
+<% end %>
 
-
-You can see your all your reviews there: <%= link_to 'All reviews', user_reviews_path(@user) %>
+<h6>
+	<em>
+		You can see your all your reviews there:
+	</em>
+	<strong>
+		<%= link_to 'All reviews', user_reviews_path(@user) %>
+	</strong>
+<h6>
 
 		

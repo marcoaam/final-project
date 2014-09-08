@@ -17,7 +17,8 @@
 
 	<ul>
 		<%= f.fields_for :pictures do |pictures_form| %>
-	     <li> <%= pictures_form.label :image %>
+	    <li> 
+	     	<%= pictures_form.label :image %>
 	      <%= pictures_form.file_field :image %>
 	    </li>
 	  <% end %>
