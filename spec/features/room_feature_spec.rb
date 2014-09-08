@@ -60,21 +60,22 @@ describe 'Room' do
 
 	end
 
-	xit 'should advice the user that he will be added as the user', js: true do
+	it 'should advice the user that he will be added as the user', js: true do
 		visit('/properties/21')
 		within(:css, "li#room-1") do
 	      click_link("Room 1")
 	  end
 
 	  within(:css, "article#container-room-1") do
-			handle_js_confirm do
-			  click_link 'Do you live here ?'
-			end.should == "Are you sure to live here, you will be added as the tenant of this room"
+		  click_link 'Do you live here ?'
+	    expect(page).to have_content("Hello I'm John")
+			# end
+			# handle_js_confirm do
+			#   click_link 'Do you live here ?'
+			# end.should == "Are you sure to live here, you will be added as the tenant of this room"
 	  end
 
-   	within(:css, "article#container-room-1") do
-    expect(page).to have_content("Hello I'm John")
-	  end
+
 	end
 
 end

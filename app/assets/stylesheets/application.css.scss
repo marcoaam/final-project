@@ -10,8 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require_tree .
 */
 
 @import "bootstrap-sprockets";
@@ -48,8 +48,8 @@ a:hover {
 	text-decoration: none;
 }
 
-li{
-		list-style-type: none;
+li {
+	list-style-type: none;
 }
 
 #header-home {
@@ -523,11 +523,11 @@ ul.ul-footer {
 	position:relative;
 	top:10%;
 	input{
-		color: rgba(75,75,75,0.7);
-		margin-top: 8px;
-		border: none;
-		width:250px;
-		height: 28px;
+	color: rgba(75,75,75,0.7);
+	margin-top: 8px;
+	border: none;
+	width:250px;
+	height: 28px;
 	}
 
 }
@@ -577,66 +577,12 @@ article.navbar.navbar-default {
 	top: 40%;
 }
 
-.fileUpload {
-	position: relative;
-	overflow: hidden;
-	margin: 10px;
-}
-.fileUpload input.upload {
-	width:300px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
-	cursor: pointer;
-	opacity: 0;
-	filter: alpha(opacity=0);
-}
-
-.btn-primary {
-	width:245px;
-	background-color: transparent;
-	border: 1px whitesmoke solid;
-}
-
 #property_description{
 	color: rgba(74,74,74,1);
 	width:250px;
 }
 
-button{
-	border:$area;
-	text-decoration: none;
-	color: #fff;
-  font-size: 20px; 
-  cursor: pointer;
-  background: transparent;
-  position: relative
-}
 
-.btn-primary:hover {
-	width:245px;
-	background-color: rgba(74,74,74,0.8);
-
-}
-
-#property_pictures_attributes_0_image button{
-	// background: transparent;
-	border-radius: 8px;
-	width: 100px;
-	display: inline-block;
-}
-
-#property_pictures_attributes_1_image {
-	width: 100px;
-	display: inline-block;
-}
-#property_pictures_attributes_2_image {
-	width: 100px;
-	display: inline-block;
-}
 
 .modal-content{
 	color:whitesmoke;
@@ -680,22 +626,37 @@ button{
 	}
 }
 
-.btn-file {
-    position: relative;
-    overflow: hidden;
+.bootstrap-filestyle.input-group {
+width: 60%;
+margin: 0 auto;
 }
-.btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
+
+label.btn.btn-default.btn-sm {
+top: 5px;
+}
+
+h5.add-pictures {
+margin: 10px auto;
+width: 90px;
+}
+
+.edit_user input[type=submit] {
+margin: 0px auto;
+padding: 0px;
+width: 100%;
+position: relative;
+background-color: #d8d8d8;
+border: none;
+margin-top: 11%;
+}
+
+.btn-primary:hover {
+width:245px;
+background-color: rgba(74,74,74,0.8);
+
+}
+.btn-primary {
+width:245px;
+background-color: transparent;
+border: 1px whitesmoke solid;
 }
