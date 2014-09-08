@@ -23,9 +23,11 @@
 
 <% if @reviews.any? %>
 	<% @reviews.each do |review| %>
-		<ul>
-			<li>
-				<%= review.thoughts %>, Posted by @<%= link_to "#{@property.user.username}", user_path(@property.user) %>
+		<ul class="property-reviews-list" >
+			<li class="property-reviews-list">
+				<p class="reviews-list">
+				<div class="thougths-reviews-list"><%= review.thoughts %>,<span class="star-reviews-list"><%= "#{star_rating(review.rating)}" %></span></div></p>
+				<span class="posted-by"><em>Posted by @<%= link_to "#{@property.user.username}", user_path(@property.user) %> the <%= review.created_at.strftime("%d %b. at %H:%M") %></em></span>
 			</li>
 		</ul>
 	<% end %>
