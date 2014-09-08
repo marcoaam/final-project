@@ -6,7 +6,7 @@
 			<h3>Leave a review </h3>
 				<aside class='stars'>
 		      <% 1.upto(5) do |n| %>
-		          <%= f.label n, "rating_#{n}" => "star-#{n}", for: "star-#{n}" %>
+		          <%= f.label n, for: "star-#{n}" %>
 		          <%= f.radio_button :rating, n, :class => "star-#{n}", id: "star-#{n}" %>
 		      <% end %>
 		      <span></span>

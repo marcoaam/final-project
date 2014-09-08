@@ -10,10 +10,8 @@
 			</li>
 		  <li id="landlord">
 		  	<a href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">
-		  		<% @user.pictures.each do |picture| %>
-		  			<%= image_tag picture.image.url(:profile), class: "img-circle panel-img-position" %>">
-		  		</a>
-		  		<% end %>
+		  		<%= image_tag @user.pictures.first.image.url(:profile), class: "img-circle panel-img-position" %>">
+		  	</a>
 		  		<a href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">Landlord</a>
 		  </li>
 
@@ -24,7 +22,7 @@
 	  			</li>
 				<% end %>
 	 		<% end %>
-
+	 		
 		</ul>
 	</section>
 
