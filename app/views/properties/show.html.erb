@@ -1,15 +1,15 @@
 <%= render "properties/slider" %>
-<article class="row">
-	<section class="toggle-vertical col-md-4 property-list-container">
+<article class="row lower_column" >
+	<section class="toggle-vertical col-md-4 property-list-container" >
 	 	<ul class="nav nav-tabs" role="tablist">
-		  <li class="active property_item" id="flat">
+		  <li class="active property_item_big" id="flat">
 		  	<a href="#flat-tab" role="tab" data-toggle="tab">
 					<h4><%= @property.title %></h4>
 					<h6><%= @property.address %></h6>
 				</a>
 			</li>
-		  <li id="landlord">
-		  		<a href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">
+		  <li class='landlord_item' id="landlord">
+		  		<a class='landlord_tab' href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">
 		  		<% @user.pictures.each do |picture| %>
 		  			<%= image_tag picture.image.url(:profile), class: "img-circle panel-img-position" %>
 		  		<% end %>
@@ -19,8 +19,8 @@
 
 	 		<% if @property.rooms.any?  %>
 	  		<% @property.rooms.each do |room| %>
-	  			<li id="room-<%= room.number %>">
-	  				<a href="#room-tab" role="tab" data-toggle="tab" id="rooma-<%= room.number %>"data-room="room-<%= room.number %>">Room <%= room.number %></a>
+	  			<li class='room_item' id="room-<%= room.number %>">
+	  				<a   href="#room-tab" role="tab" data-toggle="tab" id="rooma-<%= room.number %>"data-room="room-<%= room.number %>">Room <%= room.number %></a>
 	  			</li>
 				<% end %>
 	 		<% end %>
@@ -28,14 +28,15 @@
 		</ul>
 	</section>
 
+
 	<article class="col-md-8">
 		<nav class="tab-content">
-
 	  	<ul class="tab-pane active" id="flat-tab">
-	  		<li class="flat-partial col-md-6">
+
+	  		<li class="flat-partial flat_column col-md-6">
 		  		<%= render "properties/flat" %>
 		  	</li>
-
+		
 		  	<li class="flat-review-partial col-md-6">
 		  		<%= render "properties/flat_reviews" %>
 				</li>
