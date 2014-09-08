@@ -1,6 +1,7 @@
 class Property < ActiveRecord::Base
 
 	geocoded_by :full_address
+	
 	after_validation :geocode, :if => :address_changed?
 
 	belongs_to :user
@@ -12,6 +13,10 @@ class Property < ActiveRecord::Base
 	has_many :pictures, as: :imageable, :dependent => :destroy
 	
 	accepts_nested_attributes_for :pictures
+
+	validates_each :pictures do |property, attr, value|
+  	property.errors.add attr, "too much pictures for property" if property.pictures.size > 3
+  end
 
 	def total_rooms
 	end
@@ -29,7 +34,7 @@ class Property < ActiveRecord::Base
 	end
 
 	def average_rating
-	  self.reviews.empty? ? "No reviews have been added." : reviews.average(:rating)
+		self.reviews.empty? ? "No reviews have been added." : reviews.average(:rating)
 	end
 
 	def pluralized_review

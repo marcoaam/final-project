@@ -18,9 +18,9 @@ RSpec.describe Picture, :type => :model do
 			3.times { @picture = property.pictures.new }
 			@picture.save
 			expect(Picture.count).to eq 1
-			picture = Picture.new 
+			picture = property.pictures.new 
 			picture.save
-			expect(picture).to have(1).error_on(:image)
+			expect(property).to have(1).error_on(:pictures)
 		end 
   end
 
@@ -42,9 +42,9 @@ RSpec.describe Picture, :type => :model do
 			3.times { @picture = @john.pictures.new }
 			@picture.save
 			expect(Picture.count).to eq 1
-			picture = Picture.new 
+			picture = @john.pictures.new 
 			picture.save
-			expect(picture).to have(1).error_on(:image)
+			expect(@john).to have(1).error_on(:pictures)
 		end 
   end
 end

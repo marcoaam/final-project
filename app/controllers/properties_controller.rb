@@ -39,7 +39,7 @@ class PropertiesController < ApplicationController
 		@property = Property.find(params[:id])
 		@user = @property.user
 		@review   = Review.new
-		@reviews  = @property.reviews
+		@reviews  = @property.reviews.reverse
 	end
 
 end

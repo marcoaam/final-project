@@ -60,21 +60,20 @@ describe 'Room' do
 
 	end
 
-	it 'should advice the user that he will be added as the user', js: true do
+	xit 'should advice the user that he will be added as the user', js: true do
 		visit('/properties/21')
 		within(:css, "li#room-1") do
 	      click_link("Room 1")
 	  end
 
 	  within(:css, "article#container-room-1") do
-	      click_link("Do you live here ?")
+			handle_js_confirm do
+			  click_link 'Do you live here ?'
+			end.should == "Are you sure to live here, you will be added as the tenant of this room"
 	  end
 
-expect(page.driver.confirm_messages).to include("Are you sure to live here, you will be added as the tenant of this room")
-page.driver.accept_js_confirms!
-
-   		within(:css, "article#container-room-1") do
-      expect(page).to have_content("Hello I'm John")
+   	within(:css, "article#container-room-1") do
+    expect(page).to have_content("Hello I'm John")
 	  end
 	end
 
