@@ -18,14 +18,10 @@
 		<span class="form_label" ><%= f.label :total_rooms %></span>
 		<span class="form_text_short" ><%= f.number_field :total_rooms %></span>
 		<br>
-
-		<%= f.fields_for :pictures do |pictures_form| %>
-	    <span class="form_label" ><%= pictures_form.label :image %></span>
-	    <span class="fileUpload btn btn-primary">
-  			<%= pictures_form.file_field :image %>
-			</span>    
-	  <% end %>
-	
+			<h5 class="add-pictures">Add pictures </h5>
+			<%= f.fields_for :pictures do |pictures_form| %>
+	  		<%= pictures_form.file_field :image, class: "image-field" %>
+		  <% end %>
 	<span class="form_submit"><%= f.submit "Submit" %></span>
 	<% end %>
 </article>
