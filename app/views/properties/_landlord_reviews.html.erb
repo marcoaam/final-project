@@ -24,13 +24,11 @@
 </article>
 
 <article id="user-reviews">
-<% if @reviews.any? %>
-	<% @property.user.reviews.each do |review| %>
+	<% @property.user.reviews.reverse.each do |review| %>
 			<ul>
 				<li>
-					<%= review.thoughts %>, Posted by @<%= link_to "#{@property.user.username}", user_path(@property.user) %>
+					<%= review.thoughts %>, Posted by @<%= link_to "#{@property.user.username}", user_path(@property.user) %> <%= "#{star_rating(review.rating)}" %>
 				</li>
 		</ul>
 	<%end%>
-<% end %>
 </article>
