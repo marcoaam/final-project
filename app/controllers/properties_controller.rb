@@ -21,13 +21,15 @@ class PropertiesController < ApplicationController
 
 	def edit
 		@property = Property.find(params[:id])
-		@property.pictures.build 
+		@property.pictures.destroy_all
+		3.times { @property.pictures.build }
 	end
 
 	def update
 		@property = Property.find(params[:id])
 		_update_property_with_new_params
-		redirect_to '/properties'
+		flash[:notice] = 'Property successfully updated'
+		redirect_to "/properties/#{@property.id}"
 	end
 
 	def destroy

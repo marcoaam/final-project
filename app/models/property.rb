@@ -22,7 +22,16 @@ class Property < ActiveRecord::Base
 	end
 
 	def total_rooms=(number)
+		return if number.to_i == self.rooms.count
+		self.rooms.none? ? create_rooms_for_roomless_property(number) : updates_room_quantity_in_property(number)
+	end
+
+	def create_rooms_for_roomless_property(number)
 		1.upto(number.to_i) { |n| self.rooms << Room.create(number: n) }
+	end
+
+	def updates_room_quantity_in_property(number)
+		self.rooms.count.upto(number.to_i - 1) { |n| self.rooms << Room.create(number: (n + 1)) }
 	end
 
 	def full_address
