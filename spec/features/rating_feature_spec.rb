@@ -33,8 +33,7 @@ describe 'Ratings' do
 			expect(page).to have_content('4')
 		end
 	end
-	
-#need to do js pretty url to make it work
+
 	context 'landlord' do
 		
 		before(:each) do
@@ -52,8 +51,8 @@ describe 'Ratings' do
 				click_link('Landlord')
 			end
 
-			within(:css, "article#user-reviews") do
-				fill_in 'thoughts', with: 'Excellent'
+			within(:css, ".flat-review-partial") do
+				page.find('#thoughts').fill_in
 				choose('3')
 				click_button('Leave review')
 				expect(page).to have_content('3')
@@ -65,7 +64,7 @@ describe 'Ratings' do
 			visit('/')
 			click_link('My properties')
 			click_link('Great flat near old street')
-			visit('/properties/21#landlord-tab') #difference
+			visit('/properties/21#landlord-tab')
 			fill_in 'review_thoughts', with: 'Good'
 			choose('3')
 			click_button('Leave review')
