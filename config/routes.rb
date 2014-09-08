@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
 	root to: "home#index"
 
+	get '/users/sign_in', to: "home#index"
+	get '/users/sign_up', to: "home#index"
+
+	post '/users/sign_in', to: "home#index"
+	post '/users/sign_up', to: "home#index"
+
 	devise_for :users
 	
 	resources :user do
