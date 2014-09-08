@@ -14,7 +14,11 @@ class UserController < ApplicationController
     @user = User.find(params[:id])
     @user.update(params[:user].permit(:bio))
     @user.save
-    @user.pictures.create(image: params[:user][:image])
+    if @user.pictures.none?
+      @user.pictures.create(image: params[:user][:image])
+    else
+      @user.pictures.first.update(image: params[:user][:image])
+    end
     flash[:notice] = 'Profile successfully saved'
     redirect_to '/'
   end
