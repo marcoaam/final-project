@@ -145,7 +145,7 @@ address{
 }
 
 #index_search_bar {
-	width: 98%;
+	width: 100%;
 	height: 38px;
 	color: rgba(74,74,74,0.8);
 	font-family: $quick;
@@ -164,13 +164,14 @@ address{
 }
 
 #home_search_bar {
-	width: 400px;
-	height: 38px;
+	width: 700px;
+	height: 67px;
 	color: rgba(74,74,74,0.8);
 	font-family: $quick;
-	font-size: 20px;
+	font-size: 24px;
 	border: none;
 	background-color: rgba(216,216,216,0.8);
+	margin: 0px -10%;
 }
 
 #home_search_bar:focus{
@@ -180,11 +181,12 @@ address{
 #home_search_form {
 		width: 500px;
 		margin: 0 auto;
+		height: 100px;
 
 		input[type=submit] {
-		width:38px;
-		height: 38px;
-		background: url('search_property_small.png') no-repeat;
+		width:67px;
+		height: 67px;
+		background: url('search_property.png') no-repeat;
 		border: none;
 		color: transparent;
 		position:absolute;
@@ -237,9 +239,11 @@ address{
 
 	.home_search_form_container {
 		height: 100%;
+		margin: 0px auto;
 	}
 	
 }
+
 
 .navbar-brand{
 	position:relative;
@@ -574,6 +578,7 @@ article.navbar.navbar-default {
 }
 
 .col-md-12.home_search_form_container {
+	margin: 0px auto;
 	top: 40%;
 }
 
@@ -659,4 +664,11 @@ background-color: rgba(74,74,74,0.8);
 width:245px;
 background-color: transparent;
 border: 1px whitesmoke solid;
+}
+
+.video{
+	height:100%;
+	width:100%;
+	z-index:-1;
+	position:absolute;
 }
