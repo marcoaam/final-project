@@ -26,6 +26,7 @@
 $ada: 'Adamina', serif;
 $quick: 'Quicksand', sans-serif;
 $area :	1px red solid;
+$orange : rgba(245,166,35,1);
 
 html {
 	height: 100%;
@@ -715,10 +716,15 @@ span.star-reviews-list {
 }
 
 li.property-reviews-list {
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
+	border-bottom: 1px solid black;
 	width: 70%;
+	background: whitesmoke;
+}
+
+li.property-reviews-list:hover {
+	border-bottom: 1px solid black;
+	width: 70%;
+	background: $orange;
 }
 
 .thougths-reviews-list {
@@ -732,5 +738,9 @@ float: right;
 
 .posted-by {
 	padding-left: 24%;
+}
+
+p.reviews-list {
+	margin-bottom: 0px;
 }
 

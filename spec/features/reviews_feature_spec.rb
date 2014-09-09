@@ -95,4 +95,24 @@ end
 			end
 
 	end
+
+	context 'leave a not conform review' do
+
+		before(:each) do
+		  john = create(:user)
+		  property = create(:makers_academy)
+			john.properties << property
+			3.times { property.reviews << create(:review) }
+			login_as john
+		end
+
+		it 'gives an error message when the user do not select stars', js: true do
+			visit('/properties/21')
+			fill_in 'review_thoughts', with: 'bob'
+			click_button('Leave review')
+			expect(page).to have_content'Sorry, you need to put stars'
+		end
+
+	end
+
 end	

@@ -8,8 +8,19 @@ class ReviewsController < ApplicationController
 	end
 
 	def create
-		params[:property_id] ? _create_review_for_property : _create_review_for_user
-		redirect_to :back
+		if params[:property_id] 
+			property = Property.find(params[:property_id])
+			review = property.reviews.create(params[:review].permit(:thoughts, :rating))
+		else 
+			review = _create_review_for_user
+		end
+
+		if review.save
+			render json: review
+		# else
+		# 	render json: review.errors.full_messages
+		end
+			#redirect_to :back
 	end
 	
 end

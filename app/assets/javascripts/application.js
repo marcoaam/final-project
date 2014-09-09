@@ -20,6 +20,7 @@
 
 //show the right room number on properties/id page
 
+$(document).ready(function() {
 $(":file").filestyle({size: "sm"});
 
 
@@ -46,6 +47,28 @@ $(".input-thougths").on('click', function(event){
 	$(this).removeClass().addClass("input-thougths-big");
 });
 
+
+	$('.new_review').on('submit', function(event) {
+		// var createNewReview = $(this).siblings('.submit-button')
+		event.preventDefault();
+
+		$.post(this.action, $(this).serialize(), function(response) {
+			$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')
+			// createNewReview.html(response.property_review);
+/*
+	 			var template = $('.property-reviews-list-template').html();
+        var output = Mustache.render(template);
+
+      $(".property-reviews-list").html(output);
+*/
+
+		}).error(function(){
+			alert('Sorry put stars');
+		});
+	});
+
+
+});
 
 
 
