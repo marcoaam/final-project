@@ -8,12 +8,7 @@ class ReviewsController < ApplicationController
 	end
 
 	def create
-		if params[:property_id] 
-			property = Property.find(params[:property_id])
-			review = property.reviews.create(params[:review].permit(:thoughts, :rating))
-		else 
-			review = _create_review_for_user
-		end
+		params[:property_id] ? review = _create_review_for_property : review = _create_review_for_user
 
 		if review.save
 			render json: review

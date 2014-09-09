@@ -20,7 +20,7 @@
 	 		<% if @property.rooms.any?  %>
 	  		<% @property.rooms.each do |room| %>
 	  			<li class='room_item' id="room-<%= room.number %>">
-	  				<a   href="#room-tab" role="tab" data-toggle="tab" id="rooma-<%= room.number %>"data-room="room-<%= room.number %>">Room <%= room.number %></a>
+	  				<a  class='room_tab'  href="#room-tab" role="tab" data-toggle="tab" id="room-<%= room.number %>"data-room="room-<%= room.number %>">Room <%= room.number %></a>
 	  			</li>
 				<% end %>
 	 		<% end %>

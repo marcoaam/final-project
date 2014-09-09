@@ -13,7 +13,6 @@ module ReviewsHelper
 	def _create_review_for_property
 		property = Property.find(params[:property_id])
 		property.reviews.create(params[:review].permit(:thoughts, :rating))
-		@property = property
 	end
 
 	def _create_review_for_user

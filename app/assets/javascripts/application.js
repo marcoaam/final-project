@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require mustache
 //= require bootstrap-sprockets
 //= require bootstrap-filestyle
 //= require jquery_ujs
@@ -49,18 +50,14 @@ $(".input-thougths").on('click', function(event){
 
 
 	$('.new_review').on('submit', function(event) {
-		// var createNewReview = $(this).siblings('.submit-button')
 		event.preventDefault();
 
 		$.post(this.action, $(this).serialize(), function(response) {
-			$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')
-			// createNewReview.html(response.property_review);
-/*
-	 			var template = $('.property-reviews-list-template').html();
-        var output = Mustache.render(template);
 
-      $(".property-reviews-list").html(output);
-*/
+			//$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')
+			
+var view = response
+var output = Mustache.render("{{ review }} spends {{ rating }}", view);
 
 		}).error(function(){
 			alert('Sorry put stars');
