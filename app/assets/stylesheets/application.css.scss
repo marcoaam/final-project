@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require reset
  *= require_tree .
  *= require_self
 */
@@ -670,8 +671,9 @@ width: 100%;
 		border: none;
 		border-radius: 0px;
 		box-shadow: none;
-		outline: 0px;
+		outline: 0px;				
 }
+
 .lower_column .nav-tabs a{
 		border: none;
 		border-radius: 0px;
@@ -709,7 +711,8 @@ width: 100%;
 
 a.landlord_tab{
 	color: rgba(72,72,72,1);
-	 height: 72px;
+	height: 72px;
+
 }
 
 video.col-md-12 {
@@ -778,8 +781,7 @@ p.reviews-list {
 
 }
 
-a{
-		color: rgba(72,72,72,1);
+a{ color: rgba(72,72,72,1);
 }
 
 
@@ -793,6 +795,7 @@ a{
 
 .nav-tabs > li> a{
 	margin-right:0px;
+
 }
 
 .reviews-container {
