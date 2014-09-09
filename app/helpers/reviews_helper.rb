@@ -12,12 +12,12 @@ module ReviewsHelper
 
 	def _create_review_for_property
 		property = Property.find(params[:property_id])
-		property.reviews.create(params[:review].permit(:thoughts, :rating))
+		property.reviews.create(thoughts: params[:review][:thoughts], rating: params[:review][:rating], user_id: current_user.id)
 	end
 
 	def _create_review_for_user
 		user = User.find(params[:user_id])
-		user.reviews.create(thoughts: params[:thoughts], rating: params[:rating])
+		user.reviews.create(thoughts: params[:thoughts], rating: params[:rating], user_id: current_user.id)
 	end
 
 	def star_rating(rating)
