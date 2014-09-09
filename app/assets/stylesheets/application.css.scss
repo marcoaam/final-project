@@ -627,8 +627,10 @@ width: 100%;
 }
 
 span.alert {
-	margin-left: 42%;
-	margin-top: 16px;
+margin-left: 42%;
+margin-top: 16px;
+position: absolute;
+z-index: 9;
 }
 
 .close {
