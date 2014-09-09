@@ -34,7 +34,6 @@ html {
 
 
 body {
-	/* background: url(' https://s3.amazonaws.com/getaroom/background.jpg') no-repeat center center; */
 	background-size: 100%;
 	background-position-y: -40px;
 	height: 100%;
@@ -141,9 +140,10 @@ address{
 	margin:0px;
 }
 
-.posted_by{
-	font-family: $quick;
-	font-size: 14;
+.posted_by {
+font-family: "Quicksand", sans-serif;
+font-size: 14;
+display: list-item;
 }
 
 #index_search_bar {
@@ -484,20 +484,20 @@ ul.ul-footer {
 
 
 .add_property{
-	font-family: $ada;
-	color: whitesmoke;
-	margin: auto auto;
-	height:440px;
-	width: 420px;
-	background-color: rgba(75,75,75,0.7);
-	position:relative;
-	top:10%;
-	input{
-	color: rgba(75,75,75,0.7);
-	margin-top: 8px;
-	border: none;
-	width:250px;
-	height: 28px;
+		font-family: $ada;
+		color: whitesmoke;
+		margin: auto auto;
+		height:440px;
+		width: 420px;
+		background-color: rgba(75,75,75,0.7);
+		position:relative;
+		top:10%;
+		input{
+		color: rgba(75,75,75,0.7);
+		margin-top: 8px;
+		border: none;
+		width:250px;
+		height: 28px;
 	}
 
 }
@@ -521,11 +521,11 @@ ul.ul-footer {
 }
 
 .form_submit input[type=submit]{
-		margin: 0px auto;
-		padding:0px;
-		width:420px;
-		position: relative;
-		bottom: -14px;
+	margin: 0px auto;
+	padding:0px;
+	width:420px;
+	position: relative;
+	bottom: -14px;
 }
 
 .form_submit input[type=submit]:hover {
@@ -600,10 +600,6 @@ width: 60%;
 margin: 0 auto;
 }
 
-label.btn.btn-default.btn-sm {
-top: 5px;
-}
-
 h5.add-pictures {
 text-align: center;
 width: 100%;
@@ -632,8 +628,10 @@ width: 100%;
 }
 
 span.alert {
-	margin-left: 42%;
-	margin-top: 16px;
+margin-left: 42%;
+margin-top: 16px;
+position: absolute;
+z-index: 9;
 }
 
 .close {
@@ -720,6 +718,55 @@ a.landlord_tab{
 
 }
 
+video.col-md-12 {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+
+label.btn.btn-default.btn-sm, .btn-group-sm > label.btn.btn-default {
+	top: 10px;
+}
+
+ul.property-reviews-list {
+	padding-left: 0px;
+	min-height: 36px;
+}
+
+span.star-reviews-list {
+	
+}
+
+li.property-reviews-list {
+	border-bottom: 1px solid black;
+	width: 70%;
+	background: whitesmoke;
+}
+
+li.property-reviews-list:hover {
+	border-bottom: 1px solid black;
+	width: 70%;
+	background: $orange;
+}
+
+.thougths-reviews-list {
+width: 100%;
+}
+
+
+span.star-reviews-list {
+float: right;
+}
+
+.posted-by {
+	padding-left: 24%;
+}
+
+p.reviews-list {
+	margin-bottom: 0px;
+}
+
 .nav-tabs > li.active > a{
 	 background-color: $orange;
 	 border-top: none;
@@ -753,6 +800,7 @@ a{ color: rgba(72,72,72,1);
 	margin-right:0px;
 
 }
+
 
 
 
