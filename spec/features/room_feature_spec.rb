@@ -43,19 +43,19 @@ describe 'Room' do
 
 		visit('/properties/21')
 		within(:css, "li#room-1") do
-	      click_link("Room 1")
+      click_link("Room 1")
 	  end
 
 	  within(:css, "article#container-room-1") do
-	      click_link("Do you live here ?")
+      click_link("Do you live here ?")
 	  end
 
 		within(:css, "li#room-1") do
-	      click_link("Room 1")
+      page.find('#room-1').trigger('click')
 	  end
 
  		within(:css, "article#container-room-1") do
-	      expect(page).to have_content("Hello I'm John")
+      expect(page).to have_content("Hello I'm John")
 	  end
 
 	end
@@ -69,12 +69,7 @@ describe 'Room' do
 	  within(:css, "article#container-room-1") do
 		  click_link 'Do you live here ?'
 	    expect(page).to have_content("Hello I'm John")
-			# end
-			# handle_js_confirm do
-			#   click_link 'Do you live here ?'
-			# end.should == "Are you sure to live here, you will be added as the tenant of this room"
 	  end
-
 
 	end
 
