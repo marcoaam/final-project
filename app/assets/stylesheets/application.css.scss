@@ -676,8 +676,9 @@ width: 100%;
 		border: none;
 		border-radius: 0px;
 		box-shadow: none;
-		outline: 0px;
+		outline: 0px;				
 }
+
 .lower_column .nav-tabs a{
 		border: none;
 		border-radius: 0px;
@@ -715,7 +716,8 @@ width: 100%;
 
 a.landlord_tab{
 	color: rgba(72,72,72,1);
-	 height: 72px;
+	height: 72px;
+
 }
 
 .nav-tabs > li.active > a{
@@ -735,8 +737,7 @@ a.landlord_tab{
 
 }
 
-a{
-		color: rgba(72,72,72,1);
+a{ color: rgba(72,72,72,1);
 }
 
 
@@ -750,6 +751,7 @@ a{
 
 .nav-tabs > li> a{
 	margin-right:0px;
+
 }
 
 
