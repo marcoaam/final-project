@@ -51,7 +51,7 @@ describe 'Room' do
 	  end
 
 		within(:css, "li#room-1") do
-      page.find('#rooms-1').trigger('click')
+      page.find('#room-1').trigger('click')
 	  end
 
  		within(:css, "article#container-room-1") do
