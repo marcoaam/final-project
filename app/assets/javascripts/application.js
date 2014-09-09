@@ -56,11 +56,10 @@ $(".input-thougths").on('click', function(event){
 
 			//$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')
 			
-var template = $('#review-template').html();
-console.log(response)
-var output = Mustache.render(template, response);
-$("#target").html(output);
-	
+		var template = $('#review-template').html();
+		var output = Mustache.render(template, response);
+		$("#target").html(output);
+			
 
 		}).error(function(){
 			alert('Sorry put stars');

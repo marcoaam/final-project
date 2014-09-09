@@ -24,10 +24,6 @@
 </article>
 
 <article id="user-reviews">
-	<article class="container-reviews-mustache">
-    <div id="target"></div>
-    <%= render "layouts/template_review" %>
-  </article>
 	<% @property.user.reviews.reverse.each do |review| %>
 			<ul>
 				<li>
