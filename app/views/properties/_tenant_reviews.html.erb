@@ -1,0 +1,38 @@
+<% if !room.user.nil? %>
+	<article class='review' id="review_thoughts_flat">
+		<span class='review' id="review_thoughts_tenant">
+			<form id="form_for_user" method="POST" action="/user/<%=room.user.id%>/reviews">
+				<section class="stars-section">
+					<h3>Leave a review </h3>
+						<aside class="stars-tenant-<%=room.number%>">
+							<% 1.upto(5) do |n| %>
+								<label for="star-tenant-<%=room.number%>-<%= n %>"><%=n%></label>
+								<input type="radio" name="rating" class="star-tenant-<%=room.number%>-<%= n %>" id="star-tenant-<%=room.number%>-<%= n %>" value="<%= n %>" />
+							<% end %>
+
+							<span></span>
+						</aside>
+				</section>
+
+				<section class="input-thougths">
+					<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+				  <input type="text" id="thoughts" name="thoughts" required>
+				</section>
+
+				<input type="submit" class="submit-button" value="Leave review">
+			</form>
+		</span>
+	</article>
+
+	<article id="user-reviews">
+		<% room.user.reviews.reverse.each do |review| %>
+				<ul>
+					<li>
+						<%= review.thoughts %>, Posted by @<%= link_to "#{@property.user.username}", user_path(@property.user) %> <%= "#{star_rating(review.rating)}" %>
+					</li>
+			</ul>
+		<%end%>
+	</article>
+<%else%>
+	<h3>No Tenants in this room</h3>
+<%end%>

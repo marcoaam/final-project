@@ -54,10 +54,13 @@
 	  	<ul class="tab-pane" id="room-tab">
   			<% if @property.rooms.any?  %>
   				<% @property.rooms.each do |room| %>
-  					<li data-room="room-<%= room.number %>"> 
+  					<li data-room="room-<%= room.number %>" class="flat-partial col-md-6"> 
   							<article id="container-room-<%= room.number %>">			
 									<%= render partial: "properties/room", locals: {room: room} %>
 								</article>
+  					</li>
+  					<li data-room="room-<%= room.number %>" class="flat-review-partial col-md-6">
+  						<%= render partial:"properties/tenant_reviews", locals: {room: room}  %>
   					</li>
   				<% end %>
   			<% end %>
