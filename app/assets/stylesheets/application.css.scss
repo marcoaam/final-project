@@ -26,10 +26,12 @@
 $ada: 'Adamina', serif;
 $quick: 'Quicksand', sans-serif;
 $area :	1px red solid;
+$orange : rgba(245,166,35,1);
 
 html {
 	height: 100%;
 }
+
 
 body {
 	/* background: url(' https://s3.amazonaws.com/getaroom/background.jpg') no-repeat center center; */
@@ -38,7 +40,6 @@ body {
 	height: 100%;
 	overflow-x: hidden;
 }
-
 
 a:visited {
 	 color: rgb(75,75,75);
@@ -661,39 +662,8 @@ input.form-control.input-sm {
 	position:absolute;
 }
 
-
-.room_item a{
-	color: rgba(74,74,74,1);
-	font-family:$ada;
-	font-size:18px;
-	height:70px;
-	background-color: whitespace;
-}
-
-.landlord_item a{
-	color: rgba(74,74,74,1);
-	font-family:$ada;
-	font-size:18px;
-	height:70px;
-	background-color: rgba(251,212,149,1);
-} 
-
-.nav-tabs > li.property_item_big.active > a, .nav-tabs > li.property_item_big.active > a:hover, .nav-tabs > li.property_item_big.active > a:focus{
-	background-color: rgba(245,166,35,1);
-}
-
 .lower_column {
 	height: calc(45% - 115px);
-}
-.property-list-container{
-	padding:0px;
-	height: 100%;
-	overflow-y: auto;
-	background-color: rgba(74,74,74,1);
-}
-
-.flat_column{
-	height:200px;
 }
 
 video.col-md-12 {
@@ -702,5 +672,131 @@ height: 100%;
 width: 100%;
 }
 
-	
+.lower_column .nav-tabs{
+		border: none;
+		border-radius: 0px;
+		box-shadow: none;
+		outline: 0px;
+}
+.lower_column .nav-tabs a{
+		border: none;
+		border-radius: 0px;
+		box-shadow: none;
+		outline: 0px;
+}
+
+.lower_column .nav-tabs a:hover{
+		border: none;
+		border-radius: 0px;
+		box-shadow: none;
+		outline: 0px;
+}
+
+
+.lower_column .nav-tabs a:focus{		
+	border: none;
+	border-radius: 0px;
+	box-shadow: none;
+	outline: 0px;
+}
+
+.lower_column .nav-tabs > li > a:hover{
+  background-color: $orange
+}
+
+a.landlord_tab{
+	color: rgba(72,72,72,1);
+	 height: 72px;
+}
+
+.nav-tabs > li.active > a{
+	 background-color: $orange;
+}
+
+.room_item a{
+	height: 72px;
+}
+
+a{
+		color: rgba(72,72,72,1);
+}
+
+
+// .property-list-container{
+// 	margin:0px;
+// 	padding:0px;
+// 	height: 100%;
+// 	overflow-y: auto;
+// 	background-color: rgba(74,74,74,1);
+// }
+
+// .flat_column{
+// 	height:200px;
+// }
+
+// .landlord_item{
+// 	padding:0px;
+// 	margin:0px;
+// 	border-radius:0px;
+// }
+
+// .landlord_tab{
+// 	width:100%;
+// 	padding:0px;
+// 	margin:0px;
+// 	border-radius:0px;
+// }
+
+// .room_item{
+// 	font-size:18px;
+// 	color: rgba(74,74,74,1);
+// 	height: 70px;
+// 	background-color: whitespace;
+// 	font-family:$ada;
+// 	padding:0px;
+// 	border:none;
+// 	border-radius:0px;
+// }
+// .room_item a{
+// 	background-color: rgba(200,200,200, 0.8);
+// 	border:none;
+// }
+
+// li.landlord_item a  {
+// border: none;
+// border-radius:0px;
+// box-shadow: none;
+// }
+
+// .landlord_item a{
+// 	color: rgba(74,74,74,1);
+// 	font-family:$ada;
+// 	font-size:18px;
+// 	height:70px;
+// 	background-color: whitesmoke;
+// }
+// .landlord_item a:hover{
+// 	color: rgba(74,74,74,1);
+// 	font-family:$ada;
+// 	font-size:18px;
+// 	height:70px;
+// 	background-color: $orange;
+// }  
+
+//  li.property_item_big > a:active{
+// 	background-color: $orange;
+// 	height:90px;
+// 	padding:0px;
+// 	margin:0px;
+// 	border:none;
+// 	border-radius:0px;
+// }
+
+// li.property_item_big h4 > a:focus{
+// 	background-color: $orange;
+// }
+
+// li.property_item_big h4 {
+// 	padding-left:5%;
+// }
 
