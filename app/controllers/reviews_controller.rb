@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
 	end
 
 	def create
-		params[:property_id] ? @review = _create_review_for_property : review = _create_review_for_user
+		params[:property_id] ? @review = _create_review_for_property : @review = _create_review_for_user
 		unless @review.save!
 			#render json: review 
 			# render json: { review: review, user: current_user }

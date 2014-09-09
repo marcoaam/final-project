@@ -1,6 +1,6 @@
 <article class='review' id="review_thoughts_flat">
 	<span class='review' id="review_thoughts_landlord">
-		<form id="form_for_user" method="POST" action="">
+		<form id="form_for_user" class="new_review" method="POST" action="">
 			<section class="stars-section">
 				<h3>Leave a review </h3>
 					<aside class="stars-landlord">
@@ -24,6 +24,10 @@
 </article>
 
 <article id="user-reviews">
+	<article class="container-reviews-mustache">
+    <div id="target"></div>
+    <%= render "layouts/template_review" %>
+  </article>
 	<% @property.user.reviews.reverse.each do |review| %>
 			<ul>
 				<li>
