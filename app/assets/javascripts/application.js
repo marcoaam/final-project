@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require mustache
 //= require bootstrap-sprockets
 //= require bootstrap-filestyle
 //= require jquery_ujs
@@ -20,6 +21,7 @@
 
 //show the right room number on properties/id page
 
+$(document).ready(function() {
 $(":file").filestyle({size: "sm"});
 
 
@@ -46,6 +48,24 @@ $(".input-thougths").on('click', function(event){
 	$(this).removeClass().addClass("input-thougths-big");
 });
 
+
+	$('.new_review').on('submit', function(event) {
+		event.preventDefault();
+
+		$.post(this.action, $(this).serialize(), function(response) {
+
+			//$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')
+			
+var view = response
+var output = Mustache.render("{{ review }} spends {{ rating }}", view);
+
+		}).error(function(){
+			alert('Sorry put stars');
+		});
+	});
+
+
+});
 
 
 
