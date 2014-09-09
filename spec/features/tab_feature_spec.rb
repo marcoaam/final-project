@@ -46,7 +46,7 @@ describe 'interactive tab' do
 			within(:css, "li#room-1") do
 	      click_link("Room 1")
 	    end
-	    find('#rooma-1').visible?
+	    find('#room-1').visible?
 		end
 
 	end
