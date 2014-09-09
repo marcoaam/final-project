@@ -7,13 +7,17 @@ class ReviewsController < ApplicationController
 		@review = Review.new
 	end
 
-	def create
-		params[:property_id] ? review = _create_review_for_property : review = _create_review_for_user
+	def show
+		@review = Review.find(params[:id])
+	end
 
-		if review.save
-			render json: review
+	def create
+		params[:property_id] ? @review = _create_review_for_property : review = _create_review_for_user
+		unless @review.save!
+			#render json: review 
+			# render json: { review: review, user: current_user }
 		# else
-		# 	render json: review.errors.full_messages
+			render json: @review.errors.full_messages
 		end
 			#redirect_to :back
 	end

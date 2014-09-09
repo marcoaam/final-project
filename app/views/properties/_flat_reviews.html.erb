@@ -23,6 +23,11 @@
 
 <% if @reviews.any? %>
 	<ul class="property-reviews-list" >
+		
+  <article class="container-reviews-mustache">
+    <div id="target"></div>
+    <%= render "layouts/template_review" %>
+  </article>
 
 		<% @reviews.each do |review| %>
 			<li class="property-reviews-list">
