@@ -683,6 +683,11 @@ width: 100%;
 		border-radius: 0px;
 		box-shadow: none;
 		outline: 0px;
+		background-color: whitesmoke;
+		border-top: none;
+	 	border-right: none;
+	 	border-left: none;
+	 	border-bottom: 1px solid black;
 }
 
 .lower_column .nav-tabs a:hover{
@@ -701,7 +706,11 @@ width: 100%;
 }
 
 .lower_column .nav-tabs > li > a:hover{
-  background-color: $orange
+   background-color: $orange;
+   border-top: none;
+	 border-right: none;
+	 border-left: none;
+	 border-bottom: 1px solid black;
 }
 
 a.landlord_tab{
@@ -711,10 +720,19 @@ a.landlord_tab{
 
 .nav-tabs > li.active > a{
 	 background-color: $orange;
+	 border-top: none;
+	 border-right: none;
+	 border-left: none;
+	 border-bottom: 1px solid black;
 }
 
 .room_item a{
 	height: 72px;
+	 border-top: none;
+	 border-right: none;
+	 border-left: none;
+	 border-bottom: 1px solid black;
+
 }
 
 a{
@@ -722,81 +740,17 @@ a{
 }
 
 
-// .property-list-container{
-// 	margin:0px;
-// 	padding:0px;
-// 	height: 100%;
-// 	overflow-y: auto;
-// 	background-color: rgba(74,74,74,1);
-// }
+.property-list-container{
+	margin:0px;
+	padding:0px;
+	height: 100%;
+	overflow-y: auto;
+	background-color: rgba(74,74,74,1);
+}
 
-// .flat_column{
-// 	height:200px;
-// }
+.nav-tabs > li> a{
+	margin-right:0px;
+}
 
-// .landlord_item{
-// 	padding:0px;
-// 	margin:0px;
-// 	border-radius:0px;
-// }
 
-// .landlord_tab{
-// 	width:100%;
-// 	padding:0px;
-// 	margin:0px;
-// 	border-radius:0px;
-// }
-
-// .room_item{
-// 	font-size:18px;
-// 	color: rgba(74,74,74,1);
-// 	height: 70px;
-// 	background-color: whitespace;
-// 	font-family:$ada;
-// 	padding:0px;
-// 	border:none;
-// 	border-radius:0px;
-// }
-// .room_item a{
-// 	background-color: rgba(200,200,200, 0.8);
-// 	border:none;
-// }
-
-// li.landlord_item a  {
-// border: none;
-// border-radius:0px;
-// box-shadow: none;
-// }
-
-// .landlord_item a{
-// 	color: rgba(74,74,74,1);
-// 	font-family:$ada;
-// 	font-size:18px;
-// 	height:70px;
-// 	background-color: whitesmoke;
-// }
-// .landlord_item a:hover{
-// 	color: rgba(74,74,74,1);
-// 	font-family:$ada;
-// 	font-size:18px;
-// 	height:70px;
-// 	background-color: $orange;
-// }  
-
-//  li.property_item_big > a:active{
-// 	background-color: $orange;
-// 	height:90px;
-// 	padding:0px;
-// 	margin:0px;
-// 	border:none;
-// 	border-radius:0px;
-// }
-
-// li.property_item_big h4 > a:focus{
-// 	background-color: $orange;
-// }
-
-// li.property_item_big h4 {
-// 	padding-left:5%;
-// }
 
