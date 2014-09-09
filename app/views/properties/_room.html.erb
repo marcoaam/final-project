@@ -1,13 +1,9 @@
 <% if room.user.nil? %>
 
 	room N°<%= room.number %>
-				 <%= room.description %>
 				 <%= link_to "Do you live here ?", room_path(room), method: :patch, class: "live-here-alert" %>
-
 <% else %>
 
 	room N°<%= room.number %>
-				 <%= room.description %>
 				 Hello I'm <%= room.user.username %>
-
 <% end %>
