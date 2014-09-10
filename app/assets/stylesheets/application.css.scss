@@ -303,8 +303,8 @@ input.submit-button {
 }
 
 .carousel {
-	position: relative;
-	height:55%;
+	position: absolute;
+	height: calc(100% - 62px);
 }
 
 ul.ul-footer {
@@ -497,10 +497,10 @@ input.form-control.input-sm {
 	position:absolute;
 }
 
-.lower_column {
-height: calc(45% - 115px);
-background: white;
-position: relative;
+.main-row {
+	margin-top: 40px;
+	height: calc(100% - 115px);
+	position: relative;
 }
 
 video.col-md-12 {
@@ -509,52 +509,49 @@ height: 100%;
 width: 100%;
 }
 
-.lower_column .nav-tabs{
+.main-row .nav-tabs{
 		border: none;
 		border-radius: 0px;
 		box-shadow: none;
 		outline: 0px;				
 }
 
-.lower_column .nav-tabs a{
-	border: none;
-	border-radius: 0px;
-	box-shadow: none;
-	outline: 0px;
-	background-color: whitesmoke;
-	border-top: none;
-	border-right: none;
-	border-left: none;
-	border-bottom: 1px solid black;
-}
+.main-row .nav-tabs {
 
-.lower_column .nav-tabs a:hover{
+	a {
 		border: none;
 		border-radius: 0px;
 		box-shadow: none;
 		outline: 0px;
-}
+		border-top: none;
+		border-right: none;
+		border-left: none;
 
+		:hover {
+			border: none;
+			border-radius: 0px;
+			box-shadow: none;
+			outline: 0px;
+		}
 
-.lower_column .nav-tabs a:focus{		
-	border: none;
-	border-radius: 0px;
-	box-shadow: none;
-	outline: 0px;
-}
+		:focus {		
+			border: none;
+			border-radius: 0px;
+			box-shadow: none;
+			outline: 0px;
+		}
 
-.lower_column .nav-tabs > li > a:hover{
-  background-color: $orange;
-  border-top: none;
-	border-right: none;
-	border-left: none;
-	border-bottom: 1px solid black;
+ 		}
+
+	> li > a:hover{
+	  border-top: none;
+		border-right: none;
+		border-left: none;
+	}
 }
 
 a.landlord_tab{
-	color: rgba(72,72,72,1);
-	height: 72px;
-
+	height: 100px;
 }
 
 video.col-md-12 {
@@ -562,7 +559,6 @@ video.col-md-12 {
 	height: 100%;
 	width: 100%;
 }
-
 
 label.btn.btn-default.btn-sm, .btn-group-sm > label.btn.btn-default {
 	top: 10px;
@@ -573,29 +569,20 @@ ul.property-reviews-list {
 	min-height: 36px;
 }
 
-span.star-reviews-list {
-	
-}
-
 li.property-reviews-list {
-	border-bottom: 1px solid black;
+	margin-bottom: 10px;
+	padding: 10px;
 	width: 100%;
 	background: whitesmoke;
+	opacity: 0.5;
 }
 
 li.property-reviews-list:hover {
-	border-bottom: 1px solid black;
 	width: 100%;
-	background: $orange;
 }
 
 .thougths-reviews-list {
-width: 100%;
-}
-
-
-span.star-reviews-list {
-float: right;
+	width: 100%;
 }
 
 
@@ -604,23 +591,21 @@ p.reviews-list {
 }
 
 .nav-tabs > li.active > a{
-	 background-color: $orange;
-	 border-top: none;
-	 border-right: none;
-	 border-left: none;
-	 border-bottom: 1px solid black;
+	background-color: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
 }
 
 .room_item a{
-	height: 72px;
-	 border-top: none;
-	 border-right: none;
-	 border-left: none;
-	 border-bottom: 1px solid black;
-
+	height: 100px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
 }
 
-a{ color: rgba(72,72,72,1);
+a { 
+	color: rgba(72,72,72,1);
 }
 
 
@@ -628,8 +613,6 @@ a{ color: rgba(72,72,72,1);
 	margin:0px;
 	padding:0px;
 	height: 100%;
-	overflow-y: auto;
-	background-color: rgba(74,74,74,1);
 }
 
 .nav-tabs > li> a{
@@ -645,9 +628,8 @@ a.devise-links{
 
 
 .reviews-container {
-width: 66.6666666667%;
-height: 100%;
-overflow: scroll;
+	height: 95%;
+	overflow: scroll;
 }
 
 .user-bio {
