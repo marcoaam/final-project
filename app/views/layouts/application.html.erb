@@ -32,7 +32,9 @@
   handler.buildMap({ provider: { maxZoom: 16 }, internal: {id: 'map'}}, function(){
 
     if(<%= raw @hash.to_json %>.length == 0) {
+     
       handler.map.centerOn({ lat: 51.5116582, lng: -0.101427 })
+     
     }
     else {
       markers = handler.addMarkers(<%= raw @hash.to_json %>);

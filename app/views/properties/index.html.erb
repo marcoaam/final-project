@@ -1,9 +1,9 @@
-<div class='col-md-8' id="map"></div>
+<div class='col-md-12' id="map"></div>
 
-<article class="col-md-4 property_list_container" >
+<article class="col-md-4 property_list_container my-properties-flat-design" >
 	
 <form method='GET' action='/properties' >
-	<input type="text" name="search_bar" id="index_search_bar" placeholder='Type location' class="col-xs-6 .col-sm-4" required>
+	<input type="text" name="search_bar" id="index_search_bar" placeholder='Type location' class="col-xs-4 " required>
 	<input type="submit" value="Search" >
 </form>
 
@@ -11,7 +11,7 @@
 	<% @properties.each do |property| %> 
 			<li class="property_item">
 				<span class='property_title'>
-					<%= link_to property.title, property_path(property) %>
+					<h4><strong><%= link_to property.title, property_path(property) %></strong></h4>
 				</span>
 				<span class='property_review'>
 					<%= "#{star_rating(property.average_rating)}" %><br>
