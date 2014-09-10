@@ -1,12 +1,17 @@
+.stars-section {
+  h3 {
+    display: inline-block;  
+  }
+}
+
 form .stars {
   background: url("stars.png") repeat-x 0 0;
   width: 150px;
   margin: 0 auto;
   display: inline-block;
-  position: absolute;
   top: 17px;
-  margin-left: 65%;
-  margin-top: 1%;
+  position: relative;
+  float: right;
 }
 
 form .stars input[type="radio"] {
@@ -79,13 +84,13 @@ form .stars span {
 /* second stars */
 
 form .stars-landlord {
-background: url("stars1.png") repeat-x 0 0;
-width: 150px;
-margin: 0 auto;
-display: inline-block;
-position: absolute;
-top: 17px;
-margin-left: 35%;
+  background: url("stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+  display: inline-block;
+  top: 17px;
+  position: relative;
+  float: right;
 }
 
 form .stars-landlord input[type="radio"] {
@@ -160,13 +165,13 @@ form .stars-landlord span {
 /* tenant-1 stars */
 
 form .stars-tenant-1 {
-background: url("stars1.png") repeat-x 0 0;
-width: 150px;
-margin: 0 auto;
-display: inline-block;
-position: absolute;
-top: 17px;
-margin-left: 35%;
+  background: url("stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+  display: inline-block;
+  top: 17px;
+  position: relative;
+  float: right;
 }
 
 form .stars-tenant-1 input[type="radio"] {
@@ -238,13 +243,13 @@ form .stars-tenant-1 span {
 /* tenant-2 stars */
 
 form .stars-tenant-2 {
-background: url("stars1.png") repeat-x 0 0;
-width: 150px;
-margin: 0 auto;
-display: inline-block;
-position: absolute;
-top: 17px;
-margin-left: 35%;
+  background: url("stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+  display: inline-block;
+  top: 17px;
+  position: relative;
+  float: right;
 }
 
 form .stars-tenant-2 input[type="radio"] {
@@ -317,13 +322,13 @@ form .stars-tenant-2 span {
 /* tenant-3 stars */
 
 form .stars-tenant-3 {
-background: url("stars1.png") repeat-x 0 0;
-width: 150px;
-margin: 0 auto;
-display: inline-block;
-position: absolute;
-top: 17px;
-margin-left: 35%;
+  background: url("stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+  display: inline-block;
+  top: 17px;
+  position: relative;
+  float: right;
 }
 
 form .stars-tenant-3 input[type="radio"] {
@@ -396,13 +401,13 @@ form .stars-tenant-3 span {
 /* tenant-4 stars */
 
 form .stars-tenant-4 {
-background: url("stars1.png") repeat-x 0 0;
-width: 150px;
-margin: 0 auto;
-display: inline-block;
-position: absolute;
-top: 17px;
-margin-left: 35%;
+  background: url("stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+  display: inline-block;
+  top: 17px;
+  position: relative;
+  float: right;
 }
 
 form .stars-tenant-4 input[type="radio"] {
@@ -475,13 +480,13 @@ form .stars-tenant-4 span {
 /* tenant-5 stars */
 
 form .stars-tenant-5 {
-background: url("stars1.png") repeat-x 0 0;
-width: 150px;
-margin: 0 auto;
-display: inline-block;
-position: absolute;
-top: 17px;
-margin-left: 35%;
+  background: url("stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+  display: inline-block;
+  top: 17px;
+  position: relative;
+  float: right;
 }
 
 form .stars-tenant-5 input[type="radio"] {
