@@ -53,7 +53,6 @@ $(".input-thougths").on('click', function(event){
 		event.preventDefault();
 		var reviewList = $(this).parent().siblings('.property-reviews-list')
 		$.post(this.action, $(this).serialize(), function(response) {
-			console.log(response);
 			//$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')	
 			var template = $('#review-template').html();
 			var output = Mustache.render(template, response);

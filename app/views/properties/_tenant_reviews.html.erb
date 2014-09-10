@@ -1,7 +1,6 @@
 <% if !room.user.nil? %>
 	<article class='review' id="review_thoughts_flat">
-		<span class='review' id="review_thoughts_tenant">
-			<form id="form_for_user" method="POST" action="/user/<%=room.user.id%>/reviews">
+			<form class="new_review" id="form_for_user" method="POST" action="/user/<%=room.user.id%>/reviews">
 				<section class="stars-section">
 					<h3>Leave a review </h3>
 						<aside class="stars-tenant-<%=room.number%>">
@@ -21,11 +20,16 @@
 
 				<input type="submit" class="submit-button" value="Leave review">
 			</form>
-		</span>
 	</article>
 
 	
 		<ul class="property-reviews-list">
+
+			 <article class="container-reviews-mustache">
+    <div class="target"></div>
+    <%= render "layouts/template_review" %>
+  </article>
+
 			<% room.user.reviews.reverse.each do |review| %>
 					<li class="property-reviews-list">
 						<p class="reviews-list">
