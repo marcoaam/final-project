@@ -32,11 +32,8 @@ module PropertiesHelper
 			if @property.save
 				_create_image_if_not_nil
 				format.html { redirect_to @property, notice: 'The property has been successfully created' }
-				format.json { render json: @property, status: :created, location: @property }
 			else
-				format.html { render action: "new"}
-				format.json { render json: @property.errors, status: :unprocessable_entity }
-				redirect_to '/properties'
+				format.html { redirect_to '/properties/new', alert: 'The property cannot have more than 5 or less than 0 rooms'}
 			end
 		end	
 	end
