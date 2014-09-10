@@ -6,7 +6,7 @@ class Property < ActiveRecord::Base
 
 	belongs_to :user
 
-	has_many :rooms
+	has_many :rooms 
 
 	has_many :reviews, as: :imageable
 
@@ -16,6 +16,10 @@ class Property < ActiveRecord::Base
 
 	validates_each :pictures do |property, attr, value|
   	property.errors.add attr, "too much pictures for property" if property.pictures.size > 3
+  end
+
+ 	validates_each :rooms do |property, attr, value|
+  	property.errors.add attr, "Property cannot have more than 5 or less than 0 rooms" if property.rooms.size > 5
   end
 
 	def total_rooms

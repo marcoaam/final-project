@@ -2,7 +2,7 @@ class Picture < ActiveRecord::Base
 
 	belongs_to :imageable, polymorphic: true
 	
-	has_attached_file :image, styles: {medium: "1000x400", profile: "60x60#"},
+	has_attached_file :image, styles: {medium: "1090x600", profile: "60x60#"},
                   	:storage => :s3,
                   	:s3_credentials => {
                   	:bucket => 'getaroom',
