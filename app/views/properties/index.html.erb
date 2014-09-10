@@ -1,6 +1,6 @@
-<div class='col-md-6' id="map"></div>
+<div class='col-md-8' id="map"></div>
 
-<article class="col-md-6 property_list_container" >
+<article class="col-md-4 property_list_container" >
 	
 <form method='GET' action='/properties' >
 	<input type="text" name="search_bar" id="index_search_bar" placeholder='Type location' class="col-xs-6 .col-sm-4" required>
@@ -13,11 +13,11 @@
 				<span class='property_title'>
 					<%= link_to property.title, property_path(property) %>
 				</span>
-				<address><%= property.display_full_address %></address>
 				<span class='property_review'>
 					<%= "#{star_rating(property.average_rating)}" %><br>
 					<%= property.reviews.count %> <%= property.pluralized_review %>
 				</span>
+				<address><%= property.display_full_address %></address>
 				<% if current_user == property.user %>
 				<span class='edit'>
 					<%= link_to "Edit", edit_property_path(property) %>
