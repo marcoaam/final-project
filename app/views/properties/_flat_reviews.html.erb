@@ -25,7 +25,7 @@
 	<ul class="property-reviews-list" >
 		
   <article class="container-reviews-mustache">
-    <div id="target"></div>
+    <div class="target"></div>
     <%= render "layouts/template_review" %>
   </article>
 
@@ -38,6 +38,10 @@
 		<% end %>
 	</ul>
 <% else %>
+	<article class="container-reviews-mustache">
+    <div class="target"></div>
+    <%= render "layouts/template_review" %>
+  </article>
 	No reviews have been added.
 <% end %>
 

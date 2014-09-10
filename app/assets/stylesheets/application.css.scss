@@ -24,7 +24,7 @@
 
 /* Fonts */
 
-$ada: 'Adamina', serif;
+$ada: 'Quicksand', sans-serif;
 $quick: 'Quicksand', sans-serif;
 $area :	1px red solid;
 $orange : rgba(245,166,35,1);
@@ -39,6 +39,7 @@ body {
 	background-position-y: -40px;
 	height: 100%;
 	overflow-x: hidden;
+	font-family: $ada;
 }
 
 a:visited {
@@ -141,10 +142,9 @@ address{
 	margin:0px;
 }
 
-.posted_by {
-font-family: "Quicksand", sans-serif;
-font-size: 14;
-display: list-item;
+.posted-by {
+position: relative;
+display: block;
 }
 
 #index_search_bar {
@@ -517,6 +517,10 @@ ul.ul-footer {
 	width:220px;
 }
 
+span.form_text_tall {
+padding-left: 30px;
+}
+
 .form_submit input[type=submit]{
 	margin: 0px auto;
 	padding:0px;
@@ -602,6 +606,7 @@ margin: 0 auto;
 h5.add-pictures {
 text-align: center;
 width: 100%;
+color: white;
 }
 
 .edit_user input[type=submit] {
@@ -758,9 +763,6 @@ span.star-reviews-list {
 float: right;
 }
 
-.posted-by {
-	padding-left: 24%;
-}
 
 p.reviews-list {
 	margin-bottom: 0px;
@@ -812,5 +814,28 @@ width: 66.6666666667%;
 height: 100%;
 overflow: scroll;
 }
+
+.user-bio {
+	color: white;
+	float: left;
+	width: 340px;
+}
+
+.edit_user #user_bio {
+
+/* margin: 0 auto; */
+/* text-align: center; */
+/* height: 100px; */
+}
+
+.edit_user #user_bio {
+width: 340px;
+}
+
+span.star-reviews-list {
+float: right;
+font-size: 1.6em;
+}
+
 
 

@@ -54,15 +54,16 @@ $(".input-thougths").on('click', function(event){
 
 		$.post(this.action, $(this).serialize(), function(response) {
 
-			//$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')
+		//$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')
 			
 		var template = $('#review-template').html();
 		var output = Mustache.render(template, response);
-		$("#target").html(output);
-			
+		 $(".target").html(output);
+		//$(this).sibling('.target').html(output);
+
 
 		}).error(function(){
-			alert('Sorry put stars');
+			alert('Sorry sir, please select a rating ');
 		});
 	});
 
