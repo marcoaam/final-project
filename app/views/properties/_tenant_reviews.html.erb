@@ -27,9 +27,6 @@
 	
 		<ul class="property-reviews-list">
 			<% room.user.reviews.reverse.each do |review| %>
-					<article class="container-reviews-mustache">
-    				<%= render "layouts/template_review" %>
-  				</article>
 					<li class="property-reviews-list">
 						<p class="reviews-list">
 						<div class="thougths-reviews-list"><%= review.thoughts %>,<span class="star-reviews-list"><%= "#{star_rating(review.rating)}" %></span></div></p>

@@ -23,7 +23,4 @@ class UserController < ApplicationController
     redirect_to '/'
   end
 
-  def create
-   
-  end
 end
