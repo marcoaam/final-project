@@ -1,7 +1,6 @@
 <% if !room.user.nil? %>
 	<article class='review' id="review_thoughts_flat">
-		<span class='review' id="review_thoughts_tenant">
-			<form id="form_for_user" method="POST" action="/user/<%=room.user.id%>/reviews">
+			<form class="new_review" id="form_for_user" method="POST" action="/user/<%=room.user.id%>/reviews">
 				<section class="stars-section">
 					<h3>Leave a review </h3>
 						<aside class="stars-tenant-<%=room.number%>">
@@ -21,18 +20,24 @@
 
 				<input type="submit" class="submit-button" value="Leave review">
 			</form>
-		</span>
 	</article>
 
-	<article id="user-reviews">
-		<% room.user.reviews.reverse.each do |review| %>
-				<ul>
-					<li>
-						<%= review.thoughts %>, Posted by @<%= link_to "#{review.imageable.username}", user_path(@property.user) %> <%= "#{star_rating(review.rating)}" %>
+	
+		<ul class="property-reviews-list">
+
+			 <article class="container-reviews-mustache">
+    <div class="target"></div>
+    <%= render "layouts/template_review" %>
+  </article>
+
+			<% room.user.reviews.reverse.each do |review| %>
+					<li class="property-reviews-list">
+						<p class="reviews-list">
+						<div class="thougths-reviews-list"><%= review.thoughts %>,<span class="star-reviews-list"><%= "#{star_rating(review.rating)}" %></span></div></p>
+						<span class="posted-by"><em>Posted by @<%= link_to "#{review.imageable.username}", user_path(@property.user) %> <%= time_ago_in_words(review.created_at) %> ago</em></span>
 					</li>
-			</ul>
-		<%end%>
-	</article>
+			<%end%>
+		</ul>
 <%else%>
 	<h3>No Tenants in this room</h3>
 <%end%>
