@@ -510,9 +510,19 @@ margin-bottom: 15px;
 border-bottom: 4px solid rgba(248, 180, 79, 0.77);
 }
 	.new_review {
+		color: gray;
+
+		h3 {
+			color: black;
+		}
+		
 		#review_thoughts {
-			height: 50px;
+			height: 100px;
 			color: gray;
+		}
+
+		#thoughts {
+			height: 100px;
 		}
 	}
 }
@@ -528,7 +538,6 @@ width: 100%;
 	border: none;
 	border-radius: 0px;
 	box-shadow: none;
-
 	outline: 0px;				
 }
 
@@ -550,12 +559,15 @@ width: 100%;
 		border-top: none;
 		border-right: none;
 		border-left: none;
+		color: rgba(255, 255, 255, 0.8);
+		background-color: rgba(0,0,0,0.5);
 
 		:hover {
 			border: none;
 			border-radius: 0px;
 			box-shadow: none;
 			outline: 0px;
+			color: black;
 		}
 
 		:focus {		
@@ -571,6 +583,8 @@ width: 100%;
 	  border-top: none;
 		border-right: none;
 		border-left: none;
+		color: black;
+		background-color: rgba(255, 255, 255, 0.5);
 	}
 }
 
@@ -616,7 +630,7 @@ p.reviews-list {
 }
 
 .nav-tabs > li.active > a{
-	background-color: none;
+	background-color: rgba(255, 255, 255, 0.8);
 	border-top: none;
 	border-right: none;
 	border-left: none;
@@ -642,7 +656,6 @@ a {
 
 .nav-tabs > li> a{
 	margin-right:0px;
-
 }
 
 
@@ -656,6 +669,9 @@ a.devise-links{
 	height: 95%;
 	overflow: scroll;
 	background-color: rgba(255, 255, 255, 0.8);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
 .user-bio {
