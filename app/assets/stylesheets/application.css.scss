@@ -14,6 +14,11 @@
  *= require_tree .
  *= require_self
 */
+::-webkit-input-placeholder { /* WebKit browsers */
+		font-family: helvetica neue;
+    color: rgba(72,72,72,0.6);
+}
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -94,7 +99,7 @@ li {
 
 	.property_item {
 			clear: both;
-			padding:4px 10px;
+			padding: 15px;
 			min-height: 72px;
 			background-color: rgba(242,242,242,1);
 			border-bottom: 1px rgba(74,74,74,0.6) solid;
@@ -167,8 +172,7 @@ display: block;
 }
 
 #home_search_bar {
-	width: 112%;
-	height: 67%;
+	height:68px;
 	color: rgba(74, 74, 74, 0.8);
 	font-family: "Quicksand", sans-serif;
 	font-size: 24px;
@@ -214,11 +218,15 @@ display: block;
 
 	}
 
+	.navbar-right a:hover {
+	 color: rgb(255,255,255);
+
+	}
+
 	.navbar-right a {
 	 font-family: "helvetica neue"; 
 	 font-weight: 100;
 	 color: rgb(255,255,255);
-	 border: 2px whitesmoke solid;
 	 border-radius: 8px;
 	 margin-right: 10px;
 	 height: 24px;
@@ -235,6 +243,7 @@ display: block;
 
 	.home_search_form_container {
 		height: 100%;
+
 	}
 	
 }
@@ -265,25 +274,6 @@ img.image-show {
 	margin-right: auto;
 }
 
-.footer {
-	color: whitesmoke;
-	margin-top: -150px;
-	height: 56px;
-	clear: both;
-	padding-top: 20px;
-	color: #fff;
-	background-color: #646464;
-	padding-left: 5;
-	bottom: 0px;
-}
-
-
-.footer a {
-	color: whitesmoke;
-	font-family: $quick;
-	margin-left:10px;
-	position: relative;
-}
 
 li.col-md-6 {
 	list-style-type: none;
@@ -389,7 +379,6 @@ article.navbar.navbar-default {
 
 .col-md-12.home_search_form_container {
 	margin: 0px auto;
-	top: 40%;
 }
 
 #property_description{
@@ -678,8 +667,45 @@ span.star-reviews-list {
 
 .btn-block.button-sign-in {
 	width: 70% !important;
-	margin:0px auto;
+	margin: 0px auto;
 }
 
+img.image-show {
+	margin-left: auto;
+	margin-right: auto;
+	// width: 36.8%;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+	img.image-show {
+	margin-left: auto;
+	margin-right: auto;
+	// width: 36.8%;
+	}
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+	img.image-show {
+	margin-left: auto;
+	margin-right: auto;
+	// width: 35.87%;
+	}
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+	img.image-show {
+	margin-left: auto;
+	margin-right: auto;
+	// width: 36.8%;
+	}
+}
+.intro-sentence{
+	width:800px;
+	margin: 2px auto;
+	position:relative;
+	top:20%;
+	text-align:center;
+}
 
 
