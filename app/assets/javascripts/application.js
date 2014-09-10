@@ -35,6 +35,7 @@ $("li [role='tab']").on('click', function() {
 function showTab(tab) {
 	$("#room-tab li").hide();
   $("#room-tab [data-room='" + tab + "']").show();
+  $(".property-reviews-list li").show();
 }
 
 $("li [role='tab']").on('click', function() {
@@ -51,22 +52,16 @@ $(".input-thougths").on('click', function(event){
 
 	$('.new_review').on('submit', function(event) {
 		event.preventDefault();
-
+		var reviewList = $(this).parent().siblings('.property-reviews-list')
 		$.post(this.action, $(this).serialize(), function(response) {
-
-		//$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')
-			
-		var template = $('#review-template').html();
-		var output = Mustache.render(template, response);
-		 $(".target").html(output);
-		//$(this).sibling('.target').html(output);
-
-
+			//$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')	
+			var template = $('#review-template').html();
+			var output = Mustache.render(template, response);
+			reviewList.prepend(output);
 		}).error(function(){
 			alert('Sorry sir, please select a rating ');
 		});
 	});
-
 
 });
 
