@@ -53,10 +53,11 @@ $(".input-thougths").on('click', function(event){
 		event.preventDefault();
 		var reviewList = $(this).parent().siblings('.property-reviews-list')
 		$.post(this.action, $(this).serialize(), function(response) {
-		//$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')	
-		var template = $('#review-template').html();
-		var output = Mustache.render(template, response);
-		reviewList.prepend(output);
+			console.log(response);
+			//$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')	
+			var template = $('#review-template').html();
+			var output = Mustache.render(template, response);
+			reviewList.prepend(output);
 		}).error(function(){
 			alert('Sorry sir, please select a rating ');
 		});
