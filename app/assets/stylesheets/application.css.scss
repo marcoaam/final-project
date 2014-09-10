@@ -104,12 +104,12 @@ clear: both;
 padding: 15px;
 min-height: 72px;
 background-color: rgba(255, 255, 255, 0.8);
-border-bottom: 4px rgba(74, 74, 74, 0.8) solid;
+border-bottom: 4px solid rgba(248, 180, 79, 0.77);
 width: 100%;
 margin-top: 10px;
 }
 	.property_item:hover {
-		background-color: rgba(216, 216, 216, 1);
+		background-color: rgba(255, 255, 255, 1);
 		transition-delay: 0.6s ease-in-out;
 	}
 
@@ -160,12 +160,13 @@ color: rgba(74, 74, 74, 0.8);
 font-family: "Quicksand", sans-serif;
 font-size: 20px;
 border: none;
-background-color: rgba(216, 216, 216, 0.8);
+background-color: white;
 margin-bottom: 10px;
 }
 
 #index_search_bar:focus {
 	 outline: none;
+	 border-bottom: 4px solid rgba(248, 180, 79, 0.77);
 } 
 
 .container-fluid {
@@ -271,10 +272,6 @@ margin-bottom: 10px;
 
 }
 
-img.image-show {
-	margin-left: auto;
-	margin-right: auto;
-}
 
 
 li.col-md-6 {
@@ -302,14 +299,6 @@ section.input-thougths-big input {
 input.submit-button {
 	width: 100%;
 	height: 30px;
-}
-
-.carousel {
-	position: absolute;
-	height: calc(100% - 62px);
-}
-
-.carousel img {
 }
 
 ul.ul-footer {
@@ -508,16 +497,15 @@ input.form-control.input-sm {
 	height: calc(100% - 115px);
 	position: relative;
 
-	.submit-button {
-		background-color: black;
-		color: white;
-		border: none;
-	}
-
+.submit-button {
+background-color: rgba(0,0,0, 0.7);
+color: white;
+border: none;
+margin-top: 10px;
+margin-bottom: 15px;
+border-bottom: 4px solid rgba(248, 180, 79, 0.77);
+}
 	.new_review {
-		background-color: black;
-		color: white;
-
 		#review_thoughts {
 			height: 50px;
 			color: gray;
@@ -601,10 +589,11 @@ ul.property-reviews-list {
 }
 
 li.property-reviews-list {
-	margin-bottom: 10px;
-	padding: 10px;
-	width: 100%;
-	background: whitesmoke;
+margin-bottom: 10px;
+padding: 10px;
+width: 100%;
+background: whitesmoke;
+border-bottom: 4px solid rgba(248, 180, 79, 0.77);
 }
 
 li.property-reviews-list:hover {
@@ -683,36 +672,6 @@ span.star-reviews-list {
 	margin: 0px auto;
 }
 
-img.image-show {
-	margin-left: auto;
-	margin-right: auto;
-	// width: 36.8%;
-}
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-	img.image-show {
-	margin-left: auto;
-	margin-right: auto;
-	// width: 36.8%;
-	}
-}
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-	img.image-show {
-	margin-left: auto;
-	margin-right: auto;
-	// width: 35.87%;
-	}
-}
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-	img.image-show {
-	margin-left: auto;
-	margin-right: auto;
-	// width: 36.8%;
-	}
-}
 .intro-sentence{
 	width:800px;
 	margin: 2px auto;
@@ -731,3 +690,15 @@ font-size: 12px;
 display: block;
 padding-top: 4px;
 }
+
+.carousel {
+position: absolute;
+width: 100%;
+height: calc(100% - 60px);
+}
+
+img.image-show {
+max-height: 100%;
+width: 100%;
+}
+
