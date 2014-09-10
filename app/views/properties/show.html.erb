@@ -1,6 +1,6 @@
 <%= render "properties/slider" %>
-<article class="row lower_column" >
-	<section class="toggle-vertical col-md-4 property-list-container" >
+<article class="row main-row" >
+	<section class="toggle-vertical col-md-1 property-list-container" >
 	 	<ul class="nav nav-tabs" role="tablist">
 		  <li class="active property_item_big" id="flat">
 		  	<a href="#flat-tab" role="tab" data-toggle="tab">
@@ -29,37 +29,37 @@
 	</section>
 
 
-	<article class="reviews-container col-md-8">
+	<article class="reviews-container col-md-4">
 		<nav class="tab-content">
-	  	<ul class="tab-pane active" id="flat-tab">
+	  	<ul class="tab-pane active col-md-12" id="flat-tab">
 
-	  		<li class="flat-partial flat_column col-md-6">
+	  		<li class="flat-partial flat_column">
 		  		<%= render "properties/flat" %>
 		  	</li>
 		
-		  	<li class="flat-review-partial col-md-6">
+		  	<li class="flat-review-partial">
 		  		<%= render "properties/flat_reviews" %>
 				</li>
 	  	</ul>
 
-	  	<ul class="tab-pane" id="landlord-tab" >
-	  		<li class="flat-partial col-md-6">
+	  	<ul class="tab-pane col-md-12" id="landlord-tab" >
+	  		<li class="flat-partial">
 	  			<%= render "properties/landlord" %>
 	  		</li>
-				<li class="flat-review-partial col-md-6">
+				<li class="flat-review-partial">
 	  			<%= render "properties/landlord_reviews"%>
 	  		</li>
 	  	</ul>
 
-	  	<ul class="tab-pane" id="room-tab">
+	  	<ul class="tab-pane col-md-12" id="room-tab">
   			<% if @property.rooms.any?  %>
   				<% @property.rooms.each do |room| %>
-  					<li data-room="room-<%= room.number %>" class="flat-partial col-md-6"> 
+  					<li data-room="room-<%= room.number %>" class="flat-partial"> 
   							<article id="container-room-<%= room.number %>">			
 									<%= render partial: "properties/room", locals: {room: room} %>
 								</article>
   					</li>
-  					<li data-room="room-<%= room.number %>" class="flat-review-partial col-md-6">
+  					<li data-room="room-<%= room.number %>" class="flat-review-partial">
   						<%= render partial:"properties/tenant_reviews", locals: {room: room}  %>
   					</li>
   				<% end %>
