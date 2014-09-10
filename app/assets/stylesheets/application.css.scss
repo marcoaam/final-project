@@ -665,7 +665,9 @@ input.form-control.input-sm {
 }
 
 .lower_column {
-	height: calc(45% - 115px);
+height: calc(45% - 115px);
+background: white;
+position: relative;
 }
 
 video.col-md-12 {
@@ -841,7 +843,6 @@ span.star-reviews-list {
 	width: 70% !important;
 	margin:0px auto;
 }
-
 
 img.image-show {
 	margin-left: auto;
