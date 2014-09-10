@@ -35,6 +35,7 @@ $("li [role='tab']").on('click', function() {
 function showTab(tab) {
 	$("#room-tab li").hide();
   $("#room-tab [data-room='" + tab + "']").show();
+  $(".property-reviews-list li").show();
 }
 
 $("li [role='tab']").on('click', function() {
