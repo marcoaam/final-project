@@ -80,34 +80,36 @@ li {
 }
 
 .property_list_container {
-	padding: 0px;
-	background: rgba(74,74,74,1) ;
+
+
+	padding: 10px;
 	height: 100%;
-	position:relative;
+	position: absolute;
 	overflow-y: auto;
+	right: 0px;
+
 	
 	input[type=submit] {
-		width:38px;
-		height: 38px;
-		background: url('search_property_small.png') no-repeat;
-		border: none;
-		color: transparent;
-		position:absolute;
-		right:0px;
-		outline: none;
+	height: 38px;
+background: url("search_property_small.png") no-repeat;
+border: none;
+color: transparent;
+position: absolute;
+right: -13px;
+outline: none;
 	}
 
-	.property_item {
-			clear: both;
-			padding: 15px;
-			min-height: 72px;
-			background-color: rgba(242,242,242,1);
-			border-bottom: 1px rgba(74,74,74,0.6) solid;
-			width: 100%;
-	}
-
+.property_item {
+clear: both;
+padding: 15px;
+min-height: 72px;
+background-color: rgba(255, 255, 255, 0.8);
+border-bottom: 4px rgba(74, 74, 74, 0.8) solid;
+width: 100%;
+margin-top: 10px;
+}
 	.property_item:hover {
-		background-color: rgba(245,166,35,1);
+		background-color: rgba(216, 216, 216, 1);
 		transition-delay: 0.6s ease-in-out;
 	}
 
@@ -134,7 +136,6 @@ li {
 	font-family: $ada;
 	font-size: 14px;
 	width: 80px;
-	display: inline-block;
 	position: absolute;
 	right:0px;
 }
@@ -153,13 +154,14 @@ display: block;
 }
 
 #index_search_bar {
-	width: 100%;
-	height: 38px;
-	color: rgba(74,74,74,0.8);
-	font-family: $quick;
-	font-size: 20px;
-	border: none;
-	background-color: rgba(216,216,216,0.8);
+width: 100%;
+height: 38px;
+color: rgba(74, 74, 74, 0.8);
+font-family: "Quicksand", sans-serif;
+font-size: 20px;
+border: none;
+background-color: rgba(216, 216, 216, 0.8);
+margin-bottom: 10px;
 }
 
 #index_search_bar:focus {
@@ -205,7 +207,7 @@ display: block;
 .navbar {
 		min-height: 60px;
 		font-size: 1.2em;
-		background-color: rgba(74, 74, 74, 0.6);
+		background-color: rgba(248, 180, 79, 0.77);
 		border: none;
 		border-radius: 0px;
 
@@ -510,10 +512,10 @@ width: 100%;
 }
 
 .lower_column .nav-tabs{
-		border: none;
-		border-radius: 0px;
-		box-shadow: none;
-		outline: 0px;				
+	border: none;
+	border-radius: 0px;
+	box-shadow: none;
+	outline: 0px;				
 }
 
 .lower_column .nav-tabs a{
@@ -708,4 +710,13 @@ img.image-show {
 	text-align:center;
 }
 
+.property_title h4 {
+margin: 0px;
+}
 
+.property_item .edit {
+font-family: "Quicksand", sans-serif;
+font-size: 12px;
+display: block;
+padding-top: 4px;
+}
