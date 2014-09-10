@@ -62,6 +62,11 @@ RSpec.describe Property, :type => :model do
 			expect(property_with_one_room.rooms.first.user.username).to eq 'John'
 			expect(property_with_one_room.rooms.count).to eq 4
 		end
+
+		it 'cannot have more than five rooms or less than 0' do
+			property_with_one_room.update(total_rooms: 6)
+			expect(property_with_one_room).to have(1).error_on(:rooms)
+		end
 	end
 
 end
