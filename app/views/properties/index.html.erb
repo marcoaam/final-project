@@ -15,7 +15,7 @@
 					<h4><strong><%= link_to property.title, property_path(property) %></strong></h4>
 				</span>
 				<span class='property_review'>
-					<div class="stars-review"><%= "#{star_rating(property.average_rating)}" %></div><br>
+					<div class="star-reviews-list"><%= "#{star_rating(property.average_rating)}" %></div><br>
 					<%= property.reviews.count %> <%= property.pluralized_review %>
 				</span>
 				<address><%= property.display_full_address %></address>
