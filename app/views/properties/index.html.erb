@@ -7,6 +7,7 @@
 	<input type="submit" value="Search" >
 </form>
 
+<ul class="property-list-edit-show">
 <% if @properties.any? %>
 	<% @properties.each do |property| %> 
 			<li class="property_item">
@@ -35,5 +36,5 @@
 	<p>No properties have been added.</p>
 </li>
 <%end%>
-
+</ul>
 </article>
