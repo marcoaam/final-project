@@ -137,7 +137,7 @@ margin-top: 10px;
 	font-size: 14px;
 	width: 80px;
 	position: absolute;
-	right:0px;
+	right: 20px;
 }
 
 address{
@@ -723,5 +723,14 @@ height: calc(100% - 60px);
 img.image-show {
 max-height: 100%;
 width: 100%;
+}
+
+.stars-review {
+float: right;
+display: block;
+padding-top: 2%;
+font-size: 1.5em;
+padding-right: 2%;
+color: rgb(255,204,0);
 }
 

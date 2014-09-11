@@ -52,9 +52,7 @@ describe 'Reviews' do
 			click_link("Landlord")
     end
 
-    within(:css, "#user-reviews") do
-    	expect(page).to have_content 'Great landlord'
-  	end
+    expect(page).to have_content 'Great landlord'
 	end
 
 end
@@ -93,25 +91,6 @@ end
 			 search_home_for('25 city road,London,EC1Y 1AA')
 			 expect(page).to have_content("3 reviews")
 			end
-
-	end
-
-	context 'leave a not conform review' do
-
-		before(:each) do
-		  john = create(:user)
-		  property = create(:makers_academy)
-			john.properties << property
-			3.times { property.reviews << create(:review) }
-			login_as john
-		end
-
-		it 'gives an error message when the user do not select stars', js: true do
-			visit('/properties/21')
-			fill_in 'review_thoughts', with: 'bob'
-			click_button('Leave review')
-			expect(page).to have_content'Sorry, you need to put stars'
-		end
 
 	end
 

@@ -22,8 +22,8 @@
 </article>
 
 <% if @reviews.any? %>
-	<ul class="property-reviews-list" >
-		
+  <ul class="property-reviews-list" >
+    
   <article class="container-reviews-mustache">
     <div class="target"></div>
     <%= render "layouts/template_review" %>
@@ -31,8 +31,18 @@
 
 		<% @reviews.each do |review| %>
 			<li class="property-reviews-list">
-				<p class="reviews-list">
-				<div class="thougths-reviews-list"><%= review.thoughts %>,<span class="star-reviews-list"><%= "#{star_rating(review.rating)}" %></span></div></p>
+				<article class="reviews-list">
+					<% review.user.pictures.each do |picture| %>
+						<section class="thougths-reviews-list">
+							<%= image_tag picture.image.url(:profile), class: "img-circle panel-img-position" %>
+					<% end %>
+						<aside class="stars-review"><%= "#{star_rating(review.rating)}" %>
+						</aside>
+						<p class="review-thoughts-text"><%= review.thoughts %>
+						</p>
+						<span class="star-reviews-list"></span>
+					</section>
+				</article>
 				<span class="posted-by"><em>Posted by @<%= link_to "#{review.user.username}", user_path(review.user) %> <%= time_ago_in_words(review.created_at) %> ago</em></span>
 			</li>
 		<% end %>
