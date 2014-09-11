@@ -4,6 +4,7 @@ FactoryGirl.define do
   factory :review do
     thoughts "MyText"
     rating 	 "2"
+    user_id   1
   end
 
 end

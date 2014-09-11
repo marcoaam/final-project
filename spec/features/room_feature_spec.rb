@@ -22,9 +22,7 @@ describe 'Room' do
 		search_home_for('25 city road,London,EC1Y 1AA')
 		click_link 'Great flat near old street'
 		expect(page).to have_content 'room N°1'
-		expect(page).to have_content 'Big room'
 		expect(page).to have_content 'room N°2'
-		expect(page).to have_content 'Small room'
 	end
 
 	it 'can create a property' do
