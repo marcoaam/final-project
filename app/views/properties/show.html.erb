@@ -20,7 +20,13 @@
 	 		<% if @property.rooms.any?  %>
 	  		<% @property.rooms.each do |room| %>
 	  			<li class='room_item' id="room-<%= room.number %>">
-	  				<a  class='room_tab'  href="#room-tab" role="tab" data-toggle="tab" id="room-<%= room.number %>"data-room="room-<%= room.number %>">Room <%= room.number %></a>
+	  				<a  class='room_tab'  href="#room-tab" role="tab" data-toggle="tab" id="room-<%= room.number %>"data-room="room-<%= room.number %>">
+	  					<% if !room.user.nil?  %>
+	  					<% room.user.pictures.each do |picture| %>
+				  			<%= image_tag picture.image.url(:profile), class: "img-circle" %>
+				  		<% end %>
+				  		<% end %>
+		  		Room <%= room.number %></a>
 	  			</li>
 				<% end %>
 	 		<% end %>
