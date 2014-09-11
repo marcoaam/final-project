@@ -3,7 +3,7 @@
 	room N°<%= room.number %>
 				 <%= link_to "Do you live here ?", room_path(room), method: :patch, class: "live-here-alert" %>
 <% else %>
-
+<div class="star-rating-title"><%= "#{star_rating(@property.user.reviews.average(:rating))}" %></div>
 	room N°<%= room.number %>
 				 Hello I'm <%= room.user.username %>
 <% end %>

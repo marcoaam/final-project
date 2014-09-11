@@ -150,7 +150,11 @@ address{
 
 .posted-by {
 position: relative;
-display: block;
+display: flex;
+}
+
+span.posted_by {
+display: flex;
 }
 
 #index_search_bar {
@@ -733,3 +737,12 @@ padding-right: 2%;
 color: rgb(255,204,0);
 }
 
+.star-rating-title {
+	float: right;
+	color: rgb(255,204,0);
+}
+
+.row {
+margin-left: 0px;
+margin-right: 0px; 
+}
