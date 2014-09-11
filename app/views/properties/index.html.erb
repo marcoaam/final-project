@@ -4,12 +4,12 @@
 	
 <form method='GET' action='/properties' >
 	<input type="text" name="search_bar" id="index_search_bar" placeholder='Type location' class="col-xs-4 " required>
-	<input type="submit" value="Search" >
+	<input type="submit" value="Search">
 </form>
 
 <ul class="property-list-edit-show">
 <% if @properties.any? %>
-	<% @properties.each do |property| %> 
+	<% @properties.each do |property| %>
 			<li class="property_item">
 				<span class='property_title'>
 					<h4><strong><%= link_to property.title, property_path(property) %></strong></h4>
