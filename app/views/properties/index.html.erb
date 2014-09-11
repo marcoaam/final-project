@@ -7,6 +7,7 @@
 	<input type="submit" value="Search" >
 </form>
 
+<ul class="property-list-edit-show">
 <% if @properties.any? %>
 	<% @properties.each do |property| %> 
 			<li class="property_item">
@@ -14,7 +15,7 @@
 					<h4><strong><%= link_to property.title, property_path(property) %></strong></h4>
 				</span>
 				<span class='property_review'>
-					<%= "#{star_rating(property.average_rating)}" %><br>
+					<div class="stars-review"><%= "#{star_rating(property.average_rating)}" %></div><br>
 					<%= property.reviews.count %> <%= property.pluralized_review %>
 				</span>
 				<address><%= property.display_full_address %></address>
@@ -35,5 +36,5 @@
 	<p>No properties have been added.</p>
 </li>
 <%end%>
-
+</ul>
 </article>

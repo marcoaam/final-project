@@ -150,7 +150,11 @@ address{
 
 .posted-by {
 position: relative;
-display: block;
+display: flex;
+}
+
+span.posted_by {
+display: flex;
 }
 
 #index_search_bar {
@@ -175,15 +179,16 @@ margin-bottom: 10px;
 }
 
 #home_search_bar {
-	height:68px;
-	color: rgba(74, 74, 74, 0.8);
-	font-family: "Quicksand", sans-serif;
-	font-size: 24px;
-	border: none;
-	background-color: rgba(255, 255, 255, 1);
-	position:relative;
-	left:18%;
-	margin-top:3%;
+height: 65px;
+color: rgba(74, 74, 74, 0.8);
+font-family: "Quicksand", sans-serif;
+font-size: 24px;
+border: none;
+background-color: white;
+position: relative;
+left: 10%;
+margin-top: 7%;
+width: 50%;
 }
 
 #home_search_bar:focus{
@@ -192,16 +197,16 @@ margin-bottom: 10px;
 
 #home_search_form {
 
-		input[type=submit] {
-		height: 68px;
-		background: url('search_property.png') no-repeat;
-		border: none;
-		color: transparent;
-		outline: none;
-		position:relative;
-		left:18%;
-		margin-top:3%;
-	}
+ input[type=submit] {
+height: 69px;
+background: url("search_property.png") no-repeat;
+border: none;
+color: transparent;
+outline: none;
+position: relative;
+left: 3%;
+margin-top: 7%;
+}
 }
 
 .navbar {
@@ -213,6 +218,13 @@ margin-bottom: 10px;
 
 	a{
 	 color: rgb(255,255,255);
+	}
+
+
+	.navbar-right img.img-circle {
+		width: 50px;
+		margin-top: 3px;
+		margin-right: 20px;
 	}
 
 	.navbar-right a:visited {
@@ -244,22 +256,66 @@ margin-bottom: 10px;
 	
 }
 
-.home_search_form_container{
-	width:40%;
-	padding:1%;
-	margin: 0px auto;
-	position:relative;
-	top:30%;
-	background-color: rgba(200,200,200,0.5);
-	border-radius:5px;
+.home_search_form_container {
+width: 40%;
+padding: 1%;
+margin: auto;
+position: relative;
+top: 22%;
+background-color: rgba(200, 200, 200, 0.5);
+border-radius: 5px;
+height: 46%;
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+
+	.home_search_form_container {
+		width: 40%;
+		padding: 1%;
+		margin: auto;
+		position: relative;
+		top: 22%;
+		background-color: rgba(200, 200, 200, 0.5);
+		border-radius: 5px;
+		height: 30%;
+	}
+
+	#home_search_form input[type=submit] {
+		height: 69px;
+		background: url("search_property.png") no-repeat;
+		border: none;
+		color: transparent;
+		outline: none;
+		position: relative;
+		left: 4%;
+		margin-top: 3%;
+	}
+
+	#home_search_bar {
+		height: 65px;
+		color: rgba(74, 74, 74, 0.8);
+		font-family: "Quicksand", sans-serif;
+		font-size: 24px;
+		border: none;
+		background-color: white;
+		position: relative;
+		left: 10%;
+		margin-top: 3%;
+		width: 50%;
+	}
+
+	form#home_search_form {
+		margin-top: 10%;
+		width: 115%;
+	}
 
 }
 
-
 .navbar-brand{
 	position:relative;
-	left: 5%;
 	bottom:5px;
+	left: 20px;
 }
 
 
@@ -504,7 +560,7 @@ input.form-control.input-sm {
 
 .video{
 	height:100%;
-	width:102%;
+	width:100%;
 	z-index:-1;
 	position:absolute;
 }
@@ -573,8 +629,8 @@ width: 100%;
 		border-top: none;
 		border-right: none;
 		border-left: none;
-		color: rgba(255, 255, 255, 0.8);
-		background-color: rgba(0,0,0,0.5);
+		color: rgba(0,0,0,0.5);
+		background-color: rgba(255,255,255,0.5);
 
 		:hover {
 			border: none;
@@ -593,12 +649,31 @@ width: 100%;
 
  		}
 
+ 	> li.active > a{
+		background-color: rgba(255, 255, 255, 0.8);
+		border-top: none;
+		border-right: none;
+		border-left: none;
+	}
+
 	> li > a:hover{
 	  border-top: none;
 		border-right: none;
 		border-left: none;
 		color: black;
 		background-color: rgba(255, 255, 255, 0.5);
+	}
+
+	> li.active > a:hover{
+		background-color: rgba(255, 255, 255, 0.8);
+		border-top: none;
+		border-right: none;
+		color: black;
+		border-left: none;
+	}
+
+	img.img-circle:hover {
+		border-radius: 50%;
 	}
 }
 
@@ -641,13 +716,6 @@ li.property-reviews-list:hover {
 
 p.reviews-list {
 	margin-bottom: 0px;
-}
-
-.nav-tabs > li.active > a{
-	background-color: rgba(255, 255, 255, 0.8);
-	border-top: none;
-	border-right: none;
-	border-left: none;
 }
 
 .room_item a{
@@ -713,7 +781,7 @@ span.star-reviews-list {
 	max-width:90%;
 	margin: 2px auto;
 	position:relative;
-	top:20%;
+	top:14%;
 	text-align:center;
 }
 
@@ -751,4 +819,39 @@ width: 100%;
 	background-image: url('Room_F.jpg'); 
 }
 
+
+
+.star-rating-title {
+	float: right;
+	color: rgb(255,204,0);
+}
+
+.row {
+margin-left: 0px;
+margin-right: 0px; 
+}
+
+img.img-circle:hover {
+	border-radius: 50%;
+}
+
+
+input#home_search_bar:focus {
+background: rgba(255, 255, 255, 0.87);
+}
+input#home_search_bar {
+width: 65%;
+background: rgba(255, 255, 255, 0.97);
+}
+
+form#home_search_form {
+margin-top: 10%;
+width: 115%;
+}
+
+ul.property-list-edit-show {
+	padding: 0px;
+	overflow: visible;
+	height: calc(94% - 86px);
+}
 
