@@ -570,8 +570,8 @@ width: 100%;
 		border-top: none;
 		border-right: none;
 		border-left: none;
-		color: rgba(255, 255, 255, 0.8);
-		background-color: rgba(0,0,0,0.5);
+		color: rgba(0,0,0,0.5);
+		background-color: rgba(255,255,255,0.5);
 
 		:hover {
 			border: none;
@@ -590,12 +590,31 @@ width: 100%;
 
  		}
 
+ 	> li.active > a{
+		background-color: rgba(255, 255, 255, 0.8);
+		border-top: none;
+		border-right: none;
+		border-left: none;
+	}
+
 	> li > a:hover{
 	  border-top: none;
 		border-right: none;
 		border-left: none;
 		color: black;
 		background-color: rgba(255, 255, 255, 0.5);
+	}
+
+	> li.active > a:hover{
+		background-color: rgba(255, 255, 255, 0.8);
+		border-top: none;
+		border-right: none;
+		color: black;
+		border-left: none;
+	}
+
+	img.img-circle:hover {
+		border-radius: 50%;
 	}
 }
 
@@ -638,13 +657,6 @@ li.property-reviews-list:hover {
 
 p.reviews-list {
 	margin-bottom: 0px;
-}
-
-.nav-tabs > li.active > a{
-	background-color: rgba(255, 255, 255, 0.8);
-	border-top: none;
-	border-right: none;
-	border-left: none;
 }
 
 .room_item a{
