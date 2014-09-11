@@ -1,0 +1,26 @@
+<article id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <section class="carousel-inner">
+    <% @property.pictures.each_with_index do |picture, index| %>
+      <% if picture.image.present? %>
+        <!-- Wrapper for slides -->
+          <% if index == 0 %>
+            <span class="item active">
+             <img class="image-show" src="<%= picture.image.url(:medium)%>">
+            </span>
+          <% else %>
+            <span class="item">
+              <img class="image-show" src="<%= picture.image.url(:medium)%>">
+            </span>
+          <% end %>
+        <% end %>
+      <% end %>
+  </section>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</article>

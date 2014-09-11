@@ -1,0 +1,40 @@
+<div class='col-md-12' id="map"></div>
+
+<article class="col-md-4 property_list_container my-properties-flat-design" >
+	
+<form method='GET' action='/properties' >
+	<input type="text" name="search_bar" id="index_search_bar" placeholder='Type location' class="col-xs-4 " required>
+	<input type="submit" value="Search">
+</form>
+
+<ul class="property-list-edit-show">
+<% if @properties.any? %>
+	<% @properties.each do |property| %>
+			<li class="property_item">
+				<span class='property_title'>
+					<h4><strong><%= link_to property.title, property_path(property) %></strong></h4>
+				</span>
+				<span class='property_review'>
+					<div class="star-reviews-list"><%= "#{star_rating(property.average_rating)}" %></div><br>
+					<%= property.reviews.count %> <%= property.pluralized_review %>
+				</span>
+				<address><%= property.display_full_address %></address>
+				<% if current_user == property.user %>
+				<span class='edit'>
+					<%= link_to "Edit", edit_property_path(property) %>
+					<%= link_to "Delete", property_path(property), method: :delete %>
+				</span>
+				<%else%>
+				<span class='posted_by'>
+					<%= "Posted by - #{property.user.username}" %>
+				</span>
+			</li>
+				<%end%>
+		<% end %>
+<%else%>
+<li class="property_item">
+	<p>No properties have been added.</p>
+</li>
+<%end%>
+</ul>
+</article>

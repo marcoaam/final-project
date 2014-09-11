@@ -1,0 +1,15 @@
+<div class="background_image_edit">
+	<article class="edit-user-text">
+		<h1>Hello <%= @user.username %>, update your profile here. </h1> 
+	</article>
+
+	<%= form_for @user, :html => {:multipart => true} do |f| %>
+		
+		<h5 class="add-pictures">Bio</h5>
+	  <span class="form_text_bio"><%= f.text_area :bio %></span>
+		<br>
+			<h5 class="add-pictures">Add your profile picture </h5>
+	  	<%= f.file_field :image, class: "edit-image-field" %>
+	  	<%= f.submit "Save" %> 
+	<% end %>
+</div>
