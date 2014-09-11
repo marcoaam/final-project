@@ -1,4 +1,5 @@
 <article class="flat-bio">
 	<h2><div class="star-rating-title"><%= "#{star_rating(@property.user.reviews.average(:rating))}" %></div><%= @property.user.username  %></h2>
-		<p><%= @property.user.username %></p>
+		<p>Hello I am <%= @property.user.username %> the landlord of this property.</p>
+    <p><%= @property.user.bio %></p>
 </article>
