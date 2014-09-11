@@ -215,6 +215,13 @@ margin-bottom: 10px;
 	 color: rgb(255,255,255);
 	}
 
+
+	.navbar-right img.img-circle {
+		width: 50px;
+		margin-top: 3px;
+		margin-right: 20px;
+	}
+
 	.navbar-right a:visited {
 	 color: rgb(255,255,255);
 
@@ -258,8 +265,8 @@ margin-bottom: 10px;
 
 .navbar-brand{
 	position:relative;
-	left: 5%;
 	bottom:5px;
+	left: 20px;
 }
 
 

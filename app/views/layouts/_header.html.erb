@@ -13,6 +13,9 @@
   				<li> <%= link_to 'My properties', user_properties_path(current_user) %></li>
   				<li><%= link_to "Add property", new_property_path %></li>
           <li><%= link_to "Edit profile", edit_user_path(current_user) %></li>
+          <% current_user.pictures.each do |picture| %>
+            <li><%= image_tag picture.image.url(:profile), class: "img-circle" %></li>
+          <% end %>
         </ul>
 
       <% else %>
