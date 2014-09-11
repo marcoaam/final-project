@@ -766,9 +766,10 @@ a.devise-links{
 	width: 340px;
 }
 
-span.star-reviews-list {
+.star-reviews-list {
 	float: right;
 	font-size: 1.6em;
+	color: rgb(255,204,0);
 }
 
 .btn-block.button-sign-in {
@@ -818,7 +819,6 @@ width: 100%;
 	height: calc(100% - 60px);
 	background-image: url('Room_F.jpg'); 
 }
-
 
 
 .star-rating-title {
