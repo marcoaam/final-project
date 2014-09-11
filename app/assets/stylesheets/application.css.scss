@@ -186,8 +186,8 @@ margin-bottom: 10px;
 	border: none;
 	background-color: rgba(255, 255, 255, 1);
 	position:relative;
-	top:70px;
 	left:18%;
+	margin-top:3%;
 }
 
 #home_search_bar:focus{
@@ -203,8 +203,8 @@ margin-bottom: 10px;
 		color: transparent;
 		outline: none;
 		position:relative;
-		top: 70px;
 		left:18%;
+		margin-top:3%;
 	}
 }
 
@@ -217,6 +217,13 @@ margin-bottom: 10px;
 
 	a{
 	 color: rgb(255,255,255);
+	}
+
+
+	.navbar-right img.img-circle {
+		width: 50px;
+		margin-top: 3px;
+		margin-right: 20px;
 	}
 
 	.navbar-right a:visited {
@@ -250,7 +257,7 @@ margin-bottom: 10px;
 
 .home_search_form_container{
 	width:40%;
-	height:20%;
+	padding:1%;
 	margin: 0px auto;
 	position:relative;
 	top:30%;
@@ -262,8 +269,8 @@ margin-bottom: 10px;
 
 .navbar-brand{
 	position:relative;
-	left: 5%;
 	bottom:5px;
+	left: 20px;
 }
 
 
@@ -699,7 +706,8 @@ span.star-reviews-list {
 }
 
 .intro-sentence{
-	width:800px;
+	font-size:2.5em;
+	max-width:90%;
 	margin: 2px auto;
 	position:relative;
 	top:20%;
@@ -737,6 +745,7 @@ padding-right: 2%;
 color: rgb(255,204,0);
 }
 
+
 .star-rating-title {
 	float: right;
 	color: rgb(255,204,0);
@@ -745,4 +754,8 @@ color: rgb(255,204,0);
 .row {
 margin-left: 0px;
 margin-right: 0px; 
+}
+
+img.img-circle:hover {
+	border-radius: 50%;
 }
