@@ -21,7 +21,7 @@ describe 'Edit user' do
 		it 'can see his name' do
 			visit('/')
 			click_link('Edit profile')
-			expect(page).to have_content('Hey John')
+			expect(page).to have_content('John')
 		end
 
 	end
