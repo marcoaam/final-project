@@ -103,7 +103,7 @@ clear: both;
 padding: 15px;
 min-height: 72px;
 background-color: rgba(255, 255, 255, 0.8);
-border-bottom: 4px solid rgba(248, 180, 79, 0.77);
+border-bottom: 4px solid $orange;
 width: 100%;
 margin-top: 10px;
 }
@@ -169,7 +169,7 @@ margin-bottom: 10px;
 
 #index_search_bar:focus {
 	 outline: none;
-	 border-bottom: 4px solid rgba(248, 180, 79, 0.77);
+	 border-bottom: 4px solid $orange;
 } 
 
 .container-fluid {
@@ -211,13 +211,14 @@ margin-top: 7%;
 .navbar {
 		min-height: 60px;
 		font-size: 1.2em;
-		background-color: rgba(248, 180, 79, 0.77);
+		background-color: $orange;
 		border: none;
 		border-radius: 0px;
 
 	a{
 	 color: rgb(255,255,255);
 	}
+
 
 
 	.navbar-right img.img-circle {
@@ -313,8 +314,8 @@ height: 46%;
 
 .navbar-brand{
 	position:relative;
-	bottom:5px;
-	left: 20px;
+	bottom:12px;
+	left: 30px;
 }
 
 
@@ -576,7 +577,7 @@ color: white;
 border: none;
 margin-top: 10px;
 margin-bottom: 15px;
-border-bottom: 4px solid rgba(248, 180, 79, 0.77);
+border-bottom: 4px solid $orange;
 }
 	.new_review {
 		color: gray;
@@ -701,7 +702,7 @@ margin-bottom: 10px;
 padding: 10px;
 width: 100%;
 background: whitesmoke;
-border-bottom: 4px solid rgba(248, 180, 79, 0.77);
+border-bottom: 4px solid $orange;
 }
 
 li.property-reviews-list:hover {
