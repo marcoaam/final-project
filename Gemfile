@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby  '2.1.2'
 
 group :development, :test do
 	gem 'capybara'
@@ -24,6 +25,7 @@ gem 'aws-sdk'
 gem "paperclip", "~> 4.2"
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 gem 'bootstrap-filestyle-rails'
+gem 'rails_12factor'
 
 gem 'rails', '4.1.4'
 gem 'pg'
