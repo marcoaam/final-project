@@ -1,0 +1,81 @@
+<%= render "properties/slider" %>
+<article class="row main-row" >
+	<section class="toggle-vertical col-md-1 property-list-container" >
+	 	<ul class="nav nav-tabs" role="tablist">
+		  <li class="active property_item_big" id="flat">
+		  	<a href="#flat-tab" role="tab" data-toggle="tab">
+					<h4><%= @property.title %></h4>
+					<h6><%= @property.address %></h6>
+				</a>
+			</li>
+		  <li class='landlord_item' id="landlord">
+		  		<a class='landlord_tab' href="#landlord-tab" role="tab" data-user="<%= @property.user.id %>" data-toggle="tab">
+		  		<% @user.pictures.each do |picture| %>
+		  			<%= image_tag picture.image.url(:profile), class: "img-circle" %>
+		  		<% end %>
+		  		Landlord
+		  		</a>
+		  </li>
+
+	 		<% if @property.rooms.any?  %>
+	  		<% @property.rooms.each do |room| %>
+	  			<li class='room_item' id="room-<%= room.number %>">
+	  				<a  class='room_tab'  href="#room-tab" role="tab" data-toggle="tab" id="room-<%= room.number %>"data-room="room-<%= room.number %>">
+	  					<% if !room.user.nil?  %>
+		  					<% room.user.pictures.each do |picture| %>
+					  			<%= image_tag picture.image.url(:profile), class: "img-circle" %>
+					  		<% end %>
+				  		<% end %>
+		  		Room <%= room.number %></a>
+	  			</li>
+				<% end %>
+	 		<% end %>
+	 		
+		</ul>
+	</section>
+
+
+	<article class="reviews-container col-md-4">
+		<nav class="tab-content">
+	  	<ul class="tab-pane active col-md-12" id="flat-tab">
+
+	  		<li class="flat-partial flat_column">
+		  		<%= render "properties/flat" %>
+		  	</li>
+		
+		  	<li class="flat-review-partial">
+		  		<%= render "properties/flat_reviews" %>
+				</li>
+	  	</ul>
+
+	  	<ul class="tab-pane col-md-12" id="landlord-tab" >
+	  		<li class="flat-partial">
+	  			<%= render "properties/landlord" %>
+	  		</li>
+				<li class="flat-review-partial">
+	  			<%= render "properties/landlord_reviews"%>
+	  		</li>
+	  	</ul>
+
+	  	<ul class="tab-pane col-md-12" id="room-tab">
+  			<% if @property.rooms.any?  %>
+  				<% @property.rooms.each do |room| %>
+  					<li data-room="room-<%= room.number %>" class="flat-partial"> 
+  							<article id="container-room-<%= room.number %>">			
+									<%= render partial: "properties/room", locals: {room: room} %>
+								</article>
+  					</li>
+  					<li data-room="room-<%= room.number %>" class="flat-review-partial">
+  						<%= render partial:"properties/tenant_reviews", locals: {room: room}  %>
+  					</li>
+  				<% end %>
+  			<% end %>
+	  	</ul>
+
+		</nav>
+	</article>
+</article>
+
+
+
+

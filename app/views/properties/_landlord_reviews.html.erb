@@ -1,0 +1,45 @@
+<article class='review' id="review_thoughts_flat">
+	<form id="form_for_user" class="new_review" method="POST" action="">
+		<section class="stars-section">
+			<h3>Leave a review </h3>
+				<aside class="stars-landlord">
+					<% 1.upto(5) do |n| %>
+						<label for="star-landlord-<%= n %>">1</label>
+						<input type="radio" name="rating" class="star-landlord-<%= n %>" id="star-landlord-<%= n %>" value="<%= n %>" />
+					<% end %>
+
+				<span></span>
+				</aside>
+		</section>
+
+		<section class="input-thougths">
+			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		  <input type="text" id="thoughts" name="thoughts" required>
+		</section>
+
+		<input type="submit" class="submit-button" value="Leave review">
+	</form>
+</article>
+
+<ul class="property-reviews-list">
+	<% @property.user.reviews.reverse.each do |review| %>
+				<article class="container-reviews-mustache">
+    <%= render "layouts/template_review" %>
+  </article>
+				<li class="property-reviews-list">
+				<article class="reviews-list">
+					<% review.user.pictures.each do |picture| %>
+						<section class="thougths-reviews-list">
+							<%= image_tag picture.image.url(:profile), class: "img-circle panel-img-position" %>
+					<% end %>
+						<aside class="star-reviews-list"><%= "#{star_rating(review.rating)}" %>
+						</aside>
+						<p class="review-thoughts-text"><%= review.thoughts %>
+						</p>
+						<span class="star-reviews-list"></span>
+					</section>
+				</article>
+				<span class="posted-by"><em>Posted by @<%= link_to "#{review.user.username}", user_path(review.user) %> <%= time_ago_in_words(review.created_at) %> ago</em></span>
+			</li>
+	<%end%>
+</ul>

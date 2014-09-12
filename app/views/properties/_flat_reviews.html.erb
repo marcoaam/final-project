@@ -1,0 +1,58 @@
+<article class="review" id="review_thoughts_flat">
+
+	<%= form_for [@property, @review] do |f| %>
+
+		<section class="stars-section">
+			<h3>Leave a review </h3>
+				<aside class='stars'>
+		      <% 1.upto(5) do |n| %>
+		          <%= f.label n, for: "star-#{n}" %>
+		          <%= f.radio_button :rating, n, :class => "star-#{n}", id: "star-#{n}" %>
+		      <% end %>
+		      <span></span>
+		    </aside>
+    </section>
+
+		<section class="input-thougths">
+			<%= f.text_field   :thoughts, :placeholder => "Leave a review here... "%>
+		</section>
+
+		<%= f.submit "Leave review", class: "submit-button" %>
+	<% end %>
+</article>
+
+<% if @reviews.any? %>
+  <ul class="property-reviews-list" >
+    
+  <article class="container-reviews-mustache">
+    <div class="target"></div>
+    <%= render "layouts/template_review" %>
+  </article>
+
+		<% @reviews.each do |review| %>
+			<li class="property-reviews-list">
+				<article class="reviews-list">
+					<% review.user.pictures.each do |picture| %>
+						<section class="thougths-reviews-list">
+							<%= image_tag picture.image.url(:profile), class: "img-circle panel-img-position" %>
+					<% end %>
+						<aside class="star-reviews-list"><%= "#{star_rating(review.rating)}" %>
+						</aside>
+						<p class="review-thoughts-text"><%= review.thoughts %>
+						</p>
+						<span class="star-reviews-list"></span>
+					</section>
+				</article>
+				<span class="posted-by"><em>Posted by @<%= link_to "#{review.user.username}", user_path(review.user) %> <%= time_ago_in_words(review.created_at) %> ago</em></span>
+			</li>
+		<% end %>
+	</ul>
+<% else %>
+	<article class="container-reviews-mustache">
+    <div class="target"></div>
+    <%= render "layouts/template_review" %>
+  </article>
+	No reviews have been added.
+<% end %>
+
+<%= link_to 'See all reviews', property_reviews_path(@property) %>

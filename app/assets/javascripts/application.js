@@ -11,6 +11,58 @@
 // about supported directives.
 //
 //= require jquery
+//= require mustache
+//= require bootstrap-sprockets
+//= require bootstrap-filestyle
 //= require jquery_ujs
-//= require turbolinks
+//= require underscore
+//= require gmaps/google
 //= require_tree .
+
+//show the right room number on properties/id page
+
+$(document).ready(function() {
+$(":file").filestyle({size: "sm"});
+
+
+$("li [role='tab']").on('click', function() {
+
+	var dest = $(this).attr('data-room');
+  showTab(dest);
+  
+});
+
+function showTab(tab) {
+	$("#room-tab li").hide();
+  $("#room-tab [data-room='" + tab + "']").show();
+  $(".property-reviews-list li").show();
+}
+
+$("li [role='tab']").on('click', function() {
+
+	var dest = $(this).attr('data-user');
+	$('#form_for_user').attr('action', "/user/" + dest + "/reviews")
+
+});
+
+$(".input-thougths").on('click', function(event){
+	$(this).removeClass().addClass("input-thougths-big");
+});
+
+
+	$('.new_review').on('submit', function(event) {
+		event.preventDefault();
+		var reviewList = $(this).parent().siblings('.property-reviews-list')
+		$.post(this.action, $(this).serialize(), function(response) {
+			//$('ul.property-reviews-list').prepend('<li class="property-reviews-list">' + response.thoughts + '</li>')	
+			var template = $('#review-template').html();
+			var output = Mustache.render(template, response);
+			reviewList.prepend(output);
+		}).error(function(){
+			alert('Sorry sir, please select a rating ');
+		});
+	});
+
+});
+
+
