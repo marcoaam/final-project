@@ -90,7 +90,7 @@ li {
 	
 	input[type=submit] {
 	height: 38px;
-background: url("search_property_small.png") no-repeat;
+background: image-url("search_property_small.png") no-repeat;
 border: none;
 color: transparent;
 position: absolute;
@@ -198,7 +198,7 @@ width: 50%;
 
  input[type=submit] {
 height: 69px;
-background: url("search_property.png") no-repeat;
+background: image-url("search_property.png") no-repeat;
 border: none;
 color: transparent;
 outline: none;
@@ -282,7 +282,7 @@ height: 46%;
 
 	#home_search_form input[type=submit] {
 		height: 69px;
-		background: url("search_property.png") no-repeat;
+		background: image-url("search_property.png") no-repeat;
 		border: none;
 		color: transparent;
 		outline: none;
