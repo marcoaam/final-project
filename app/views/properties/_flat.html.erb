@@ -1,0 +1,5 @@
+<article class="flat-bio">
+	<h2><div class="star-rating-title"><%= star_rating(@property.reviews.average(:rating)) %></div><%= @property.title %></h2>
+	<strong> Number of rooms: </strong><%= @property.rooms.count %>
+		<p><%= @property.description %></p>
+</article>
