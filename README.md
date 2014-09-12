@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/marcoaam/final-project/badges/gpa.svg)](https://codeclimate.com/github/marcoaam/final-project)[![Test Coverage](https://codeclimate.com/github/marcoaam/final-project/badges/coverage.svg)](https://codeclimate.com/github/marcoaam/final-project)
+
 Flatter
 ===========
 
