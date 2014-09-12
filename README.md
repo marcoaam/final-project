@@ -29,6 +29,7 @@ Technologies used
 - Devise.
 - Geocoder.
 - Gmaps4rails.
+- Paperclip.
 - [S3 AWS].
 - Bootstrap.
 - HTML5.
@@ -55,8 +56,8 @@ How to test it
 
 
 
-    [Marco](https://github.com/marcoaam)
-    [Jean](https://github.com/jeantroiani)
-    [Alex](https://github.com/BobRazoswki)
-    [Makers Academy](http://www.makersacademy.com/)
-    [S3 AWS](http://aws.amazon.com/s3/)
+  [Marco]:https://github.com/marcoaam
+  [Jean]:https://github.com/jeantroiani
+  [Alex]:https://github.com/BobRazoswki
+  [Makers Academy]:http://www.makersacademy.com/
+  [S3 AWS]:http://aws.amazon.com/s3/
