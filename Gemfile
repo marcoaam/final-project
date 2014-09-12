@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 
 group :development, :test do
 	gem 'capybara'
-	gem 'cucumber-rails', require: nil
 	gem 'database_cleaner'
 	gem 'rspec-rails'
 	gem 'codeclimate-test-reporter', require: nil
