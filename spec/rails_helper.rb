@@ -1,4 +1,3 @@
-# This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
@@ -9,7 +8,7 @@ require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 
 Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, {js_errors: false})
+  Capybara::Poltergeist::Driver.new(app, { js_errors: false })
 end
 
 Capybara.configure do |config|
@@ -57,31 +56,30 @@ RSpec.configure do |config|
   end
 
   config.before(:all) do 
-  Geocoder.configure(:lookup => :test)
+    Geocoder.configure(:lookup => :test)
 
-  Geocoder::Lookup::Test.add_stub(
-  "25 city road,London,EC1Y 1AA", [
-    {
-      'latitude'     => 51.5229965,
-      'longitude'    => -0.0871299,
-      'address'      => '25 City Road, London EC1Y 1AA, UK',
-      'country'      => 'United Kingdom',
-      'country_code' => 'UK'
-    }
-   ]
-  )
+    Geocoder::Lookup::Test.add_stub(
+    "25 city road,London,EC1Y 1AA", [
+      {
+        'latitude'     => 51.5229965,
+        'longitude'    => -0.0871299,
+        'address'      => '25 City Road, London EC1Y 1AA, UK',
+        'country'      => 'United Kingdom',
+        'country_code' => 'UK'
+      }
+     ]
+    )
 
-  Geocoder::Lookup::Test.add_stub(
-  "Victoria St,London,SW1E 5ND", [
-    {
-      'latitude'     => 51.4935138,
-      'longitude'    => -0.1421816,
-      'address'      => 'Victoria, London SW1E 5ND, UK',
-      'country'      => 'United Kingdom',
-      'country_code' => 'UK'
-    }
-   ]
-  )
+    Geocoder::Lookup::Test.add_stub(
+    "Victoria St,London,SW1E 5ND", [
+      {
+        'latitude'     => 51.4935138,
+        'longitude'    => -0.1421816,
+        'address'      => 'Victoria, London SW1E 5ND, UK',
+        'country'      => 'United Kingdom',
+        'country_code' => 'UK'
+      }
+     ]
+    )
   end
-
 end
