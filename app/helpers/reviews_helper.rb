@@ -1,21 +1,21 @@
 module ReviewsHelper
 
-	def _show_reviews_of_one_property
+	def show_reviews_of_one_property
 		@property = Property.find(params[:property_id])
 		@reviews = @property.reviews.all
 	end
 
-	def _show_reviews_of_one_user
+	def show_reviews_of_one_user
 		@user = User.find(params[:user_id])
 		@reviews = @user.reviews.all
 	end
 
-	def _create_review_for_property
+	def create_review_for_property
 		property = Property.find(params[:property_id])
 		property.reviews.create(thoughts: params[:review][:thoughts], rating: params[:review][:rating], user_id: current_user.id)
 	end
 
-	def _create_review_for_user
+	def create_review_for_user
 		user = User.find(params[:user_id])
 		user.reviews.create(thoughts: params[:thoughts], rating: params[:rating], user_id: current_user.id)
 	end
