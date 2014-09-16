@@ -39,8 +39,8 @@ Technologies used
 How to setup and run it
 -----------------------
 
-    git clone git@github.com:jeantroiani/get_a_room.git
-    cd get_a_room
+    git clone git@github.com:marcoaam/final-project.git
+    cd final-project
     bundle install
     bin/rake db:create
     bin/rake db:migrate
@@ -51,7 +51,7 @@ How to setup and run it
 How to test it
 ----------------
 
-    cd get_a_room
+    cd final-project
     rspec
 
 
