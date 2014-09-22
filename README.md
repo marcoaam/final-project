@@ -36,6 +36,23 @@ Technologies used
 - Sass.
 
 
+How it looks like
+-----------------
+
+Home page.
+![](app/public/images/home_page.png)
+
+Search an area.
+![](app/public/images/properties_page.png)
+
+Click on a property.
+![](app/public/images/property_page.png)
+
+Click on the room tab.
+![](app/public/images/room_page.png)
+
+
+
 How to setup and run it
 -----------------------
 
@@ -44,8 +61,10 @@ How to setup and run it
     bundle install
     bin/rake db:create
     bin/rake db:migrate
-    bin/rake db:seed
     bin/rails server
+
+go to [http://localhost:3000/] on your browser
+
 
 
 How to test it
@@ -61,3 +80,4 @@ How to test it
   [Alex]:https://github.com/BobRazoswki
   [Makers Academy]:http://www.makersacademy.com/
   [S3 AWS]:http://aws.amazon.com/s3/
+  [http://localhost:3000/]:http://localhost:3000/
