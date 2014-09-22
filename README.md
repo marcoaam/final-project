@@ -66,6 +66,27 @@ How to setup and run it
 go to [http://localhost:3000/] on your browser
 
 
+In order for the app to run you will need to create a S3 AWS account, create a bucket named 'getaroom' and then add the unique key id and the secret access key following this steps.
+
+
+The details will need to be created in a file called secrets.yml:
+    
+    cd final-project
+    touch ./config/secrets.yml
+
+
+Then copy your details inside of the file in this format:
+
+    development:
+      s3_access_key_id: AKIAIqecwvwe
+      s3_secret_access_key: IpVHHwevbNFIJdGqxV+M9/
+
+    test:
+      s3_access_key_id: AKIAIVC4FwelcmlWLJ
+      s3_secret_access_key: IpVHHbwevwevNFIJdGqxV+M
+
+
+
 
 How to test it
 ----------------
