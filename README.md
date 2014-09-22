@@ -40,16 +40,16 @@ How it looks like
 -----------------
 
 Home page.
-![](app/public/images/home_page.png)
+![](public/images/home_page.png)
 
 Search an area.
-![](app/public/images/properties_page.png)
+![](public/images/properties_page.png)
 
 Click on a property.
-![](app/public/images/property_page.png)
+![](public/images/property_page.png)
 
 Click on the room tab.
-![](app/public/images/room_page.png)
+![](public/images/room_page.png)
 
 
 
