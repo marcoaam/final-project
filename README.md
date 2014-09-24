@@ -7,6 +7,8 @@ Final project at [Makers Academy]. This application was build in the two final w
 
 Flatter is a Web application to help you make the decision of moving to a new place easier. The main purpose of this website is to review properties, landlords and tenants.
 
+check it live on heroku [Flatter](http://flatter-project.herokuapp.com/)
+
 
 Team members
 ------------
@@ -51,6 +53,32 @@ Click on a property.
 Click on the room tab.
 ![](public/images/room_page.png)
 
+
+Heroku test searches and user credentials
+---------------------------------------
+
+live app link [Flatter](http://flatter-project.herokuapp.com/)
+
+The purpose of this application is take information from user but before it becomes famous we populated the DB with information so you can navigate and see how it works.
+
+# Available testing user credentials
+
+    username: marco
+    password: 12345678
+
+    username: alex
+    password: 12345678
+
+    username: jean
+    password: 12345678
+
+
+# Available search examples
+
+All the properties are located near angel and old street so it would be easier for you to search these areas to be able to see some properties. for example:
+
+- Old street, London
+- Angel, London
 
 
 How to setup and run it
