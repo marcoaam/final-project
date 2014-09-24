@@ -61,7 +61,7 @@ live app link [Flatter](http://flatter-project.herokuapp.com/)
 
 The purpose of this application is take information from user but before it becomes famous we populated the DB with information so you can navigate and see how it works.
 
-# Available testing user credentials
+### Available testing user credentials
 
     username: marco
     password: 12345678
@@ -73,7 +73,7 @@ The purpose of this application is take information from user but before it beco
     password: 12345678
 
 
-# Available search examples
+### Available search examples
 
 All the properties are located near angel and old street so it would be easier for you to search these areas to be able to see some properties. for example:
 
