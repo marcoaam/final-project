@@ -26,6 +26,7 @@
         null,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -123,6 +124,7 @@
         null,
         null,
         null,
+        1,
         1,
         null,
         null,
@@ -595,7 +597,6 @@
         1,
         null,
         null,
-        null,
         null
       ],
       "/Users/user/Documents/MA/get_a_room/app/helpers/reviews_helper.rb": [
@@ -622,9 +623,9 @@
         null,
         null,
         1,
-        111,
-        23,
-        23,
+        109,
+        21,
+        21,
         null,
         null,
         null
@@ -796,7 +797,7 @@
         1,
         null,
         1,
-        26,
+        20,
         null,
         null,
         null
@@ -810,6 +811,6 @@
         null
       ]
     },
-    "timestamp": 1410688629
+    "timestamp": 1411569238
   }
 }
