@@ -66,7 +66,7 @@ How to setup and run it
 go to [http://localhost:3000/] on your browser
 
 
-In order for the app to run you will need to create a S3 AWS account, create a bucket named 'getaroom' and then add the unique key id and the secret access key following this steps.
+In order for the app to run you will need to create a [S3 AWS] account, create a bucket named 'getaroom' and then add the unique key id and the secret access key following this steps.
 
 
 The details will need to be created in a file called secrets.yml:
