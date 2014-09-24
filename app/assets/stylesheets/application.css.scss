@@ -811,13 +811,13 @@ width: 100%;
 .background_image_add{
 	width:100%;
 	height: calc(100% - 60px);
-	background-image: url('Room_E.jpg'); 
+	background: image-url('Room_E.jpg'); 
 }
 
 .background_image_edit{
 	width:100%;
 	height: calc(100% - 60px);
-	background-image: url('Room_F.jpg'); 
+	background: image-url('Room_F.jpg'); 
 }
 
 .star-rating-title {
